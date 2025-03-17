@@ -1,7 +1,7 @@
 export const Header = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-sm fixed-top mt-2 p-2 position-relative bg-dark">
+      <nav className="navbar navbar-expand-sm fixed-top mt-2 p-2 position-relative bg-light">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
