@@ -1,7 +1,7 @@
 export const Inicio = () => {
     return (
-        <div className="container-inicio d-flex align-items-center justify-content-center">
-            <div className="text">
+        <div className="d-flex align-items-center justify-content-center mt-3 p-3">
+            <div className="text m-5">
                 <h4>👋Hola, soy</h4>
                 <h1>Ricardo</h1>
                 <h5>
