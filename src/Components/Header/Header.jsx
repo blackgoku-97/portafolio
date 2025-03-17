@@ -1,7 +1,9 @@
+import './Header.css';
+
 export const Header = () => {
     return (
         <>
-            <nav className="navbar navbar-expand-lg fixed-top">
+            <nav className="navbar navbar-expand-lg fixed-top mt-2 p-2">
                 <div className="container-fluid">
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
