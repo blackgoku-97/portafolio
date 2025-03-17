@@ -9,7 +9,7 @@ export const Inicio = () => {
                 </h5>
             </div>
             <div className="img">
-                <img src="../../img/coding.png" alt="img" />
+                <img src="/img/coding.png" alt="img" />
             </div>
         </div>
     )
