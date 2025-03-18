@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-export const Header = () => {
+export const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-expand-md navbar-expand-sm navbar-expand navbar-expand-fixed-top mt-2 p-2">
@@ -20,7 +20,7 @@ export const Header = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
-                  className="nav-link active text-light bg-primary rounded-pill mx-auto p-2"
+                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`}
                   aria-current="page"
                   to="/"
                 >
@@ -28,19 +28,28 @@ export const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <Link className={({ isActive }) => `nav-link ${ isActive ? 'active' : '' }`} to="/proyectos">
+                <NavLink 
+                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`}
+                  to="/proyectos"
+                >
                   Proyectos
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
+                <NavLink 
+                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`} 
+                  to="/habilidades"
+                >
                   Habilidades
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
+                <NavLink 
+                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`} 
+                  to="/contacto"
+                >
                   Contacto
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>
