@@ -4,24 +4,24 @@ export const Habilidades = () => {
       <h1 className="titulo text-center">Habilidades</h1>
       <div className="row justify-content-center mt-5">
         <div className="col-md-3 mb-4">
-          <div className="card border-0 text-light">
+          <div className="card">
             <img
               src="https://skillicons.dev/icons?i=html"
-              alt="html5"
+              alt="html-5"
             />
             <p>HTML 5</p>
           </div>
         </div>
         <div className="col-md-3 mb-4 mx-5">
-          <div className="card border-0 text-light">
+          <div className="card">
             <img src="https://skillicons.dev/icons?i=css" alt="css3" />
             <p>CSS 3</p>
           </div>
         </div>
         <div className="col-md-3 mb-4 mx-5">
-          <div className="card border-0 text-light">
+          <div className="card">
             <img
-              src="https://skillicons.dev/icons?i=js"
+              src="https://skillicons.dev/icons?i=javascript"
               alt="javascript"
             />
             <p>Javascript</p>
