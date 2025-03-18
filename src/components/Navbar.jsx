@@ -20,7 +20,7 @@ export const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink
-                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`}
+                  className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`}
                   aria-current="page"
                   to="/"
                 >
@@ -29,7 +29,7 @@ export const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink 
-                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`}
+                  className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`}
                   to="/proyectos"
                 >
                   Proyectos
@@ -37,7 +37,7 @@ export const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink 
-                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`} 
+                  className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`} 
                   to="/habilidades"
                 >
                   Habilidades
@@ -45,7 +45,7 @@ export const Navbar = () => {
               </li>
               <li className="nav-item">
                 <NavLink 
-                  className={({ isActive }) => `nav-link ${ isActive ? 'active text-light bg-primary rounded-pill mx-auto p-2' : '' }`} 
+                  className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`} 
                   to="/contacto"
                 >
                   Contacto
