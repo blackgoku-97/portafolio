@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const Header = () => {
   return (
     <>
@@ -17,18 +19,18 @@ export const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
+                <Link
                   className="nav-link active text-light bg-primary rounded-pill mx-auto p-2"
                   aria-current="page"
-                  href="#"
+                  to="/"
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light" href="#">
+                <Link className="nav-link text-light" to="/proyectos">
                   Proyectos
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-light" href="#">
