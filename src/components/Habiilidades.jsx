@@ -1,3 +1,5 @@
+import './Habilidades.css';
+
 export const Habilidades = () => {
   return (
     <div id="Habilidades" className="container mt-5">
@@ -9,11 +11,10 @@ export const Habilidades = () => {
               src="https://skillicons.dev/icons?i=html"
               alt="html-5"
             />
-            <p>HTML 5</p>
           </div>
         </div>
         <div className="col-sm-2 mb-4 mx-5">
-          <div className="card" style={{ border: 'none !important' }}>
+          <div className="card">
             <img src="https://skillicons.dev/icons?i=css" alt="css3" />
             <p>CSS 3</p>
           </div>
