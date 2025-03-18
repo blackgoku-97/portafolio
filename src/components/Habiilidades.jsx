@@ -4,25 +4,25 @@ export const Habilidades = () => {
       <h1 className="titulo text-center">Habilidades</h1>
       <div className="row justify-content-center mt-5">
         <div className="col-md-3 mb-4">
-          <div className="card">
+          <div className="card border-0 text-light">
             <img
-              src="https://img.icons8.com/color/100/html-5--v1.png"
-              alt="html-5--v1"
+              src="https://skillicons.dev/icons?i=html"
+              alt="html5"
             />
-            <p>Html5</p>
+            <p>HTML 5</p>
           </div>
         </div>
         <div className="col-md-3 mb-4 mx-5">
-          <div className="card">
-            <img src="https://img.icons8.com/color/100/css3.png" alt="css3" />
-            <p>css3</p>
+          <div className="card border-0 text-light">
+            <img src="https://skillicons.dev/icons?i=css" alt="css3" />
+            <p>CSS 3</p>
           </div>
         </div>
         <div className="col-md-3 mb-4 mx-5">
-          <div className="card">
+          <div className="card border-0 text-light">
             <img
-              src="https://img.icons8.com/color/100/javascript--v1.png"
-              alt="javascript--v1"
+              src="https://skillicons.dev/icons?i=js"
+              alt="javascript"
             />
             <p>Javascript</p>
           </div>
