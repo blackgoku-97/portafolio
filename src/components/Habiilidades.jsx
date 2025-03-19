@@ -101,6 +101,33 @@ export const Habilidades = () => {
             <p className='text-light text-center'>IntelliJ IDEA</p>
           </div>
         </div>
+        <div className="col-sm-2 mb-4 mx-3">
+          <div className="card">
+            <img
+              src="https://skillicons.dev/icons?i=postman"
+              alt="postman"
+            />
+            <p className='text-light text-center'>Postman</p>
+          </div>
+        </div>
+        <div className="col-sm-2 mb-4 mx-3">
+          <div className="card">
+            <img
+              src="https://skillicons.dev/icons?i=mysql"
+              alt="mysql"
+            />
+            <p className='text-light text-center'>MySQL</p>
+          </div>
+        </div>
+        <div className="col-sm-2 mb-4 mx-3">
+          <div className="card">
+            <img
+              src="https://skillicons.dev/icons?i=postgresql"
+              alt="postgresql"
+            />
+            <p className='text-light text-center'>PostgreSQL</p>
+          </div>
+        </div>
       </div>
     </div>
   );
