@@ -46,6 +46,21 @@ export const Habilidades = () => {
           </div>
         </div>
       </div>
+      <h2 className="subtitulo text-center mt-5">Bases de Datos</h2>
+      <div className="row justify-content-center mt-5">
+        <div className="col-sm-2 mb-4">
+          <div className="card">
+            <img src="https://skillicons.dev/icons?i=mysql" alt="mysql" />
+            <p className='text-light text-center'>MySQL</p>
+          </div>
+        </div>
+        <div className="col-sm-2 mb-4 mx-3">
+          <div className="card">
+            <img src="https://skillicons.dev/icons?i=postgresql" alt="postgresql" />
+            <p className='text-light text-center'>PostgreSQL</p>
+          </div>
+        </div>
+      </div>
       <h2 className="subtitulo text-center mt-5">IDEs (entornos de desarrollo)</h2>
       <div className="row justify-content-center mt-5">
         <div className="col-sm-2 mb-4">
@@ -61,7 +76,7 @@ export const Habilidades = () => {
           </div>
         </div>
       </div>
-      <h2 className="subtitulo text-center mt-5">Herramientas</h2>
+      <h2 className="subtitulo text-center mt-5">Herramientas de Desarrollo</h2>
       <div className="row justify-content-center mt-5">
         <div className="col-sm-2 mb-4">
           <div className="card">
@@ -79,6 +94,12 @@ export const Habilidades = () => {
           <div className="card">
             <img src="https://skillicons.dev/icons?i=vite" alt="vite" />
             <p className='text-light text-center'>Vite</p>
+          </div>
+        </div>
+        <div className="col-sm-2 mb-4 mx-3">
+          <div className="card">
+            <img src="https://skillicons.dev/icons?i=postman" alt="postman" />
+            <p className='text-light text-center'>Postman</p>
           </div>
         </div>
       </div>
