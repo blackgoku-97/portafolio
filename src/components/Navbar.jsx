@@ -56,7 +56,7 @@ export const Navbar = () => {
                   className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`} 
                   to="/curriculum"
                 >
-                  Curriculum
+                  Perfil profesional
                 </NavLink>
               </li>
             </ul>
