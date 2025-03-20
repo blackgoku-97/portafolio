@@ -1,4 +1,24 @@
 export const Curriculum = () => {
+  const datosPersonales = {
+    nombre: "Ricardo Perez",
+    correoElectronico: "rpe19971210gmail.com",
+  };
+
+  const educacion = {
+    titulo: "Tecnico Analista Programador",
+    universidad: "INACAP",
+    fechaGraduacion: "2019",
+  };
+
+  const experienciaLaboral = {
+    tituloPuesto: "Puesto de ejemplo",
+    empresa: "Empresa de ejemplo",
+    fechaInicio: "2020",
+    fechaFin: "2022",
+    descripcion:
+      "Descripción breve de tus responsabilidades y logros en el puesto",
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -9,16 +29,11 @@ export const Curriculum = () => {
               <h2 className="mb-3">Información personal</h2>
               <ul className="list-group">
                 <li className="list-group-item">
-                  <strong>Nombre:</strong> Juan Pérez
+                  <strong>Nombre:</strong> {datosPersonales.nombre}
                 </li>
                 <li className="list-group-item">
-                  <strong>Dirección:</strong> Calle 123, Número 456
-                </li>
-                <li className="list-group-item">
-                  <strong>Teléfono:</strong> 1234567890
-                </li>
-                <li className="list-group-item">
-                  <strong>Correo electrónico:</strong> juan.perez@example.com
+                  <strong>Correo electrónico:</strong>{" "}
+                  {datosPersonales.correoElectronico}
                 </li>
               </ul>
             </div>
@@ -26,10 +41,14 @@ export const Curriculum = () => {
               <h2 className="mb-3">Educación</h2>
               <ul className="list-group">
                 <li className="list-group-item">
-                  <strong>Título de grado:</strong> Universidad de ejemplo
+                  <strong>Título de grado:</strong> {educacion.titulo}
                 </li>
                 <li className="list-group-item">
-                  <strong>Fecha de graduación:</strong> 2020
+                  <strong>Universidad:</strong> {educacion.universidad}
+                </li>
+                <li className="list-group-item">
+                  <strong>Fecha de graduación:</strong>{" "}
+                  {educacion.fechaGraduacion}
                 </li>
               </ul>
             </div>
@@ -37,17 +56,25 @@ export const Curriculum = () => {
               <h2 className="mb-3">Experiencia laboral</h2>
               <ul className="list-group">
                 <li className="list-group-item">
-                  <strong>Título del puesto:</strong> Empresa de ejemplo
+                  <strong>Título del puesto:</strong>{" "}
+                  {experienciaLaboral.tituloPuesto}
                 </li>
                 <li className="list-group-item">
-                  <strong>Fecha de inicio:</strong> 2020
+                  <strong>Empresa:</strong> {experienciaLaboral.empresa}
                 </li>
                 <li className="list-group-item">
-                  <strong>Fecha de fin:</strong> 2022
+                  <strong>Fecha de inicio:</strong>{" "}
+                  {experienciaLaboral.fechaInicio}
                 </li>
                 <li className="list-group-item">
-                  <strong>Descripción breve de tus responsabilidades y logros en el puesto:</strong>
-                  Descripción breve de tus responsabilidades y logros en el puesto
+                  <strong>Fecha de fin:</strong> {experienciaLaboral.fechaFin}
+                </li>
+                <li className="list-group-item">
+                  <strong>
+                    Descripción breve de tus responsabilidades y logros en el
+                    puesto:
+                  </strong>
+                  {experienciaLaboral.descripcion}
                 </li>
               </ul>
             </div>
