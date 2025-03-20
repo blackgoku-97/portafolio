@@ -51,6 +51,14 @@ export const Navbar = () => {
                   Contacto
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink 
+                  className={({ isActive }) => `nav-link text-light ${ isActive ? 'active bg-primary rounded-pill mx-auto p-2' : '' }`} 
+                  to="/curriculum"
+                >
+                  Curriculum
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

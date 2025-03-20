@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { Contacto, Habilidades, Inicio, Navbar, Proyectos } from './components';
+import { Curriculum, Contacto, Habilidades, Inicio, Navbar, Proyectos } from './components';
 
 export const App = () => {
 
@@ -12,6 +12,7 @@ export const App = () => {
                 <Route path="/proyectos" element={<Proyectos />} />
                 <Route path="/habilidades" element={<Habilidades />} />
                 <Route path="/contacto" element={<Contacto />} />
+                <Route path="/curriculum" element={<Curriculum />} />
                 <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </>   
