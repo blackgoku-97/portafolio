@@ -24,7 +24,7 @@ El proyecto es un portafolio web.
 
   * El sistema debe mostrar contactos.
 
-* Perfil profesional:
+* Perfil:
 
   * El sistema debe mostrar descripcion, educacion y experiencia laboral.
 
@@ -56,7 +56,7 @@ Para ejecutar el proyecto es necesario seguir estos pasos:
 
 ## 3. **Funcionamiento**
 
-* La aplicación consiste 5 secciones: Inicio, Proyectos, Habilidades, Contacto y Perfil profesional.
+* La aplicación consiste 5 secciones: Inicio, Proyectos, Habilidades, Contacto y Perfil.
 
 ## 4. **Licencia**
 
