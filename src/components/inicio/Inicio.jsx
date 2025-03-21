@@ -1,3 +1,5 @@
+import './Inicio.css';
+
 export const Inicio = () => {
 
   const title = "👋Hola, soy";
