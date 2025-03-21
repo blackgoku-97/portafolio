@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Educacion = () => {
   return (
     <div className="col-md-6">
