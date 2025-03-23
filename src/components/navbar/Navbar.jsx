@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { NavItem } from './NavItem';
-import { NavItems } from './NavItems';
-import { NavbarToggler } from './NavbarToggler';
+import { NavItem, NavItems, NavbarToggler } from './components';
 import './Navbar.css';
 
 export const Navbar = () => (

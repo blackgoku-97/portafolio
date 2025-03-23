@@ -1,5 +1,4 @@
-import { Educacion } from './Educacion';
-import { Experiencia } from './Experiencia';
+import { Educacion, Experiencia } from './components';
 
 export const Curriculum = () => {
   return (
