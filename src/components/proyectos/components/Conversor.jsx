@@ -14,13 +14,14 @@ export const Conversor = () => {
             <Typography variant="h5" component="h2">
               Conversor de Monedas
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography variant="body2" color="textSecondary" component="p" sx={{ mb: 2 }}>
               Proyecto de cambio de monedas.
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               <a
                 href="https://github.com/blackgoku-97/transformador_monedas"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Ver más
               </a>

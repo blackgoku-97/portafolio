@@ -1,21 +1,36 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, Typography, Button, Drawer, List, ListItem, IconButton } from '@mui/material';
+import { IconButton, AppBar, Toolbar, Typography, Button, Drawer, List, ListItemButton } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
-export const Navbar = () => {
+const enlaces = [
+  { to: '/', text: 'Inicio' },
+  { to: '/proyectos', text: 'Proyectos' },
+  { to: '/habilidades', text: 'Habilidades' },
+  { to: '/contacto', text: 'Contacto' },
+  { to: '/curriculum', text: 'Perfil' },
+];
 
+export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const handleDrawerToggle = () => {
     setOpen(!open);
   };
 
+  const renderMenuItems = () => {
+    return enlaces.map((enlace) => (
+      <ListItemButton component={RouterLink} to={enlace.to} key={enlace.to}>
+        {enlace.text}
+      </ListItemButton>
+    ));
+  };
+
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ boxShadow: 0 }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Mi Portafolio
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+            Mundo del Desarrollo Web
           </Typography>
           <Button onClick={handleDrawerToggle}>
             Menú
@@ -38,24 +53,10 @@ export const Navbar = () => {
         anchor="right"
         open={open}
         onClose={handleDrawerToggle}
-        sx={{ width: 250 }}
+        sx={{ width: 250, backgroundColor: '#333' }}
       >
-        <List>
-          <ListItem component={RouterLink} to="/">
-            Inicio
-          </ListItem>
-          <ListItem component={RouterLink} to="/proyectos">
-            Proyectos
-          </ListItem>
-          <ListItem component={RouterLink} to="/habilidades">
-            Habilidades
-          </ListItem>
-          <ListItem component={RouterLink} to="/contacto">
-            Contacto
-          </ListItem>
-          <ListItem component={RouterLink} to="/curriculum">
-            Perfil
-          </ListItem>
+        <List sx={{ padding: 0, margin: 0 }}>
+          {renderMenuItems()}
         </List>
       </Drawer>
     </div>

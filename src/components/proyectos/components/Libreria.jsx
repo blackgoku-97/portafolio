@@ -21,6 +21,7 @@ export const Libreria = () => {
               <a
                 href="https://github.com/blackgoku-97/libreria"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Ver más
               </a>

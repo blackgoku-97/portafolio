@@ -10,7 +10,7 @@ import {
 
 export const Educacion = () => {
   return (
-    <Grid item xs={12} md={6}>
+    <Grid size={{ xs: 12, md: 6 }}>
       <Paper elevation={3} sx={{ p: 3, mb: 5 }}>
         <Typography variant="h2" align="center" sx={{ mb: 2 }}>
           Educación
