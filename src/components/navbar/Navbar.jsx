@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconButton, AppBar, Toolbar, Typography, Button, Drawer, List, ListItemButton } from '@mui/material';
+import { IconButton, AppBar, Toolbar, Typography, Button, Drawer, List, ListItemButton, Box } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const enlaces = [
@@ -59,6 +59,18 @@ export const Navbar = () => {
           {renderMenuItems()}
         </List>
       </Drawer>
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: { xs: 'none', md: 'flex' },
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+          Mundo del Desarrollo Web
+        </Typography>
+      </Box>
     </div>
   );
 };
