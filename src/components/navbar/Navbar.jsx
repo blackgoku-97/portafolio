@@ -1,13 +1,23 @@
-import { useState } from 'react';
-import { IconButton, AppBar, Toolbar, Typography, Button, Drawer, List, ListItemButton, Box } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { useState } from "react";
+import {
+  IconButton,
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Drawer,
+  List,
+  ListItemButton,
+  Box,
+} from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 const enlaces = [
-  { to: '/', text: 'Inicio' },
-  { to: '/proyectos', text: 'Proyectos' },
-  { to: '/habilidades', text: 'Habilidades' },
-  { to: '/contacto', text: 'Contacto' },
-  { to: '/curriculum', text: 'Perfil' },
+  { to: "/", text: "Inicio" },
+  { to: "/proyectos", text: "Proyectos" },
+  { to: "/habilidades", text: "Habilidades" },
+  { to: "/contacto", text: "Contacto" },
+  { to: "/curriculum", text: "Perfil" },
 ];
 
 export const Navbar = () => {
@@ -29,12 +39,14 @@ export const Navbar = () => {
     <div>
       <AppBar position="static" sx={{ boxShadow: 0 }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{ flexGrow: 1, textAlign: "center" }}
+          >
             Mundo del Desarrollo Web
           </Typography>
-          <Button onClick={handleDrawerToggle}>
-            Menú
-          </Button>
+          <Button onClick={handleDrawerToggle}>Menú</Button>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -42,9 +54,14 @@ export const Navbar = () => {
             onClick={handleDrawerToggle}
             sx={{ mr: 2 }}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-              <path d="M0 0h24v24H0V0z" fill="none"/>
-              <path d="M3 18h18v-2H3v2zm0-8h18v-2H3v2zm0-8h18v-2H3v2z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path d="M0 0h24v24H0V0z" fill="none" />
+              <path d="M3 18h18v-2H3v2zm0-8h18v-2H3v2zm0-8h18v-2H3v2z" />
             </svg>
           </IconButton>
         </Toolbar>
@@ -53,24 +70,18 @@ export const Navbar = () => {
         anchor="right"
         open={open}
         onClose={handleDrawerToggle}
-        sx={{ width: 250, backgroundColor: '#333' }}
+        sx={{ width: 250, backgroundColor: "#333" }}
       >
-        <List sx={{ padding: 0, margin: 0 }}>
-          {renderMenuItems()}
-        </List>
+        <List sx={{ padding: 0, margin: 0 }}>{renderMenuItems()}</List>
       </Drawer>
       <Box
         sx={{
           flexGrow: 1,
-          display: { xs: 'none', md: 'flex' },
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: { xs: "none", md: "flex" },
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      >
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
-          Mundo del Desarrollo Web
-        </Typography>
-      </Box>
+      ></Box>
     </div>
   );
 };
