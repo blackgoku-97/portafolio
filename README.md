@@ -39,6 +39,7 @@ Antes de proceder, asegúrate de tener estos programas en el equipo:
 
 * JavaScript: Lenguaje de programación utilizado para el desarrollo.
 * CSS: Lenguaje de Hojas de Estilo.
+* MUI: Biblioteca CSS (Material User Interface)
 * HTML: Lenguaje de Marcado de Texto.
 * React: Biblioteca de Facebook y para desarrollar aplicaciones.
 * React Router: Libreria para la navegación de componentes.

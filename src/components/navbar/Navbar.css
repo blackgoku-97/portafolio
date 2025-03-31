@@ -1,9 +1,0 @@
-@media (max-width: 992px) {
-  .navbar-nav {
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .nav-link {
-    padding: 0.5rem;
-  }
-}

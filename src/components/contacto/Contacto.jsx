@@ -1,29 +1,114 @@
-export const Contacto = () => {
+import { Grid, Typography, Card, Stack, Link } from "@mui/material";
 
+export const Contacto = () => {
   return (
-    <div className="text-center">
-      <h1 className="mb-5">¡Contáctame!</h1>
-      <p className='mb-5'>Puedes contactarme a través de los siguientes medios:</p>
-      <div className="row justify-content-center">
-        <div className="col-md-3 mb-3">
-          <a href="https://www.linkedin.com/in/ricardo-perez-a31474229/" target="_blank">
-            <img className='w-25' src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" />
-          </a>
-          <h5 className="mt-3">LinkedIn</h5>
-        </div>
-        <div className="col-md-3 mb-3">
-          <a href="https://github.com/blackgoku-97" target="_blank">
-            <img className='w-25' src="https://skillicons.dev/icons?i=github" alt="GitHub" />
-          </a>
-          <h5 className="mt-3">GitHub</h5>
-        </div>
-        <div className="col-md-3 mb-3">
-          <a href="https://app.aluracursos.com/emprega-one/profile/rpe19971210" target="_blank">
-            <img className='w-25' src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.png" alt="Alura Latam" />
-          </a>
-          <h5 className="mt-3">EmpleaOne</h5>
-        </div>
-      </div>
-    </div>
-  )
-}
+    <Grid
+      container
+      spacing={2}
+      sx={{ mt: 5, gap: 2, justifyContent: "center" }}
+    >
+      <Grid size={{ xs: 12 }}>
+        <Typography variant="h3" align="center">
+          ¡Contáctame!
+        </Typography>
+        <Typography variant="p" align="center" display={"block"} sx={{ mt: 2 }}>
+          Puedes contactarme a través de los siguientes medios:
+        </Typography>
+      </Grid>
+      <Grid
+        size={{ xs: 12 }}
+        container
+        spacing={2}
+        sx={{ mt: 5, gap: 2, justifyContent: "center" }}
+      >
+        <Grid size={{ xs: 2 }}>
+          <Card
+            sx={{
+              p: 2,
+              mb: 2,
+              borderRadius: 0,
+              boxShadow: "none",
+              border: "none",
+              backgroundColor: "transparent",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Stack alignItems="center">
+              <Link
+                href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://skillicons.dev/icons?i=linkedin"
+                  alt="LinkedIn"
+                />
+              </Link>
+              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
+                LinkedIn
+              </Typography>
+            </Stack>
+          </Card>
+        </Grid>
+        <Grid size={{ xs: 2 }}>
+          <Card
+            sx={{
+              p: 2,
+              mb: 2,
+              borderRadius: 0,
+              boxShadow: "none",
+              border: "none",
+              backgroundColor: "transparent",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Stack alignItems="center">
+              <Link
+                href="https://github.com/blackgoku-97"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+              </Link>
+              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
+                GitHub
+              </Typography>
+            </Stack>
+          </Card>
+        </Grid>
+        <Grid size={{ xs: 1 }}>
+          <Card
+            sx={{
+              p: 2,
+              mb: 2,
+              borderRadius: 0,
+              boxShadow: "none",
+              border: "none",
+              backgroundColor: "transparent",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Stack alignItems="center">
+              <Link
+                href="https://app.aluracursos.com/emprega-one/profile/rpe19971210"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.png"
+                  alt="Alura Latam"
+                />
+              </Link>
+              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
+                EmpleaOne
+              </Typography>
+            </Stack>
+          </Card>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+};
