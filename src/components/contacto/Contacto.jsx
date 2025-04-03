@@ -8,7 +8,7 @@ export const Contacto = () => {
       sx={{ mt: 5, gap: 2, justifyContent: "center" }}
     >
       <Grid size={{ xs: 12 }}>
-        <Typography variant="h3" align="center">
+        <Typography variant="h3" align="center" sx={{ mt: 5 }}>
           ¡Contáctame!
         </Typography>
         <Typography variant="p" align="center" display={"block"} sx={{ mt: 2 }}>
