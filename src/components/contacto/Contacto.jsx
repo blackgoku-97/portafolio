@@ -21,7 +21,7 @@ export const Contacto = () => {
         spacing={2}
         sx={{ mt: 5, gap: 2, justifyContent: "center" }}
       >
-        <Grid size={{ xs: 2 }}>
+        <Grid size={{ xs: 4, sm: 2, md: 1 }}>
           <Card
             sx={{
               p: 2,
@@ -30,8 +30,6 @@ export const Contacto = () => {
               boxShadow: "none",
               border: "none",
               backgroundColor: "transparent",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <Stack alignItems="center">
@@ -43,6 +41,8 @@ export const Contacto = () => {
                 <img
                   src="https://skillicons.dev/icons?i=linkedin"
                   alt="LinkedIn"
+                  width={64}
+                  height={64}
                 />
               </Link>
               <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
@@ -51,7 +51,7 @@ export const Contacto = () => {
             </Stack>
           </Card>
         </Grid>
-        <Grid size={{ xs: 2 }}>
+        <Grid size={{ xs: 4, sm: 2, md: 1 }}>
           <Card
             sx={{
               p: 2,
@@ -60,8 +60,6 @@ export const Contacto = () => {
               boxShadow: "none",
               border: "none",
               backgroundColor: "transparent",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <Stack alignItems="center">
@@ -70,7 +68,12 @@ export const Contacto = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+                <img
+                  src="https://skillicons.dev/icons?i=github"
+                  alt="GitHub"
+                  width={64}
+                  height={64}
+                />
               </Link>
               <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
                 GitHub
@@ -78,7 +81,7 @@ export const Contacto = () => {
             </Stack>
           </Card>
         </Grid>
-        <Grid size={{ xs: 1 }}>
+        <Grid size={{ xs: 4, sm: 2, md: 1 }}>
           <Card
             sx={{
               p: 2,
@@ -87,8 +90,6 @@ export const Contacto = () => {
               boxShadow: "none",
               border: "none",
               backgroundColor: "transparent",
-              display: "flex",
-              justifyContent: "space-between",
             }}
           >
             <Stack alignItems="center">
@@ -100,6 +101,8 @@ export const Contacto = () => {
                 <img
                   src="https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.png"
                   alt="Alura Latam"
+                  width={64}
+                  height={64}
                 />
               </Link>
               <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
