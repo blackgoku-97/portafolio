@@ -15,24 +15,13 @@ export const Lenguajes = () => {
         Lenguajes
       </Typography>
       <Grid container spacing={2} sx={{ mt: 2, gap: 2, justifyContent: 'center' }}>
-        <Grid size={{ xs: 7 }}>
-          <Card
-            sx={{
-              p: 2,
-              mb: 2,
-              borderRadius: 0,
-              boxShadow: "none",
-              border: "none",
-              backgroundColor: "transparent",
-              display: 'flex',
-              justifyContent: 'space-between',
-            }}
-          >
-            {tecnologias.map((tecnologia, index) => (
-              <Tecnologia key={index} icon={tecnologia.icon} nombre={tecnologia.nombre} />
-            ))}
-          </Card>
-        </Grid>
+        {tecnologias.map((tecnologia, index) => (
+          <Grid key={index} size={{ xs: 6, sm: 3, md: 2 }}>
+            <Card sx={{ p: 2, mb: 2, borderRadius: 0, boxShadow: "none", border: "none", backgroundColor: "transparent" }}>
+              <Tecnologia icon={tecnologia.icon} nombre={tecnologia.nombre} />
+            </Card>
+          </Grid>
+        ))}
       </Grid>
     </Grid>
   );
