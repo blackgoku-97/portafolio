@@ -3,3 +3,4 @@ export * from './Entornos';
 export * from './Frameworks';
 export * from './Herramientas';
 export * from './Lenguajes';
+export * from './Tecnologia';

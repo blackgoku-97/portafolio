@@ -1,4 +1,12 @@
 import { Card, Grid, Stack, Typography } from '@mui/material';
+import { Tecnologia } from './Tecnologia';
+
+const tecnologias = [
+  { icon: 'html', nombre: 'HTML 5' },
+  { icon: 'css', nombre: 'CSS 3' },
+  { icon: 'javascript', nombre: 'JavaScript' },
+  { icon: 'java', nombre: 'Java' },
+];
 
 export const Lenguajes = () => {
   return (
@@ -20,45 +28,12 @@ export const Lenguajes = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=html`}
-                alt="HTML 5"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                HTML 5
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=css`}
-                alt="CSS 3"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                CSS 3
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=javascript`}
-                alt="JavaScript"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                JavaScript
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=java`}
-                alt="Java"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Java
-              </Typography>
-            </Stack>
+            {tecnologias.map((tecnologia, index) => (
+              <Tecnologia key={index} icon={tecnologia.icon} nombre={tecnologia.nombre} />
+            ))}
           </Card>
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
