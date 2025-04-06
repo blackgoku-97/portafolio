@@ -1,4 +1,10 @@
-import { Card, Grid, Stack, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
+import { Tecnologia } from './Tecnologia';
+
+const entornos = [
+  { icon: 'vscode', nombre: 'Visual Studio Code' },
+  { icon: 'idea', nombre: 'IntelliJ IDEA' },
+];
 
 export const Entornos = () => {
   return (
@@ -17,30 +23,16 @@ export const Entornos = () => {
               border: "none",
               backgroundColor: "transparent",
               display: 'flex',
-              justifyContent: 'space-between',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=vscode`}
-                alt="Visual Studio Code"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Visual Studio Code
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=idea`}
-                alt="IntelliJ IDEA"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                IntelliJ IDEA
-              </Typography>
-            </Stack>
+            {entornos.map((entorno, index) => (
+              <Tecnologia key={index} icon={entorno.icon} nombre={entorno.nombre} />
+            ))}
           </Card>
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
-import { Card, Grid, Stack, Typography } from '@mui/material';
-import Tecnologia from './Tecnologia';
+import { Card, Grid, Typography } from '@mui/material';
+import { Tecnologia } from './Tecnologia';
 
 const databases = [
   { icon: 'mysql', nombre: 'MySQL' },
