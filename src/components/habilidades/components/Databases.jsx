@@ -1,4 +1,10 @@
 import { Card, Grid, Stack, Typography } from '@mui/material';
+import Tecnologia from './Tecnologia';
+
+const databases = [
+  { icon: 'mysql', nombre: 'MySQL' },
+  { icon: 'postgresql', nombre: 'PostgreSQL' },
+];
 
 export const Databases = () => {
   return (
@@ -17,30 +23,16 @@ export const Databases = () => {
               border: "none",
               backgroundColor: "transparent",
               display: 'flex',
-              justifyContent: 'space-between',
+              flexDirection: 'column',
+              alignItems: 'center',
             }}
           >
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=mysql`}
-                alt="MySQL"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                MySQL
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=postgresql`}
-                alt="PostgreSQL"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                PostgreSQL
-              </Typography>
-            </Stack>
+            {databases.map((database, index) => (
+              <Tecnologia key={index} icon={database.icon} nombre={database.nombre} />
+            ))}
           </Card>
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
