@@ -1,4 +1,13 @@
-import { Card, Grid, Stack, Typography } from '@mui/material';
+import { Card, Grid, Typography } from '@mui/material';
+import { Tecnologia } from './Tecnologia';
+
+const herramientas = [
+  { icon: 'git', nombre: 'Git' },
+  { icon: 'github', nombre: 'GitHub' },
+  { icon: 'vite', nombre: 'Vite' },
+  { icon: 'postman', nombre: 'Postman' },
+  { icon: 'vitest', nombre: 'Vitest' },
+];
 
 export const Herramientas = () => {
   return (
@@ -20,54 +29,12 @@ export const Herramientas = () => {
               justifyContent: 'space-between',
             }}
           >
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=git`}
-                alt="Git"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Git
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=github`}
-                alt="GitHub"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                GitHub
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=vite`}
-                alt="Vite"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Vite
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=postman`}
-                alt="Postman"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Postman
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <img
-                src={`https://skillicons.dev/icons?i=vitest`}
-                alt="Vitest"
-              />
-              <Typography variant="h6" sx={{ mt: 1, color: "white" }}>
-                Vitest
-              </Typography>
-            </Stack>
+            {herramientas.map((herramienta, index) => (
+              <Tecnologia key={index} icon={herramienta.icon} nombre={herramienta.nombre} />
+            ))}
           </Card>
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};
