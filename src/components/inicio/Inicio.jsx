@@ -41,7 +41,7 @@ const Styles = {
     marginLeft: 1,
     '@media (max-width: 768px)': {
       fontSize: 24,
-      marginLeft: 0,
+      marginLeft: 5,
     },
   },
   profesion: {
