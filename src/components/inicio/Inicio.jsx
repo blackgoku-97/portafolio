@@ -20,7 +20,7 @@ const Styles = {
   tituloNombre: {
     display: "flex",
     flexDirection: "row",
-    alignItems: "baseline",
+    alignItems: "center",
   },
   title: {
     fontSize: 24,
