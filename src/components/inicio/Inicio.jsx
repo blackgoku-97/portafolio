@@ -13,20 +13,17 @@ const Styles = {
   texto: {
     display: "flex",
     flexDirection: "column",
+    alignItems: "center",
     justifyContent: "center",
-    alignItems: "flex-start",
-    marginRight: 30,
+    height: "100vh",
   },
   tituloNombre: {
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     alignItems: "center",
-    flexWrap: "nowrap",
-    gap: 10,
   },
   title: {
     fontSize: 24,
-    marginRight: 1,
     '@media (max-width: 768px)': {
       fontSize: 20,
       whiteSpace: "nowrap",
@@ -36,11 +33,16 @@ const Styles = {
   nombre: {
     fontSize: 36,
     fontWeight: "bold",
-    marginTop: -5,
+    marginLeft: 1,
     '@media (max-width: 768px)': {
       fontSize: 28,
       marginLeft: 20,
     },
+  },
+  profesion: {
+    fontSize: 18,
+    color: "#666",
+    marginTop: 20,
   },
   imagen: {
     width: "40%",
@@ -64,6 +66,7 @@ const Header = ({ title, nombre }) => (
       <Box sx={Styles.title}>{title}</Box>
       <Box sx={Styles.nombre}>{nombre}</Box>
     </Box>
+    <Box sx={Styles.profesion}>Desarrollador web</Box>
   </Box>
 );
 
@@ -82,4 +85,4 @@ export const Inicio = () => {
       </Box>
     </Box>
   );
-};
+}
