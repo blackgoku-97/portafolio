@@ -11,6 +11,7 @@ const Styles = {
     padding: 20,
     '@media (max-width: 768px)': {
       justifyContent: "flex-start",
+      flexDirection: "column",
     },
   },
   texto: {
