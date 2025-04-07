@@ -40,7 +40,7 @@ const Styles = {
     },
   },
   profesion: {
-    fontSize: 18,
+    fontSize: 24,
     color: "#fff",
     marginTop: 5,
   },
@@ -48,6 +48,7 @@ const Styles = {
     width: "40%",
     maxWidth: 300,
     textAlign: "center",
+    marginLeft: 30,
     '@media (max-width: 768px)': {
       width: "60%",
     },
