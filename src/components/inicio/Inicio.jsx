@@ -30,6 +30,7 @@ const Styles = {
     '@media (max-width: 768px)': {
       fontSize: 20,
       whiteSpace: "nowrap",
+      marginLeft: 10,
     },
   },
   nombre: {
