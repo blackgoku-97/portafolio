@@ -29,6 +29,8 @@ const Styles = {
     '@media (max-width: 768px)': {
       flexWrap: "wrap",
       justifyContent: "flex-start",
+      alignItems: "flex-start",
+      width: "100%",
     },
   },
   title: {
@@ -46,6 +48,7 @@ const Styles = {
     '@media (max-width: 768px)': {
       fontSize: 24,
       marginLeft: 10,
+      textAlign: "left",
     },
   },
   profesion: {
