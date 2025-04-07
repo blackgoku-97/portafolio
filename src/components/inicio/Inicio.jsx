@@ -9,6 +9,9 @@ const Styles = {
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
+    '@media (max-width: 768px)': {
+      justifyContent: "flex-start",
+    },
   },
   texto: {
     display: "flex",
