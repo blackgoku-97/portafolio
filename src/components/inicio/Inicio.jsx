@@ -23,6 +23,9 @@ const Styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    '@media (max-width: 768px)': {
+      flexWrap: "wrap",
+    },
   },
   title: {
     fontSize: 24,
@@ -53,7 +56,7 @@ const Styles = {
     width: "40%",
     maxWidth: 300,
     textAlign: "center",
-    marginLeft: 30,
+    marginLeft: 20,
     '@media (max-width: 768px)': {
       width: "60%",
     },
