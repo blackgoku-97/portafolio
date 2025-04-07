@@ -2,27 +2,32 @@ import { Box } from '@mui/material';
 
 const Styles = {
   header: {
-    width: "50%",
-    height: "50vh",
+    width: "100%",
+    height: "auto",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
+    padding: 20,
+  },
+  texto: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    marginRight: 30,
   },
   title: {
-    fontSize: 36,
-    marginBottom: 20,
+    fontSize: 24,
+    marginBottom: 10,
   },
   nombre: {
-    fontSize: 48,
-    marginBottom: 20,
-    fontWeight: "bold",
-    marginRight: 5,
+    fontSize: 24,
   },
   imagen: {
     width: "40%",
+    maxWidth: 300,
     textAlign: "center",
-    marginLeft: 10,
   },
 };
 
@@ -33,14 +38,13 @@ const Imagen = ({ imagen }) => (
 );
 
 const Header = ({ title, nombre }) => (
-  <Box sx={Styles.header}>
+  <Box sx={Styles.texto}>
     <Box sx={Styles.title}>{title}</Box>
     <Box sx={Styles.nombre}>{nombre}</Box>
   </Box>
 );
 
 export const Inicio = () => {
-
   const datos = {
     title: "👋Hola, soy",
     nombre: "Ricardo",
@@ -48,14 +52,7 @@ export const Inicio = () => {
   };
 
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Box sx={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
       <Box sx={Styles.header}>
         <Header title={datos.title} nombre={datos.nombre} />
         <Imagen imagen={datos.imagen} />
