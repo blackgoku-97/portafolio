@@ -62,7 +62,8 @@ const Styles = {
     color: "#fff",
     marginTop: 5,
     '@media (max-width: 768px)': {
-      fontSize: 16
+      fontSize: 16,
+      marginTop: 0,
     },
   },
   imagen: {
