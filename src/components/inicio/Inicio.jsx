@@ -36,6 +36,7 @@ const Styles = {
   nombre: {
     fontSize: 36,
     fontWeight: "bold",
+    marginTop: -5,
     '@media (max-width: 768px)': {
       fontSize: 28,
       marginLeft: 20,
