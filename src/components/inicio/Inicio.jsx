@@ -20,6 +20,7 @@ const Styles = {
     padding: 20,
     '@media (max-width: 768px)': {
       alignItems: "flex-start",
+      paddingLeft: 0,
     }
   },
   tituloNombre: {
@@ -31,6 +32,7 @@ const Styles = {
       justifyContent: "flex-start",
       alignItems: "flex-start",
       width: "100%",
+      marginLeft: 0
     },
   },
   title: {
