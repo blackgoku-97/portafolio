@@ -22,7 +22,7 @@ const Styles = {
     flexDirection: "row",
     alignItems: "center",
     flexWrap: "wrap",
-    gap: 1,
+    gap: 10,
   },
   title: {
     fontSize: 24,
