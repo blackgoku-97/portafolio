@@ -33,7 +33,10 @@ const Imagen = ({ imagen }) => (
 );
 
 const Header = ({ title, nombre }) => (
-  <Box sx={Styles.header}>
+  <Box sx={{
+    flexGrow: 1, 
+    sx: Styles.header,
+  }}>
     <Box sx={Styles.title}>{title}</Box>
     <Box sx={Styles.nombre}>{nombre}</Box>
   </Box>
