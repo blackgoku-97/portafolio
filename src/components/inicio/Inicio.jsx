@@ -19,7 +19,7 @@ const Styles = {
   },
   tituloNombre: {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
     flexWrap: "nowrap",
     gap: 10,
