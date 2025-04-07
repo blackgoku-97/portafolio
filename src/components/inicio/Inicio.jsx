@@ -18,6 +18,9 @@ const Styles = {
     height: "100vh",
     maxWidth: "80%",
     padding: 20,
+    '@media (max-width: 768px)': {
+      alignItems: "flex-start",
+    }
   },
   tituloNombre: {
     display: "flex",
