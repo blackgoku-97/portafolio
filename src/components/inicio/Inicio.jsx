@@ -35,7 +35,8 @@ const Styles = {
       justifyContent: "flex-start",
       alignItems: "flex-start",
       width: "100%",
-      marginLeft: 0
+      marginLeft: 0,
+      marginBottom: 10,
     },
   },
   title: {
