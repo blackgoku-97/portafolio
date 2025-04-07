@@ -84,22 +84,12 @@ const Imagen = ({ imagen }) => (
 );
 
 const Header = ({ title, nombre }) => (
-  <Box
-    sx={{
-      ...Styles.texto,
-      width: "100%",
-      "@media (max-width: 768px)": {
-        flexDirection: "column",
-      },
-    }}
-  >
-    <Box sx={Styles.tituloNombre}>
+  <Box sx={{ ...Styles.texto, width: "100%", "@media (max-width: 768px)": { flexDirection: "column", alignItems: "flex-start" } }}>
+    <Box sx={{ ...Styles.tituloNombre, "@media (max-width: 768px)": { flexDirection: "column" } }}>
       <Box sx={Styles.title}>{title}</Box>
       <Box sx={Styles.nombre}>{nombre}</Box>
     </Box>
-    <Box sx={Styles.profesion} style={{ marginTop: 5 }}>
-      Desarrollador web
-    </Box>
+    <Box sx={Styles.profesion} style={{ marginTop: 5 }}>Desarrollador web</Box>
   </Box>
 );
 
