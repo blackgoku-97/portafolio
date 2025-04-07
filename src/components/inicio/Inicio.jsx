@@ -41,8 +41,8 @@ const Styles = {
   },
   profesion: {
     fontSize: 18,
-    color: "#666",
-    marginTop: 20,
+    color: "#fff",
+    marginTop: 5,
   },
   imagen: {
     width: "40%",
@@ -66,7 +66,7 @@ const Header = ({ title, nombre }) => (
       <Box sx={Styles.title}>{title}</Box>
       <Box sx={Styles.nombre}>{nombre}</Box>
     </Box>
-    <Box sx={Styles.profesion}>Desarrollador web</Box>
+    <Box sx={Styles.profesion} style={{ marginTop: 5 }}>Desarrollador web</Box>
   </Box>
 );
 
