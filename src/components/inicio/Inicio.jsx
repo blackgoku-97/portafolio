@@ -84,7 +84,7 @@ const Imagen = ({ imagen }) => (
 );
 
 const Header = ({ title, nombre }) => (
-  <Box sx={{ ...Styles.texto, width: "100%", '@media (max-width: 768px)': { padding: 0 } }}>
+  <Box sx={{ ...Styles.texto, width: "100%", '@media (max-width: 768px)': { padding: 0, display: "flex", flexDirection: "column" } }}>
     <Box sx={Styles.tituloNombre}>
       <Box sx={Styles.title}>{title}</Box>
       <Box sx={Styles.nombre}>{nombre}</Box>
