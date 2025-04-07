@@ -36,7 +36,7 @@ const Styles = {
       alignItems: "flex-start",
       width: "100%",
       marginLeft: 0,
-      marginBottom: 10,
+      marginBottom: 5,
     },
   },
   title: {
@@ -63,7 +63,7 @@ const Styles = {
     marginTop: 5,
     '@media (max-width: 768px)': {
       fontSize: 16,
-      marginTop: 0,
+      marginTop: 5,
     },
   },
   imagen: {
