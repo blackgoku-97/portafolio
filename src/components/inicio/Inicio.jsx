@@ -17,12 +17,18 @@ const Styles = {
     alignItems: "flex-start",
     marginRight: 30,
   },
+  tituloNombre: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "baseline",
+  },
   title: {
     fontSize: 24,
-    marginBottom: 10,
+    marginRight: 1,
   },
   nombre: {
-    fontSize: 24,
+    fontSize: 36,
+    fontWeight: "bold",
   },
   imagen: {
     width: "40%",
@@ -39,8 +45,10 @@ const Imagen = ({ imagen }) => (
 
 const Header = ({ title, nombre }) => (
   <Box sx={Styles.texto}>
-    <Box sx={Styles.title}>{title}</Box>
-    <Box sx={Styles.nombre}>{nombre}</Box>
+    <Box sx={Styles.tituloNombre}>
+      <Box sx={Styles.title}>{title}</Box>
+      <Box sx={Styles.nombre}>{nombre}</Box>
+    </Box>
   </Box>
 );
 
