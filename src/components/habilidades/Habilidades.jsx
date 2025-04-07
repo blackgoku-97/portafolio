@@ -3,7 +3,7 @@ import { Databases, Entornos, Frameworks, Herramientas, Lenguajes } from './comp
 
 export const Habilidades = () => {
   return (
-    <Container maxWidth="lg" sx={{ mt: 5 }}>
+    <Container maxWidth="lg" sx={{ mt: 8 }}>
       <Typography variant="h1" align="center" sx={{ mb: 2 }}>
         Habilidades
       </Typography>
