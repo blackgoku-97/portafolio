@@ -26,14 +26,14 @@ const Styles = {
     fontSize: 24,
     marginRight: 1,
     '@media (max-width: 768px)': {
-      fontSize: 18,
+      fontSize: 20,
     },
   },
   nombre: {
     fontSize: 36,
     fontWeight: "bold",
     '@media (max-width: 768px)': {
-      fontSize: 24,
+      fontSize: 28,
     },
   },
   imagen: {
@@ -56,7 +56,7 @@ const Header = ({ title, nombre }) => (
   <Box sx={Styles.texto}>
     <Box sx={Styles.tituloNombre}>
       <Box sx={Styles.title}>{title}</Box>
-      <Box sx={Styles.nombre}>{nombre}</Box>
+      <Box sx={{...Styles.nombre, marginTop: {xs: -5, sm: 0}}}>{nombre}</Box>
     </Box>
   </Box>
 );
