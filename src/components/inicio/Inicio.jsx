@@ -25,7 +25,7 @@ const Styles = {
   title: {
     fontSize: 24,
     '@media (max-width: 768px)': {
-      fontSize: 20,
+      fontSize: 18,
       whiteSpace: "nowrap",
       marginLeft: 10,
     },
@@ -35,7 +35,7 @@ const Styles = {
     fontWeight: "bold",
     marginLeft: 1,
     '@media (max-width: 768px)': {
-      fontSize: 28,
+      fontSize: 24,
       marginLeft: 20,
     },
   },
@@ -43,6 +43,9 @@ const Styles = {
     fontSize: 24,
     color: "#fff",
     marginTop: 5,
+    '@media (max-width: 768px)': {
+      fontSize: 16
+    },
   },
   imagen: {
     width: "40%",
