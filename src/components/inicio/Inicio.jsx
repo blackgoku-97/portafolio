@@ -25,15 +25,24 @@ const Styles = {
   title: {
     fontSize: 24,
     marginRight: 1,
+    '@media (max-width: 768px)': {
+      fontSize: 18,
+    },
   },
   nombre: {
     fontSize: 36,
     fontWeight: "bold",
+    '@media (max-width: 768px)': {
+      fontSize: 24,
+    },
   },
   imagen: {
     width: "40%",
     maxWidth: 300,
     textAlign: "center",
+    '@media (max-width: 768px)': {
+      width: "60%",
+    },
   },
 };
 
