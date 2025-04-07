@@ -21,14 +21,14 @@ const Styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    flexWrap: "wrap",
+    flexWrap: "nowrap",
     gap: 10,
   },
   title: {
     fontSize: 24,
     marginRight: 1,
     '@media (max-width: 768px)': {
-      fontSize: 20,
+      fontSize: 18,
     },
   },
   nombre: {
