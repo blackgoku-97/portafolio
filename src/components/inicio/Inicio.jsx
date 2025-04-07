@@ -59,7 +59,7 @@ const Header = ({ title, nombre }) => (
   <Box sx={Styles.texto}>
     <Box sx={Styles.tituloNombre}>
       <Box sx={Styles.title}>{title}</Box>
-      <Box sx={{...Styles.nombre, marginTop: {xs: -5, sm: 0}}}>{nombre}</Box>
+      <Box sx={Styles.nombre}>{nombre}</Box>
     </Box>
   </Box>
 );
