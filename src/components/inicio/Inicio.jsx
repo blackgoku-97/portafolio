@@ -25,6 +25,7 @@ const Styles = {
     alignItems: "center",
     '@media (max-width: 768px)': {
       flexWrap: "wrap",
+      justifyContent: "flex-start",
     },
   },
   title: {
