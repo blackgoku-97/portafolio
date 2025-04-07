@@ -16,6 +16,8 @@ const Styles = {
     alignItems: "center",
     justifyContent: "center",
     height: "100vh",
+    maxWidth: "80%",
+    padding: 20,
   },
   tituloNombre: {
     display: "flex",
