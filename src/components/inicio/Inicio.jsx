@@ -28,7 +28,7 @@ const Styles = {
     fontSize: 24,
     marginRight: 1,
     '@media (max-width: 768px)': {
-      fontSize: 18,
+      fontSize: 22,
     },
   },
   nombre: {
