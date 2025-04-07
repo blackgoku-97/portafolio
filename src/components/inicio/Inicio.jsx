@@ -22,7 +22,7 @@ const Styles = {
     flexDirection: "row",
     alignItems: "center",
     flexWrap: "wrap",
-    gap: 10,
+    gap: 1,
   },
   title: {
     fontSize: 24,
@@ -36,6 +36,7 @@ const Styles = {
     fontWeight: "bold",
     '@media (max-width: 768px)': {
       fontSize: 28,
+      marginLeft: 20,
     },
   },
   imagen: {
