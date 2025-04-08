@@ -4,7 +4,7 @@ import { Databases, Entornos, Frameworks, Herramientas, Lenguajes } from './comp
 export const Habilidades = () => {
   return (
     <Container maxWidth="lg" sx={{ mt: 8 }}>
-      <Typography variant="h1" align="center" sx={{ mb: 2 }}>
+      <Typography variant="h2" align="center" sx={{ mb: 2 }}>
         Habilidades
       </Typography>
       <Grid container spacing={2} sx={{ mb: 5 }}>
