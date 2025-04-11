@@ -1,25 +1,13 @@
-import { Box } from "@mui/material";
-import { Header, Imagen, Styles } from './components';
+import { Box, Typography } from '@mui/material';
 
 export const Inicio = () => {
-  const datos = {
-    title: "👋Hola, soy",
-    nombre: "Ricardo",
-    imagen: "assets/img/coding.png",
-  };
-
   return (
-    <Box
-      sx={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Box sx={Styles.header}>
-        <Header title={datos.title} nombre={datos.nombre} />
-        <Imagen imagen={datos.imagen} />
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
+      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Typography variant="h4" align="center" sx={{ marginRight: 20 }}>
+          ¡Bienvenido a mi sitio web! 👋 
+        </Typography>
+        <img src="assets/img/coding.png" alt="Imagen de bienvenida" style={{ width: 400, height: 400, marginLeft: 20 }} />
       </Box>
     </Box>
   );
