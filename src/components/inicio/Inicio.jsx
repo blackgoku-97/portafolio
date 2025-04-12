@@ -7,7 +7,7 @@ export const Inicio = () => {
       <Grid container spacing={{ xs: 4, md: 8 }} direction={{ xs: "column", md: "row" }} alignItems="center" justifyContent="center"
       >
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant="h4" align="center" sx={{ marginBottom: { xs: 4, md: 0 } }}
+          <Typography variant="h4" align="center" sx={{ width: "100%", marginBottom: { xs: 4, md: 0 } }}
           >
             ¡Hola Soy Ricardo! 👋 Desarrollador Web Junior
           </Typography>
