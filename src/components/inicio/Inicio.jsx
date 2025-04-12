@@ -4,12 +4,13 @@ export const Inicio = () => {
   return (
     <Container maxWidth="lg" sx={{ height: "80vh", display: "flex", justifyContent: "center", alignItems: "center", marginTop: { xs: 10, md: 0 }, }}
     >
-      <Grid container spacing={2} direction={{ xs: "column", md: "row" }} alignItems="center" justifyContent="center"
+      <Grid container spacing={{ xs: 4, md: 8 }} direction={{ xs: "column", md: "row" }} alignItems="center" justifyContent="center"
       >
         <Grid size={{ xs: 12, md: 6 }}>
-          <Typography variant="h4" align="center" sx={{ marginBottom: { xs: 2, md: 0 } }}
+          <Typography variant="h4" align="center" sx={{ marginBottom: { xs: 4, md: 0 } }}
           >
-            ¡Hola Soy Ricardo! 👋 <br /> Desarrollador Web Junior
+            ¡Hola Soy Ricardo! 👋 
+            Desarrollador Web Junior
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 6 }} sx={{ display: "flex", justifyContent: "center" }}
