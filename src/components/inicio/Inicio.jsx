@@ -9,7 +9,8 @@ export const Inicio = () => {
         alignItems: { xs: 'center', md: 'center' }
       }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: { xs: 2, md: 0 }, marginRight: { md: 20 } }}>
-          ¡Bienvenido a mi sitio web! 👋
+          ¡Hola Soy Ricardo! 👋
+          <br /> Desarrollador Web Junior
         </Typography>
         <img src="assets/img/coding.png" alt="Imagen de bienvenida" style={{
           width: { xs: 250, md: 400 },
