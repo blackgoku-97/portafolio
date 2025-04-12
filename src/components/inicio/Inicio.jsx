@@ -12,7 +12,13 @@ export const Inicio = () => {
         marginTop: { xs: 10, md: 0 },
       }}
     >
-      <Grid container spacing={2} alignItems="center" justifyContent="center">
+      <Grid
+        container
+        spacing={2}
+        direction={{ xs: "column", md: "row" }}
+        alignItems="center"
+        justifyContent="center"
+      >
         <Grid size={{ xs: 12, md: 6 }}>
           <Typography
             variant="h4"
