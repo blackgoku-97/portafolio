@@ -26,10 +26,8 @@ export const Experiencia = () => {
           <ListItem>
             <ListItemText align="center" primary="Desarrollador Web, Proyectos de AlumniOne (2024-2025)" secondary={
               <Typography variant="body2" sx={{ fontSize: '14px', opacity: 1 }}>
-                Desarrollo de un Conversor de Monedas Utilizando Java y Exchange Rates API. 
-                <p></p> 
-                Creación de una libreria y autores Utilizando Java y Spring y PostgreSQL. 
-                <p></p> 
+                Desarrollo de un Conversor de Monedas Utilizando Java y Exchange Rates API.<br />
+                Creación de una libreria y autores Utilizando Java y Spring y PostgreSQL.<br />
                 Desarrollo de un CRUD utilizando Java y Spring para un foro Utilizando Java, Spring, MySQL
               </Typography>
             } />
