@@ -11,13 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
+*.Zone.Identifier
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.Zone.Identifier
 *.suo
 *.ntvs*
 *.njsproj
