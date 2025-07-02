@@ -57,8 +57,8 @@ export const Navbar = () => {
             sx={{
               width: esMovil ? "100%" : "auto",
               textAlign: esMovil ? "left" : "center",
-              mb: esMovil ? 1 : 0,
-              lineHeight: 1,
+              mb: esMovil ? 2 : 0,
+              lineHeight: 1
             }}
           >
             Mundo del Desarrollo Web
