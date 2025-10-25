@@ -1,19 +1,19 @@
 export default function Curriculum() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start p-10 text-white">
-      <div className="w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-amber-400 mb-6 text-center">
+    <div className="min-h-screen flex flex-col items-center justify-start p-10 bg-slate-900 text-white">
+      <div className="w-full max-w-4xl bg-slate-800/70 rounded-xl shadow-lg p-10">
+        <h1 className="text-4xl font-bold text-amber-400 mb-6 text-center tracking-wide">
           Pergamino del héroe
         </h1>
-        <p className="mb-8 text-lg text-gray-300 text-center">
+        <p className="mb-8 text-lg text-gray-300 text-center leading-relaxed">
           Este es mi currículum, un pergamino que narra mis logros, habilidades y
           aventuras profesionales.
         </p>
 
         {/* Resumen */}
-        <section className="mb-10">
+        <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-amber-300 mb-2">Resumen</h2>
-          <p className="text-gray-200">
+          <p className="text-gray-200 leading-relaxed">
             Desarrollador Freelancer Junior apasionado por el desarrollo web y mobile.
             Con una sólida formación en ingeniería informática, me caracterizo por
             ser organizado, responsable y proactivo. Estoy ansioso por unirme a un
@@ -23,27 +23,25 @@ export default function Curriculum() {
         </section>
 
         {/* Experiencia */}
-        <section className="mb-10">
+        <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-amber-300 mb-4">Experiencia</h2>
-
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-green-400">
               Desarrollador Laravel – Betech
             </h3>
             <p className="italic text-gray-400">03/2022 - 05/2022 · Concepción</p>
-            <ul className="list-disc list-inside text-gray-200 mt-2">
+            <ul className="list-disc list-inside text-gray-200 mt-2 leading-relaxed">
               <li>Desarrollo web full-stack con PHP, JavaScript, CSS y MySQL.</li>
               <li>Uso de Bootstrap para interfaces responsivas y personalizadas.</li>
               <li>Diseño de interfaces de usuario (UI) y maquetación web.</li>
             </ul>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold text-green-400">
               Desarrollador Laravel – Himce
             </h3>
             <p className="italic text-gray-400">08/2019 - 10/2019 · San Pedro de la Paz</p>
-            <ul className="list-disc list-inside text-gray-200 mt-2">
+            <ul className="list-disc list-inside text-gray-200 mt-2 leading-relaxed">
               <li>Desarrollo de aplicaciones web innovadoras.</li>
               <li>Experiencia en Laravel para aplicaciones escalables.</li>
             </ul>
@@ -51,9 +49,8 @@ export default function Curriculum() {
         </section>
 
         {/* Educación */}
-        <section className="mb-10">
+        <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-amber-300 mb-4">Educación</h2>
-
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-sky-400">
               Ingeniero Informático – Universidad Técnica de Inacap
@@ -61,7 +58,6 @@ export default function Curriculum() {
             <p className="italic text-gray-400">03/2020 - 12/2021 · Concepción - Talcahuano</p>
             <p className="text-gray-200">Modalidad: online · Estado: titulado</p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold text-sky-400">
               Analista Programador – Instituto Técnico de Inacap
@@ -72,18 +68,18 @@ export default function Curriculum() {
         </section>
 
         {/* Idiomas */}
-        <section className="mb-10">
+        <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-amber-300 mb-2">Idiomas</h2>
-          <ul className="list-disc list-inside text-gray-200">
+          <ul className="list-disc list-inside text-gray-200 leading-relaxed">
             <li>Español – Nativo</li>
             <li>Inglés – Base</li>
           </ul>
         </section>
 
         {/* Habilidades */}
-        <section className="mb-10">
+        <section>
           <h2 className="text-2xl font-bold text-amber-300 mb-2">Habilidades</h2>
-          <p className="text-gray-200">
+          <p className="text-gray-200 leading-relaxed">
             Git · GitHub · Dart · Flutter · Firebase · JavaScript · TypeScript · React
           </p>
         </section>
