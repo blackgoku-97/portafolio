@@ -87,39 +87,6 @@ export default function Curriculum() {
             Git · GitHub · Dart · Flutter · Firebase · JavaScript · TypeScript · React
           </p>
         </section>
-
-        {/* Contacto */}
-        <section>
-          <h2 className="text-2xl font-bold text-amber-300 mb-2">Encuéntrame en línea</h2>
-          <ul className="text-gray-200">
-            <li>
-              📧{" "}
-              <a href="mailto:rpe19971210@gmail.com" className="text-sky-400">
-                rpe19971210@gmail.com
-              </a>
-            </li>
-            <li>
-              ⚔️{" "}
-              <a
-                href="https://github.com/blackgoku-97"
-                target="_blank"
-                className="text-purple-400"
-              >
-                github.com/blackgoku-97
-              </a>
-            </li>
-            <li>
-              🧙‍♂️{" "}
-              <a
-                href="https://www.linkedin.com/in/ricardo-perez-a31474229"
-                target="_blank"
-                className="text-sky-400"
-              >
-                linkedin.com/in/ricardo-perez
-              </a>
-            </li>
-          </ul>
-        </section>
       </div>
     </div>
   )
