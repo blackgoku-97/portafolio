@@ -23,7 +23,7 @@ export default function Contacto() {
 
         {/* LinkedIn */}
         <a
-          href="https://www.linkedin.com/in/tuusuario"
+          href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
           target="_blank"
           rel="noreferrer"
           className="bg-black/60 border-2 border-sky-500 rounded-lg p-6 text-center
@@ -31,7 +31,7 @@ export default function Contacto() {
         >
           <div className="text-5xl mb-4">🧙‍♂️</div>
           <h2 className="text-2xl font-bold text-sky-300">LinkedIn</h2>
-          <p className="mt-2 text-gray-200">linkedin.com/in/tuusuario</p>
+          <p className="mt-2 text-gray-200">linkedin.com/in/ricardo-perez</p>
         </a>
 
         {/* GitHub */}
