@@ -21,17 +21,17 @@ export default function Contacto() {
           <p className="mt-2 text-gray-200">rpe19971210@gmail.com</p>
         </a>
 
-        {/* LinkedIn */}
+        {/* EmpleaONE */}
         <a
-          href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
+          href="https://app.aluracursos.com/emprega-one/profile/rpe19971210"
           target="_blank"
           rel="noreferrer"
           className="bg-black/60 border-2 border-sky-500 rounded-lg p-6 text-center
                      hover:scale-105 hover:shadow-lg hover:shadow-sky-500/50 transition-transform"
         >
           <div className="text-5xl mb-4">🧙‍♂️</div>
-          <h2 className="text-2xl font-bold text-sky-300">LinkedIn</h2>
-          <p className="mt-2 text-gray-200">linkedin.com/in/ricardo-perez</p>
+          <h2 className="text-2xl font-bold text-sky-300">EmpleaONE</h2>
+          <p className="mt-2 text-gray-200">rpe19971210</p>
         </a>
 
         {/* GitHub */}
@@ -43,7 +43,7 @@ export default function Contacto() {
                      hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 transition-transform"
         >
           <div className="text-5xl mb-4">⚔️</div>
-          <h2 className="text-2xl font-bold text-purple-300">GitHub</h2>
+          <h2 className="text-2xl font-bold text-purple-300">GitHub (linkedin denTro)</h2>
           <p className="mt-2 text-gray-200">github.com/blackgoku-97</p>
         </a>
       </div>
