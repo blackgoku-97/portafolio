@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.9.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.9.4",
-    "react-tsparticles": "^2.12.2",
-    "tailwindcss": "^4.1.16",
-    "tsparticles": "^3.9.1"
+    "tailwindcss": "^4.1.16"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
