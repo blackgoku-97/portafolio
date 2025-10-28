@@ -43,7 +43,7 @@ export default function Contacto() {
                      hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 transition-transform"
         >
           <div className="text-5xl mb-4">⚔️</div>
-          <h2 className="text-2xl font-bold text-purple-300">GitHub (linkedin denTro)</h2>
+          <h2 className="text-2xl font-bold text-purple-300">GitHub (linkedin dentro)</h2>
           <p className="mt-2 text-gray-200">github.com/blackgoku-97</p>
         </a>
       </div>
