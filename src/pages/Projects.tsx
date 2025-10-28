@@ -16,7 +16,7 @@ export default function Projects() {
         Proyectos Destacados
       </h1>
       <p className="mb-12 text-lg text-gray-300 text-center max-w-2xl mx-auto">
-        Algunos de los proyectos que he desarrollado, aplicando mis conocimientos en backend, mobile y arquitecturas escalables.
+        Algunos de los proyectos que he desarrollado, aplicando mis conocimientos en frontend, mobile y arquitecturas escalables.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
