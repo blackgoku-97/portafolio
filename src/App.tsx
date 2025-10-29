@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"   // 👈 aquí
 import Home from "./pages/Home"
 import Skills from "./pages/Skills"
 import Projects from "./pages/Projects"
@@ -9,9 +10,11 @@ import Contact from "./pages/Contact"
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-[#0a192f] text-white">
+      <div className="min-h-screen flex flex-col bg-[#0a192f] text-white">
         <Navbar />
-        <main className="pt-20 px-6">
+
+        {/* Contenido principal */}
+        <main className="grow pt-20 px-6">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/skills" element={<Skills />} />
@@ -20,6 +23,9 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+
+        {/* Footer siempre visible */}
+        <Footer />
       </div>
     </Router>
   )
