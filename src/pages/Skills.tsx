@@ -1,5 +1,14 @@
 import { FaNodeJs, FaReact, FaJava, FaJsSquare } from "react-icons/fa"
-import { SiTypescript, SiFlutter, SiFirebase, SiSpring } from "react-icons/si"
+import { 
+  SiTypescript, 
+  SiFlutter, 
+  SiFirebase, 
+  SiSpring, 
+  SiDart, 
+  SiMongodb, 
+  SiPostgresql, 
+  SiMysql 
+} from "react-icons/si"
 import SkillsCard from "../components/SkillsCard"
 
 export default function Skills() {
@@ -10,6 +19,7 @@ export default function Skills() {
         { name: "JavaScript", desc: "Lenguaje base para la web", icon: <FaJsSquare className="text-yellow-400" /> },
         { name: "TypeScript", desc: "Código tipado y mantenible", icon: <SiTypescript className="text-blue-400" /> },
         { name: "Java", desc: "Aplicaciones empresariales y backend", icon: <FaJava className="text-red-500" /> },
+        { name: "Dart", desc: "Lenguaje para Flutter y multiplataforma", icon: <SiDart className="text-cyan-400" /> },
       ],
     },
     {
@@ -27,9 +37,17 @@ export default function Skills() {
       ],
     },
     {
+      title: "🗄️ Bases de Datos",
+      items: [
+        { name: "MySQL", desc: "Base de datos relacional", icon: <SiMysql className="text-blue-500" /> },
+        { name: "PostgreSQL", desc: "Base de datos avanzada y escalable", icon: <SiPostgresql className="text-sky-600" /> },
+        { name: "MongoDB", desc: "Base de datos NoSQL orientada a documentos", icon: <SiMongodb className="text-green-500" /> },
+      ],
+    },
+    {
       title: "☁️ Cloud & Servicios",
       items: [
-        { name: "Firebase", desc: "Autenticación y Bases de Datos", icon: <SiFirebase className="text-orange-400" /> },
+        { name: "Firebase", desc: "Autenticación y Bases de Datos NoSQL", icon: <SiFirebase className="text-orange-400" /> },
       ],
     },
   ]
