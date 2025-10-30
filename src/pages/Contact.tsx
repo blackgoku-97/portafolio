@@ -8,7 +8,7 @@ export default function Contact() {
       name: "Correo",
       href: "mailto:rpe19971210@gmail.com",
       icon: <MdEmail />,
-      desc: "Correo electrónica",
+      desc: "Correo electrónico",
       color: "text-cyan-400",
     },
     {
@@ -28,14 +28,14 @@ export default function Contact() {
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/ricardo-perez-a31474229/",
-      icon: <FaLinkedin className="text-blue-500" />,
-      desc: "Linkedin",
+      icon: <FaLinkedin />,
+      desc: "LinkedIn",
       color: "text-blue-500",
     },
     {
       name: "WhatsApp",
       href: "https://wa.me/56931031944",
-      icon: <FaWhatsapp className="text-green-500" />,
+      icon: <FaWhatsapp />,
       desc: "WhatsApp",
       color: "text-green-500",
     },
@@ -48,7 +48,7 @@ export default function Contact() {
         Puedes escribirme para proyectos, colaboraciones o nuevas oportunidades.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 w-full max-w-6xl">
         {contacts.map((c, i) => (
           <motion.a
             key={c.name}
@@ -62,7 +62,9 @@ export default function Contact() {
             className="bg-slate-900/70 border border-cyan-500 rounded-lg p-6 text-center
                        hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/40 transition-transform"
           >
-            <div className="text-5xl mb-4 flex justify-center">{c.icon}</div>
+            <div className={`text-5xl mb-4 flex justify-center ${c.color}`}>
+              {c.icon}
+            </div>
             <h2 className="text-2xl font-bold text-cyan-300">{c.name}</h2>
             <p className="mt-2 text-gray-200">{c.desc}</p>
           </motion.a>
