@@ -1,12 +1,12 @@
 export default function Projects() {
   const projects = [
     {
-      name: "App de Prevención de Riesgos",
-      desc: "Aplicación móvil multiplataforma para reportar incidentes laborales en tiempo real.",
-      stack: ["Flutter", "Firebase", "Dart"],
-      impact: "En construccion",
+      name: "App de Transformación de Monedas",
+      desc: "Aplicación de escritorio para la transformación de monedas.",
+      stack: ["Java"],
+      impact: "Proyecto terminado",
       image: "Sin imagen",
-      link: "Sin link"
+      link: "https://github.com/blackgoku-97/transformador_monedas",
     }
   ]
 
