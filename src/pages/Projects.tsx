@@ -3,14 +3,29 @@ import ProjectCard from "../components/ProjectCard"
 export default function Projects() {
   const projects = [
     {
-      name: "App de Transformación de Monedas",
+      name: "App de Conversión de Monedas",
       desc: "Aplicación de escritorio para la transformación de monedas.",
-      stack: ["Java"],
+      stack: ["Java", "Exchange Rates API", "Gson"],
       impact: "Proyecto terminado",
-      image: "Sin imagen",
+      image: "/monedas.jpg",
       link: "https://github.com/blackgoku-97/transformador_monedas",
     },
-    // Aquí puedes agregar más proyectos
+    {
+      name: "App de Librería",
+      desc: "Aplicación de escritorio para la gestión de libros y autores.",
+      stack: ["Java", "Spring", "PostgreSQL", "Jackson"],
+      impact: "Proyecto terminado",
+      image: "/libros.jpg",
+      link: "https://github.com/blackgoku-97/java-spring-libreria",
+    },
+    {
+      name: "App de Foro",
+      desc: "Aplicación web para la gestión de topicos y usuarios.",
+      stack: ["Java", "Spring", "MySQL", "Insomnia"],
+      impact: "Proyecto terminado",
+      image: "/topicos.jpg",
+      link: "https://github.com/blackgoku-97/foroapi",
+    }
   ]
 
   return (
