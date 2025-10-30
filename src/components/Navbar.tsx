@@ -23,14 +23,16 @@ export default function Navbar() {
         {/* Links */}
         <nav
           className={`${
-            open ? "block" : "hidden"
-          } sm:flex flex-col sm:flex-row gap-4 sm:gap-8 mt-4 sm:mt-0`}
+            open ? "flex" : "hidden"
+          } sm:flex flex-col sm:flex-row sm:items-center 
+             gap-4 sm:gap-8 mt-4 sm:mt-0 
+             w-full sm:w-auto text-center sm:text-left`}
         >
-          <Link to="/" className="hover:text-white">Inicio</Link>
-          <Link to="/skills" className="hover:text-white">Habilidades</Link>
-          <Link to="/projects" className="hover:text-white">Proyectos</Link>
-          <Link to="/curriculum" className="hover:text-white">Currículum</Link>
-          <Link to="/contact" className="hover:text-white">Contacto</Link>
+          <Link to="/" className="block py-2 hover:text-white">Inicio</Link>
+          <Link to="/skills" className="block py-2 hover:text-white">Habilidades</Link>
+          <Link to="/projects" className="block py-2 hover:text-white">Proyectos</Link>
+          <Link to="/curriculum" className="block py-2 hover:text-white">Currículum</Link>
+          <Link to="/contact" className="block py-2 hover:text-white">Contacto</Link>
         </nav>
       </div>
     </header>
