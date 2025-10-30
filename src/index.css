@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  button, nav, footer {
+    display: none !important;
+  }
+
+  h1, h2, h3 {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  .break-page {
+    page-break-before: always;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}

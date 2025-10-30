@@ -1,40 +1,72 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { FaBars, FaTimes } from "react-icons/fa"
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
+
+  // Cierra el menú si se hace clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setOpen(false)
+      }
+    }
+
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside)
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [open])
 
   return (
-    <header className="w-full bg-slate-900/80 text-cyan-400 fixed top-0 left-0 z-50 shadow-md">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo / Nombre */}
-        <Link to="/" className="text-xl font-bold tracking-wide">
-          Devfolio
-        </Link>
+    <nav className="fixed top-0 left-0 w-full bg-[#0a192f] text-white shadow-md z-50">
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 className="text-2xl font-bold">Devfolio</h1>
 
-        {/* Botón hamburguesa (móvil) */}
+        {/* Botón hamburguesa */}
         <button
-          className="sm:hidden text-cyan-400 focus:outline-none"
+          className="md:hidden text-2xl"
           onClick={() => setOpen(!open)}
         >
-          ☰
+          {open ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Links */}
-        <nav
-          className={`${
-            open ? "flex" : "hidden"
-          } sm:flex flex-col sm:flex-row sm:items-center 
-             gap-4 sm:gap-8 mt-4 sm:mt-0 
-             w-full sm:w-auto text-center sm:text-left`}
-        >
-          <Link to="/" className="block py-2 hover:text-white">Inicio</Link>
-          <Link to="/skills" className="block py-2 hover:text-white">Habilidades</Link>
-          <Link to="/projects" className="block py-2 hover:text-white">Proyectos</Link>
-          <Link to="/curriculum" className="block py-2 hover:text-white">Currículum</Link>
-          <Link to="/contact" className="block py-2 hover:text-white">Contacto</Link>
-        </nav>
+        {/* Menú en desktop */}
+        <ul className="hidden md:flex gap-6">
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/projects">Proyectos</Link></li>
+          <li><Link to="/curriculum">Currículum</Link></li>
+          <li><Link to="/contact">Contacto</Link></li>
+        </ul>
       </div>
-    </header>
+
+      {/* Overlay oscuro detrás del menú móvil */}
+      {open && (
+        <div className="fixed inset-0 bg-black/50 md:hidden z-40"></div>
+      )}
+
+      {/* Menú móvil con animación slide-in */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 right-0 h-full w-64 bg-[#0a192f] shadow-lg transform transition-transform duration-300 ease-in-out z-50 md:hidden
+          ${open ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <div className="flex flex-col items-start px-6 py-8 space-y-6">
+          <Link to="/" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Inicio</Link>
+          <Link to="/skills" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Skills</Link>
+          <Link to="/projects" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Proyectos</Link>
+          <Link to="/curriculum" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Currículum</Link>
+          <Link to="/contact" onClick={() => setOpen(false)} className="block w-full py-2">Contacto</Link>
+        </div>
+      </div>
+    </nav>
   )
 }
