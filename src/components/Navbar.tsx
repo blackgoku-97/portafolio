@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Menú en desktop */}
         <ul className="hidden md:flex gap-6">
           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/skills">Skills</Link></li>
+          <li><Link to="/skills">Habilidades</Link></li>
           <li><Link to="/projects">Proyectos</Link></li>
           <li><Link to="/curriculum">Currículum</Link></li>
           <li><Link to="/contact">Contacto</Link></li>
