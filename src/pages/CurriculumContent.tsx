@@ -1,11 +1,11 @@
-import { 
-  FaUniversity, 
-  FaLaptopCode, 
-  FaGraduationCap, 
-  FaBriefcase, 
-  FaUserTie, 
-  FaLanguage, 
-  FaTools 
+import {
+  FaUniversity,
+  FaLaptopCode,
+  FaGraduationCap,
+  FaBriefcase,
+  FaUserTie,
+  FaLanguage,
+  FaTools
 } from "react-icons/fa"
 
 export default function CurriculumContent() {
@@ -16,29 +16,64 @@ export default function CurriculumContent() {
           Currículum
         </h1>
 
-        {/* Resumen */}
         <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-cyan-300 mb-2 flex items-center gap-2">
             <FaUserTie className="text-cyan-400" /> Resumen
           </h2>
           <p className="text-gray-200 leading-relaxed">
-            Ingeniero Informático con sólida formación académica y experiencia en 
-            <span className="font-semibold text-cyan-400"> desarrollo frontend y backend</span>, 
-            especializado en arquitecturas modernas y soluciones escalables. 
-            He trabajado con <span className="font-semibold">React, Node.js y Java con Spring</span>, 
-            integrando bases de datos relacionales y no relacionales. 
-            Actualmente estoy ampliando mis competencias hacia el 
-            <span className="font-semibold text-cyan-400"> desarrollo mobile con Flutter</span>, 
-            combinando mi enfoque técnico con una mentalidad organizada, proactiva 
+            Ingeniero Informático con sólida formación académica y experiencia en
+            <span className="font-semibold text-cyan-400"> desarrollo frontend y backend</span>,
+            especializado en arquitecturas modernas y soluciones escalables.
+            He trabajado con <span className="font-semibold">React, Node.js y Java con Spring</span>,
+            integrando bases de datos relacionales y no relacionales.
+            Actualmente estoy ampliando mis competencias hacia el
+            <span className="font-semibold text-cyan-400"> desarrollo mobile con Flutter</span>,
+            combinando mi enfoque técnico con una mentalidad organizada, proactiva
             y orientada a resultados, capaz de aportar valor en equipos multidisciplinarios.
           </p>
         </section>
 
-        {/* Experiencia */}
         <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
-            <FaBriefcase className="text-cyan-400" /> Experiencia
+            <FaBriefcase className="text-cyan-400" /> Experiencia Laboral
           </h2>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-green-400 flex items-center gap-2">
+              <FaLaptopCode className="text-green-400" />
+              Proyecto Académico – App de Conversión de Monedas
+            </h3>
+            <p className="italic text-gray-400">2024 - 2025 · Proyecto académico</p>
+            <ul className="list-disc list-inside text-gray-200 mt-2 leading-relaxed">
+              <li>Aplicación de escritorio en Java con integración de Exchange Rates API.</li>
+              <li>Uso de Gson para parseo de datos y arquitectura modular.</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-green-400 flex items-center gap-2">
+              <FaLaptopCode className="text-green-400" />
+              Proyecto Académico – App de Librería
+            </h3>
+            <p className="italic text-gray-400">2024 - 2025 · Proyecto académico</p>
+            <ul className="list-disc list-inside text-gray-200 mt-2 leading-relaxed">
+              <li>Gestión de libros y autores con Java, Spring y PostgreSQL.</li>
+              <li>Implementación de API REST y persistencia con JPA.</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold text-green-400 flex items-center gap-2">
+              <FaLaptopCode className="text-green-400" />
+              Proyecto Académico – App de Foro
+            </h3>
+            <p className="italic text-gray-400">2024 - 2025 · Proyecto académico</p>
+            <ul className="list-disc list-inside text-gray-200 mt-2 leading-relaxed">
+              <li>Aplicación web para gestión de tópicos y usuarios.</li>
+              <li>Desarrollada con Java, Spring y MySQL, probada con Insomnia.</li>
+            </ul>
+          </div>
+
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-green-400 flex items-center gap-2">
               <FaLaptopCode className="text-green-400" />
@@ -51,6 +86,7 @@ export default function CurriculumContent() {
               <li>Diseño y maquetación de UI orientadas a la usabilidad.</li>
             </ul>
           </div>
+
           <div>
             <h3 className="text-xl font-semibold text-green-400 flex items-center gap-2">
               <FaLaptopCode className="text-green-400" />
@@ -64,12 +100,10 @@ export default function CurriculumContent() {
           </div>
         </section>
 
-        {/* Educación */}
         <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
             <FaGraduationCap className="text-cyan-400" /> Educación
           </h2>
-
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-sky-400 flex items-center gap-2">
               <FaUniversity className="text-blue-400" />
@@ -78,12 +112,11 @@ export default function CurriculumContent() {
             <p className="italic text-gray-400">2024 - 2025</p>
             <p className="text-gray-200">Modalidad: online · Estado: finalizado</p>
             <p className="text-gray-200 mt-1">
-              Formación intensiva en desarrollo web y backend con enfoque en empleabilidad, 
-              proyectos prácticos y colaboración internacional. Tecnologías: Java, Spring, 
+              Formación intensiva en desarrollo web y backend con enfoque en empleabilidad,
+              proyectos prácticos y colaboración internacional. Tecnologías: Java, Spring,
               MySQL, PostgreSQL, APIs REST y metodologías ágiles.
             </p>
           </div>
-
           <div className="mb-6">
             <h3 className="text-xl font-semibold text-sky-400 flex items-center gap-2">
               <FaUniversity className="text-blue-400" />
@@ -92,7 +125,6 @@ export default function CurriculumContent() {
             <p className="italic text-gray-400">03/2020 - 12/2021 · Concepción - Talcahuano</p>
             <p className="text-gray-200">Modalidad: online · Estado: titulado</p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold text-sky-400 flex items-center gap-2">
               <FaUniversity className="text-blue-400" />
@@ -103,7 +135,6 @@ export default function CurriculumContent() {
           </div>
         </section>
 
-        {/* Idiomas */}
         <section className="mb-10 border-b border-gray-700 pb-6">
           <h2 className="text-2xl font-bold text-cyan-300 mb-2 flex items-center gap-2">
             <FaLanguage className="text-cyan-400" /> Idiomas
@@ -114,7 +145,6 @@ export default function CurriculumContent() {
           </ul>
         </section>
 
-        {/* Habilidades */}
         <section>
           <h2 className="text-2xl font-bold text-cyan-300 mb-2 flex items-center gap-2">
             <FaTools className="text-cyan-400" /> Habilidades
