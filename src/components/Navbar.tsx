@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { FaBars, FaTimes } from "react-icons/fa"
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
           Devfolio
         </h1>
 
-        {/* Botón hamburguesa con color */}
+        {/* Botón hamburguesa */}
         <button
           className="md:hidden text-2xl text-cyan-400 hover:text-blue-400 transition-colors"
           onClick={() => setOpen(!open)}
@@ -40,35 +40,30 @@ export default function Navbar() {
 
         {/* Menú en desktop */}
         <ul className="hidden md:flex gap-6">
-          <li>
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Inicio
-            </Link>
-          </li>
-          <li>
-            <Link to="/skills" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Habilidades
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Proyectos
-            </Link>
-          </li>
-          <li>
-            <Link to="/curriculum" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Currículum
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Contacto
-            </Link>
-          </li>
+          {[
+            { to: "/", label: "Inicio" },
+            { to: "/skills", label: "Habilidades" },
+            { to: "/projects", label: "Proyectos" },
+            { to: "/curriculum", label: "Currículum" },
+            { to: "/contact", label: "Contacto" },
+          ].map(({ to, label }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                className={({ isActive }) =>
+                  isActive
+                    ? "font-semibold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+                    : "text-gray-300 hover:text-cyan-400 transition-colors"
+                }
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
 
-      {/* Overlay oscuro */}
+      {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/50 md:hidden z-40 transition-opacity duration-300
           ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
@@ -82,11 +77,28 @@ export default function Navbar() {
           ${open ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col items-start px-6 py-8 space-y-6">
-          <Link to="/" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700 text-gray-300 hover:text-cyan-400 transition-colors">Inicio</Link>
-          <Link to="/skills" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700 text-gray-300 hover:text-cyan-400 transition-colors">Habilidades</Link>
-          <Link to="/projects" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700 text-gray-300 hover:text-cyan-400 transition-colors">Proyectos</Link>
-          <Link to="/curriculum" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700 text-gray-300 hover:text-cyan-400 transition-colors">Currículum</Link>
-          <Link to="/contact" onClick={() => setOpen(false)} className="block w-full py-2 text-gray-300 hover:text-cyan-400 transition-colors">Contacto</Link>
+          {[
+            { to: "/", label: "Inicio" },
+            { to: "/skills", label: "Habilidades" },
+            { to: "/projects", label: "Proyectos" },
+            { to: "/curriculum", label: "Currículum" },
+            { to: "/contact", label: "Contacto" },
+          ].map(({ to, label }) => (
+            <NavLink
+              key={to}
+              to={to}
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `block w-full py-2 border-b border-gray-700 transition-colors ${
+                  isActive
+                    ? "font-semibold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+                    : "text-gray-300 hover:text-cyan-400"
+                }`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
         </div>
       </div>
     </nav>
