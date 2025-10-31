@@ -172,7 +172,7 @@ export default function CurriculumContent() {
                 href="mailto:rpe19971210@gmail.com"
                 className="hover:text-cyan-300 transition-colors"
               >
-                Correo
+                rpe19971210@gmail.com
               </a>
             </li>
             <li className="flex items-center gap-3">
@@ -183,7 +183,7 @@ export default function CurriculumContent() {
                 rel="noopener noreferrer"
                 className="hover:text-cyan-300 transition-colors"
               >
-                Linkedin
+                https://www.linkedin.com/in/ricardo-perez-a31474229/
               </a>
             </li>
             <li className="flex items-center gap-3">
@@ -194,7 +194,7 @@ export default function CurriculumContent() {
                 rel="noopener noreferrer"
                 className="hover:text-cyan-300 transition-colors"
               >
-                Sitio personal
+                https://ricardoweb.vercel.app/
               </a>
             </li>
           </ul>
