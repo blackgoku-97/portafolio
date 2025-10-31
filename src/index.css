@@ -1,5 +1,7 @@
+/* Importa Tailwind v4 */
 @import "tailwindcss";
 
+/* Estilos específicos para impresión */
 @media print {
   body {
     background: white !important;
@@ -10,24 +12,47 @@
     print-color-adjust: exact;
   }
 
-  button, nav, footer {
+  /* Ocultar elementos no necesarios en PDF */
+  button,
+  nav,
+  footer {
     display: none !important;
   }
 
-  h1, h2, h3 {
-    color: black !important;
-    font-weight: bold;
+  /* Ajustar imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
+  /* Títulos más legibles en impresión */
+  h1,
+  h2,
+  h3 {
+    color: black !important;
+    font-weight: bold;
+    page-break-after: avoid;
+  }
+
+  /* Evitar cortes feos en secciones */
   section {
     page-break-inside: avoid;
     margin-bottom: 1.5rem;
   }
 
+  /* Forzar salto de página manual */
   .break-page {
     page-break-before: always;
   }
 
+  /* Evitar cortes en listas o tablas */
+  ul,
+  ol,
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Configuración de página A4 */
   @page {
     size: A4;
     margin: 20mm;
