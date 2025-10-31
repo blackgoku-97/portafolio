@@ -177,17 +177,6 @@ export default function CurriculumContent() {
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <FaLinkedin className="text-cyan-400" />
-                <a
-                  href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-cyan-300 transition-colors"
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
                 <FaGlobe className="text-cyan-400" />
                 <a
                   href="https://ricardoweb.vercel.app/"
