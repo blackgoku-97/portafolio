@@ -1,4 +1,7 @@
 import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGlobe,
   FaUniversity,
   FaLaptopCode,
   FaGraduationCap,
@@ -155,6 +158,45 @@ export default function CurriculumContent() {
             <li><span className="font-semibold text-cyan-400">Mobile:</span> Flutter (en progreso)</li>
             <li><span className="font-semibold text-cyan-400">Cloud & DB:</span> Firebase, MySQL, PostgreSQL, APIs REST</li>
             <li><span className="font-semibold text-cyan-400">Herramientas:</span> GitHub, VS Code, Insomnia</li>
+          </ul>
+        </section>
+
+         <section className="mt-10 border-t border-gray-700 pt-6">
+          <h2 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+            <FaEnvelope className="text-cyan-400" /> Contacto
+          </h2>
+          <ul className="space-y-3 text-gray-200">
+            <li className="flex items-center gap-3">
+              <FaEnvelope className="text-cyan-400" />
+              <a
+                href="mailto:rpe19971210@gmail.com"
+                className="hover:text-cyan-300 transition-colors"
+              >
+                Correo
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaLinkedin className="text-cyan-400" />
+              <a
+                href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-300 transition-colors"
+              >
+                Linkedin
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <FaGlobe className="text-cyan-400" />
+              <a
+                href="https://ricardoweb.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-300 transition-colors"
+              >
+                Sitio personal
+              </a>
+            </li>
           </ul>
         </section>
       </div>
