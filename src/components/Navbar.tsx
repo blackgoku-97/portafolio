@@ -63,7 +63,7 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-start px-6 py-8 space-y-6">
           <Link to="/" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Inicio</Link>
-          <Link to="/skills" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Skills</Link>
+          <Link to="/skills" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Habilidades</Link>
           <Link to="/projects" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Proyectos</Link>
           <Link to="/curriculum" onClick={() => setOpen(false)} className="block w-full py-2 border-b border-gray-700">Currículum</Link>
           <Link to="/contact" onClick={() => setOpen(false)} className="block w-full py-2">Contacto</Link>
