@@ -161,43 +161,45 @@ export default function CurriculumContent() {
           </ul>
         </section>
 
-         <section className="mt-10 border-t border-gray-700 pt-6">
+        <section className="mt-10 border-t border-gray-700 pt-6">
           <h2 className="text-2xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
             <FaEnvelope className="text-cyan-400" /> Contacto
           </h2>
-          <ul className="space-y-3 text-gray-200">
-            <li className="flex items-center gap-3">
-              <FaEnvelope className="text-cyan-400" />
-              <a
-                href="mailto:rpe19971210@gmail.com"
-                className="hover:text-cyan-300 transition-colors"
-              >
-                rpe19971210@gmail.com
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <FaLinkedin className="text-cyan-400" />
-              <a
-                href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-cyan-300 transition-colors"
-              >
-                https://www.linkedin.com/in/ricardo-perez-a31474229/
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <FaGlobe className="text-cyan-400" />
-              <a
-                href="https://ricardoweb.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-cyan-300 transition-colors"
-              >
-                https://ricardoweb.vercel.app/
-              </a>
-            </li>
-          </ul>
+          <div className="bg-slate-700/40 rounded-lg p-4">
+            <ul className="space-y-3 text-gray-200">
+              <li className="flex items-center gap-3">
+                <FaEnvelope className="text-cyan-400" />
+                <a
+                  href="mailto:rpe19971210@gmail.com"
+                  className="hover:text-cyan-300 transition-colors"
+                >
+                  rpe19971210@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <FaLinkedin className="text-cyan-400" />
+                <a
+                  href="https://www.linkedin.com/in/ricardo-perez-a31474229/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-300 transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <FaGlobe className="text-cyan-400" />
+                <a
+                  href="https://ricardoweb.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-300 transition-colors"
+                >
+                  ricardoweb.vercel.app
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
