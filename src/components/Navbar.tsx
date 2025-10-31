@@ -48,12 +48,14 @@ export default function Navbar() {
         </ul>
       </div>
 
-      {/* Overlay oscuro detrás del menú móvil */}
-      {open && (
-        <div className="fixed inset-0 bg-black/50 md:hidden z-40"></div>
-      )}
+      {/* Overlay oscuro con fade-in/fade-out */}
+      <div
+        className={`fixed inset-0 bg-black/50 md:hidden z-40 transition-opacity duration-300
+          ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setOpen(false)}
+      ></div>
 
-      {/* Menú móvil con animación slide-in */}
+      {/* Menú móvil con animación slide-in/slide-out */}
       <div
         ref={menuRef}
         className={`fixed top-0 right-0 h-full w-64 bg-[#0a192f] shadow-lg transform transition-transform duration-300 ease-in-out z-50 md:hidden
