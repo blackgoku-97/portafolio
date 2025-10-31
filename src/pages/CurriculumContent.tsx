@@ -1,6 +1,5 @@
 import {
   FaEnvelope,
-  FaLinkedin,
   FaGlobe,
   FaUniversity,
   FaLaptopCode,
