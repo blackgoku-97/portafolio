@@ -33,7 +33,7 @@ export const Educacion = () => {
   const habilidadesTecnicas = [
     { categoria: "Lenguajes", items: ["Java", "JavaScript", "TypeScript", "Dart", "SQL"] },
     { categoria: "Frameworks", items: ["React", "Next.js", "Tailwind CSS", "Node.js", "Spring Boot", "Flutter"] },
-    { categoria: "DB", items: ["MySQL", "PostgreSQL", "Firebase", "MongoDB"] },
+    { categoria: "Base de datos", items: ["MySQL", "PostgreSQL", "Firebase", "MongoDB"] },
     { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman"] },
     { categoria: "IDEs", items: ["Visual Studio Code", "IntelliJ IDEA"] },
     { categoria: "IA", items: ["Copilot"] },

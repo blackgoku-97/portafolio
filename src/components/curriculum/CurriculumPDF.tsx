@@ -82,16 +82,16 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.title}>Currículum</Text>
           <Text style={styles.subtitle}>Resumen</Text>
           <Text style={styles.text}>
-            Ingeniero Informático con experiencia en frontend, backend y mobile, apasionado por crear soluciones digitales que combinan rendimiento, escalabilidad y diseño moderno.
+            Ingeniero Informático con experiencia en desarrollo de aplicaciones y soluciones digitales. 
+            Me interesa crear proyectos que sean rápidos, confiables y fáciles de usar.
           </Text>
-          <Text style={styles.text}>He trabajado con tecnologías clave en el ecosistema full stack:</Text>
-          <Text style={styles.listItem}>• React</Text>
-          <Text style={styles.listItem}>• Node.js</Text>
-          <Text style={styles.listItem}>• Java + Spring</Text>
-          <Text style={styles.listItem}>• SQL / NoSQL</Text>
-          <Text style={styles.listItem}>• Flutter</Text>
           <Text style={styles.text}>
-            Actualmente impulso mi crecimiento en Flutter y desarrollo mobile, llevando mi enfoque full stack hacia aplicaciones multiplataforma.
+            Mi diferencia está en la capacidad de resolver problemas de manera práctica y aportar ideas nuevas 
+            que mejoren los resultados de un equipo o empresa.
+          </Text>
+          <Text style={styles.text}>
+            Puedo aportar organización, trabajo en equipo y aprendizaje constante, asegurando que cada proyecto 
+            avance con calidad y cumpla objetivos reales.
           </Text>
         </View>
 
@@ -102,7 +102,7 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.text}>
             Práctica Profesional – Desarrollador Laravel en Betech (03/2022 - 05/2022 · Concepción)
           </Text>
-          <Text style={styles.listItem}>• Desarrollo backend y frontend con PHP, JavaScript, CSS y MySQL</Text>
+          <Text style={styles.listItem}>• Desarrollo con PHP, JavaScript, CSS y MySQL</Text>
           <Text style={styles.listItem}>• Optimización de interfaces responsivas con Bootstrap</Text>
           <Text style={styles.listItem}>• Diseño y maquetación de UI orientadas a la usabilidad</Text>
           <Text style={styles.text}>
