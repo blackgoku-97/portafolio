@@ -1,12 +1,11 @@
-"use client";
+"use client"
 
-import { FaUserTie } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { FaUserTie } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 export const Resumen = () => {
   return (
     <section className="mb-12 border-b border-gray-700 pb-8">
-      {/* Título animado */}
       <motion.h2
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -16,42 +15,27 @@ export const Resumen = () => {
         <FaUserTie className="text-cyan-400" /> Resumen
       </motion.h2>
 
-      {/* Contenido animado */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="space-y-4 text-gray-200 leading-relaxed"
       >
-        {/* Texto moderno */}
         <p>
-          Ingeniero Informático con experiencia en{" "}
-          <span className="font-semibold text-cyan-400">frontend, backend y mobile</span>, 
-          apasionado por crear soluciones digitales que combinan rendimiento, escalabilidad y diseño moderno.
+          Ingeniero Informático con experiencia en desarrollo de aplicaciones y soluciones digitales. 
+          Me interesa crear proyectos que sean rápidos, confiables y fáciles de usar.
         </p>
 
         <p>
-          He trabajado con tecnologías clave en el ecosistema full stack:
+          Mi diferencia está en la capacidad de <span className="font-semibold text-cyan-400">resolver problemas </span> 
+          de manera práctica y aportar ideas nuevas que mejoren los resultados de un equipo o empresa.
         </p>
 
-        {/* Badges de tecnologías */}
-        <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 bg-cyan-900/40 text-cyan-300 rounded-md text-sm font-semibold">React</span>
-          <span className="px-3 py-1 bg-cyan-900/40 text-cyan-300 rounded-md text-sm font-semibold">Node.js</span>
-          <span className="px-3 py-1 bg-cyan-900/40 text-cyan-300 rounded-md text-sm font-semibold">Java + Spring</span>
-          <span className="px-3 py-1 bg-cyan-900/40 text-cyan-300 rounded-md text-sm font-semibold">SQL / NoSQL</span>
-          <span className="px-3 py-1 bg-cyan-900/40 text-cyan-300 rounded-md text-sm font-semibold">Flutter</span>
-        </div>
-
         <p>
-          Actualmente impulso mi crecimiento en{" "}
-          <span className="font-semibold text-cyan-400">Flutter y desarrollo mobile</span>, 
-          llevando mi enfoque full stack hacia aplicaciones multiplataforma. 
-          Me caracterizo por una mentalidad{" "}
-          <span className="font-semibold text-cyan-400">proactiva, organizada y orientada a resultados</span>, 
-          aportando valor en equipos multidisciplinarios y proyectos que buscan impacto real.
+          Puedo aportar <span className="font-semibold text-cyan-400">organización, trabajo en equipo y aprendizaje constante</span>, 
+          asegurando que cada proyecto avance con calidad y cumpla objetivos reales.
         </p>
       </motion.div>
     </section>
-  );
+  )
 }

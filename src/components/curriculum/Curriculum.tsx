@@ -11,7 +11,7 @@ const PDFDownloadLink = dynamic(
 
 export const Curriculum = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start p-10 bg-slate-900 text-white">
+    <div className="pt-20 min-h-screen flex flex-col items-center justify-start p-10 bg-slate-900 text-white">
       {/* Botón de descarga */}
       <PDFDownloadLink
         document={<CurriculumPDF />}

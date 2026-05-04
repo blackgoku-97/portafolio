@@ -155,12 +155,12 @@ export const CurriculumPDF = (): JSX.Element => {
         {/* Habilidades Técnicas */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Habilidades Técnicas</Text>
-          <Text style={styles.text}>Frontend: React, TypeScript, JavaScript</Text>
-          <Text style={styles.text}>Backend: Node.js, Java & Spring, Tailwind CSS</Text>
-          <Text style={styles.text}>Mobile: Flutter</Text>
-          <Text style={styles.text}>DB: Firebase, MySQL, PostgreSQL</Text>
-          <Text style={styles.text}>Herramientas: GitHub, VS Code, Insomnia</Text>
-          <Text style={styles.text}>IA: Copilot, Windsurf</Text>
+          <Text style={styles.text}>Lenguajes: Java, JavaScript, TypeScript, Dart, SQL</Text>
+          <Text style={styles.text}>Frameworks: React, Next.js, Tailwind CSS, Node.js, Spring Boot, Flutter</Text>
+          <Text style={styles.text}>Bases de Datos: MySQL, PostgreSQL, Firebase, MongoDB</Text>
+          <Text style={styles.text}>Herramientas: Git, GitHub, Docker, Postman</Text>
+          <Text style={styles.text}>IDEs: Visual Studio Code, IntelliJ IDEA</Text>
+          <Text style={styles.text}>IA: Copilot</Text>
         </View>
 
         {/* Habilidades Blandas */}
