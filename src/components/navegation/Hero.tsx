@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { FaCheckCircle, FaShieldAlt, FaCode, FaGlobe } from "react-icons/fa"
 
@@ -8,8 +9,8 @@ export const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col items-center justify-center h-screen text-center px-4 
-                 pt-28 sm:pt-20 md:pt-0"
+      className="flex flex-col items-center justify-center min-h-screen text-center px-4 
+                 pt-20 sm:pt-24 md:pt-28"
     >
       <Image
         src="/perfil.jpg"
@@ -17,15 +18,14 @@ export const Hero = () => {
         loading="eager"
         width={160}
         height={160}
-        className="rounded-full border-4 border-indigo-500 shadow-lg"
+        className="rounded-full border-4 border-indigo-500 shadow-lg w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
       />
 
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="mt-6 text-4xl font-extrabold text-indigo-500 tracking-wide 
-                   sm:text-3xl md:text-5xl font-sans"
+        className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-500 tracking-wide font-sans"
       >
         Ingeniero Informático · Desarrollo Web y Móvil
       </motion.h1>
@@ -35,14 +35,18 @@ export const Hero = () => {
         con enfoque en diseño moderno y experiencia de usuario.
       </p>
 
-      {/* Botones CTA */}
+      {/* Botones CTA con navegación */}
       <div className="mt-6 flex gap-4">
-        <button className="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md">
-          Ver Proyectos
-        </button>
-        <button className="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md">
-          Contacto
-        </button>
+        <Link href="/proyectos">
+          <button className="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md cursor-pointer">
+            Ver Proyectos
+          </button>
+        </Link>
+        <Link href="/contacto">
+          <button className="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md cursor-pointer">
+            Contacto
+          </button>
+        </Link>
       </div>
 
       {/* Bloque de valor agregado */}
