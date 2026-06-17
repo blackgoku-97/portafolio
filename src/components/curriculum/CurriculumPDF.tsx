@@ -45,6 +45,14 @@ export const CurriculumPDF = (): JSX.Element => {
               <Text style={styles.listItem}>• Resolución de problemas</Text>
               <Text style={styles.listItem}>• Autodidacta</Text>
             </View>
+            <View style={styles.section}>
+              <Text style={styles.subtitle}>Información adicional</Text>
+              <Text style={styles.text}>
+                Discapacidad reconocida por SENADIS: usuario de silla de ruedas.
+                Gestionada con autonomía, no afecta mi desempeño profesional y aporta resiliencia
+                y capacidad de adaptación en entornos laborales.
+              </Text>
+            </View>
           </View>
 
           <View style={{ flex: 2 }}>
@@ -52,7 +60,7 @@ export const CurriculumPDF = (): JSX.Element => {
               <Text style={styles.title}>Currículum</Text>
               <Text style={styles.subtitle}>Resumen</Text>
               <Text style={styles.text}>
-                Ingeniero Informático con experiencia en desarrollo de aplicaciones y soluciones digitales. 
+                Ingeniero Informático con experiencia en desarrollo de aplicaciones y soluciones digitales.
                 Me interesa crear proyectos que sean rápidos, confiables y fáciles de usar.
               </Text>
               <Text style={styles.text}>
