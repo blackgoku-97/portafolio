@@ -9,7 +9,7 @@ export const CurriculumPDF = (): JSX.Element => {
     <Document>
       <Page size="A4" style={styles.page}>
         <Text style={styles.header}>
-          Ricardo Pérez — Ingeniero Informático · 📧 rpe19971210@gmail.com · 🌐 ricardoweb.vercel.app
+          Ricardo Pérez — Ingeniero Informático · 🌐 ricardoweb.cl
         </Text>
 
         <View style={styles.section}>
