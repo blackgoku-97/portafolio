@@ -9,7 +9,7 @@ export const CurriculumPDF = (): JSX.Element => {
     <Document>
       <Page size="A4" style={styles.page}>
         <Text style={styles.header}>
-          Ricardo Pérez — Ingeniero Informáticoo
+          Ricardo Pérez — Ingeniero Informático
         </Text>
 
         <View style={{ flexDirection: "row" }}>
@@ -48,9 +48,8 @@ export const CurriculumPDF = (): JSX.Element => {
             <View style={styles.section}>
               <Text style={styles.subtitle}>Información adicional</Text>
               <Text style={styles.text}>
-                Discapacidad reconocida por SENADIS: usuario de silla de ruedas.
-                Gestionada con autonomía, no afecta mi desempeño profesional y aporta resiliencia
-                y capacidad de adaptación en entornos laborales.
+                Discapacidad reconocida por SENADIS: usuario de silla de ruedas, 
+                gestionada con autonomía y sin impacto en desempeño profesional.
               </Text>
             </View>
           </View>
