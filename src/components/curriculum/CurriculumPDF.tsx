@@ -1,73 +1,8 @@
 "use client";
 
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { Page, Text, View, Document } from "@react-pdf/renderer";
 import { JSX } from "react";
-
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: "column",
-    backgroundColor: "#ffffff",
-    paddingTop: 70,
-    paddingBottom: 50,
-    paddingHorizontal: 30,
-  },
-  header: {
-    position: "absolute",
-    top: 20,
-    left: 30,
-    right: 30,
-    fontSize: 12,
-    color: "#0ea5e9",
-    borderBottom: "1pt solid #0ea5e9",
-    paddingBottom: 4,
-    textAlign: "center",
-  },
-  footer: {
-    position: "absolute",
-    bottom: 20,
-    left: 30,
-    right: 30,
-    textAlign: "center",
-    fontSize: 10,
-    color: "#6b7280",
-    borderTop: "1pt solid #0ea5e9",
-    paddingTop: 4,
-  },
-  section: {
-    marginBottom: 16,
-    padding: 8,
-    backgroundColor: "#f0f9ff",
-    borderRadius: 4,
-  },
-  title: {
-    fontSize: 20,
-    color: "#0ea5e9",
-    marginBottom: 8,
-    fontWeight: "bold",
-    textAlign: "center",
-    backgroundColor: "#e0f2fe",
-    padding: 6,
-    borderRadius: 4,
-  },
-  subtitle: {
-    fontSize: 14,
-    marginBottom: 6,
-    fontWeight: "bold",
-    color: "#0369a1",
-  },
-  text: {
-    fontSize: 12,
-    color: "#111827",
-    lineHeight: 1.4,
-    marginBottom: 2,
-  },
-  listItem: {
-    fontSize: 12,
-    marginLeft: 12,
-    marginBottom: 2,
-    color: "#374151",
-  },
-});
+import { styles } from "./Curriculum.styles";
 
 export const CurriculumPDF = (): JSX.Element => {
   return (
@@ -77,7 +12,6 @@ export const CurriculumPDF = (): JSX.Element => {
           Ricardo Pérez — Ingeniero Informático · 📧 rpe19971210@gmail.com · 🌐 ricardoweb.vercel.app
         </Text>
 
-        {/* Resumen */}
         <View style={styles.section}>
           <Text style={styles.title}>Currículum</Text>
           <Text style={styles.subtitle}>Resumen</Text>
@@ -95,10 +29,8 @@ export const CurriculumPDF = (): JSX.Element => {
           </Text>
         </View>
 
-        {/* Experiencia Laboral */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Experiencia Laboral</Text>
-          <Text style={styles.subtitle}>Prácticas Profesionales</Text>
           <Text style={styles.text}>
             Práctica Profesional – Desarrollador Laravel en Betech (03/2022 - 05/2022 · Concepción)
           </Text>
@@ -112,7 +44,6 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.listItem}>• Implementación de soluciones escalables con Laravel</Text>
         </View>
 
-        {/* Proyectos Académicos */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Proyectos Académicos</Text>
           <Text style={styles.text}>Proyecto Académico – App de Conversión de Monedas (2024 - 2025)</Text>
@@ -126,7 +57,6 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.listItem}>• Desarrollada con Java, Spring y MySQL, probada con Insomnia</Text>
         </View>
 
-        {/* Proyectos Personales */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Proyectos Personales</Text>
           <Text style={styles.text}>Gestor de Tareas – Frontend (01/2026)</Text>
@@ -137,7 +67,6 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.listItem}>• Modo oscuro total y formularios modernos con validaciones</Text>
         </View>
 
-        {/* Educación */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Educación</Text>
           <Text style={styles.text}>Programa Oracle Next Education (ONE) – Alura & Oracle (2024 - 2025)</Text>
@@ -145,14 +74,12 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.text}>Analista Programador – Instituto Técnico de Inacap (2017 - 2019)</Text>
         </View>
 
-        {/* Idiomas */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Idiomas</Text>
           <Text style={styles.text}>Español – Nativo</Text>
           <Text style={styles.text}>Inglés – Intermedio (A2, lectura técnica fluida)</Text>
         </View>
 
-        {/* Habilidades Técnicas */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Habilidades Técnicas</Text>
           <Text style={styles.text}>Lenguajes: Java, JavaScript, TypeScript, Dart, SQL</Text>
@@ -163,7 +90,6 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.text}>IA: Copilot</Text>
         </View>
 
-        {/* Habilidades Blandas */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Habilidades Blandas</Text>
           <Text style={styles.listItem}>• Trabajo en equipo</Text>
@@ -172,7 +98,6 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.listItem}>• Autodidacta</Text>
         </View>
 
-        {/* Contacto */}
         <View style={styles.section}>
           <Text style={styles.subtitle}>Contacto</Text>
           <Text style={styles.text}>rpe19971210@gmail.com</Text>
@@ -189,4 +114,4 @@ export const CurriculumPDF = (): JSX.Element => {
       </Page>
     </Document>
   );
-}
+};
