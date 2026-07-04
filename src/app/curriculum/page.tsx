@@ -1,5 +1,3 @@
-"use client"
-
 import { Curriculum } from "@/components"
 
 export default function CurriculumPage() {
