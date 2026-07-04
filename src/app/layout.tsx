@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="relative min-h-screen text-white font-sans">
         {/* Fondo global moderno */}
         <div className="absolute inset-0 bg-linear-to-br from-indigo-700 via-purple-700 to-pink-600 animate-gradient-x"></div>
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Layout global */}
         <div className="relative z-10 flex flex-col min-h-screen">
