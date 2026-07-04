@@ -31,11 +31,6 @@ button {
   @apply px-4 py-2 rounded-md font-medium transition;
 }
 
-.section-spacing {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-}
-
 /* Tarjeta base compartida por Proyectos, Habilidades y Contacto. */
 @utility card-surface {
   @apply bg-slate-900/70 border border-cyan-500/30 rounded-xl shadow-md

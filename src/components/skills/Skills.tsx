@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"tecnicas" | "blandas">("tecnicas")
 
   return (
-    <section id="habilidades" className="section-spacing max-w-6xl mx-auto px-4 pt-20 text-center">
+    <section id="habilidades" className="pt-24 pb-12 max-w-6xl mx-auto px-4 text-center">
       <PageTitle>Habilidades</PageTitle>
 
       {/* Tabs dinámicos */}

@@ -45,7 +45,7 @@ export const Contact = () => {
   ]
 
   return (
-    <section className="section-spacing max-w-6xl mx-auto px-4 pt-20 text-white flex flex-col items-center">
+    <section className="pt-24 pb-12 max-w-6xl mx-auto px-4 text-white flex flex-col items-center">
       <PageTitle
         subtitle={
           <>
