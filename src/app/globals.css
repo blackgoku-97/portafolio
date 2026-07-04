@@ -35,3 +35,18 @@ button {
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
+
+/* Tarjeta base compartida por Proyectos, Habilidades y Contacto. */
+@utility card-surface {
+  @apply bg-slate-900/70 border border-cyan-500/30 rounded-xl shadow-md
+         transition-[border-color,box-shadow,filter] duration-300
+         hover:border-cyan-400/60 hover:shadow-cyan-500/20 hover:brightness-105;
+}
+
+@utility btn-primary {
+  @apply bg-cyan-500 hover:bg-cyan-600 text-white;
+}
+
+@utility btn-secondary {
+  @apply border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10;
+}

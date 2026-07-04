@@ -52,7 +52,7 @@ export const TechnicalSkills = () => {
   ]
 
   return (
-    <section className="section-spacing max-w-5xl mx-auto px-4">
+    <section className="mb-10">
       <h2 className="text-3xl font-bold text-cyan-300 mb-8">Habilidades Técnicas</h2>
       <SkillsSection title="Lenguajes" skills={languages} />
       <SkillsSection title="Frameworks" skills={frameworks} />

@@ -3,6 +3,7 @@
 import { MdEmail } from "react-icons/md"
 import { FaGithub, FaGlobe, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { motion } from "framer-motion"
+import { PageTitle } from "@/components"
 
 export const Contact = () => {
   const contacts = [
@@ -44,14 +45,19 @@ export const Contact = () => {
   ]
 
   return (
-    <section className="section-spacing max-w-6xl mx-auto px-4 text-white flex flex-col items-center">
-      <h1 className="text-4xl font-extrabold text-cyan-400 mb-6 pt-20">Contacto</h1>
-      <p className="mb-8 text-lg text-center max-w-2xl text-gray-300">
-        Puedes escribirme para proyectos, colaboraciones o nuevas oportunidades.<br />
-        <span className="text-cyan-400 font-semibold">
-          ¡Hablemos y creemos algo increíble juntos!
-        </span>
-      </p>
+    <section className="section-spacing max-w-6xl mx-auto px-4 pt-20 text-white flex flex-col items-center">
+      <PageTitle
+        subtitle={
+          <>
+            Puedes escribirme para proyectos, colaboraciones o nuevas oportunidades.<br />
+            <span className="text-cyan-400 font-semibold">
+              ¡Hablemos y creemos algo increíble juntos!
+            </span>
+          </>
+        }
+      >
+        Contacto
+      </PageTitle>
 
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 w-full"
@@ -74,8 +80,7 @@ export const Contact = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-slate-900/70 border border-cyan-500 rounded-lg p-6 text-center
-                       hover:scale-105 hover:shadow-cyan-500/40 transition-transform duration-300"
+            className="card-surface p-6 text-center"
             whileHover={{ scale: 1.08, rotate: 1 }}
             whileTap={{ scale: 0.95 }}
           >

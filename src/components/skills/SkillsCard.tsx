@@ -15,13 +15,13 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({ name, desc, icon }) => {
       whileHover={{ scale: 1.08 }}
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
-      className="bg-slate-900/70 border border-cyan-500/30 rounded-xl p-6 shadow-md 
-                 hover:shadow-cyan-500/50 hover:brightness-110 transition-transform duration-300"
+      className="card-surface p-6"
     >
-      {/* Ícono con gradiente opcional */}
-      <div className="text-6xl mb-4 flex justify-center 
-                      bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-        {icon}
+      {/* Ícono con acento circular */}
+      <div className="mb-4 flex justify-center">
+        <span className="text-6xl inline-flex items-center justify-center rounded-full bg-cyan-500/10 p-4">
+          {icon}
+        </span>
       </div>
 
       {/* Nombre de la skill */}

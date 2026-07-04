@@ -15,7 +15,7 @@ interface Project {
 
 export const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition">
+    <div className="card-surface overflow-hidden flex flex-col">
       {/* Imagen */}
       <div className="relative w-full h-40">
         <Image
@@ -34,7 +34,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
         </h3>
 
         {/* Descripción con border-radius sobrio */}
-        <div className="bg-gray-700 p-3 rounded-md mb-3">
+        <div className="bg-slate-800/60 p-3 rounded-md mb-3">
           <p className="text-sm text-gray-200 leading-relaxed">
             {project.desc}
           </p>
@@ -61,7 +61,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-1 rounded-md transition"
+            className="flex items-center gap-2 text-sm btn-primary px-3 py-1 rounded-md transition"
           >
             <FaGithub /> GitHub
           </a>

@@ -25,7 +25,7 @@ export const Hero = () => {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold text-indigo-500 tracking-wide font-sans"
+        className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 tracking-wide font-sans"
       >
         Ingeniero Informático · Desarrollo Web y Móvil
       </motion.h1>
@@ -38,12 +38,12 @@ export const Hero = () => {
       {/* Botones CTA con navegación */}
       <div className="mt-6 flex gap-4">
         <Link href="/proyectos">
-          <button className="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-md cursor-pointer">
+          <button className="btn-primary px-4 py-2 rounded-md cursor-pointer">
             Ver Proyectos
           </button>
         </Link>
         <Link href="/contacto">
-          <button className="bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-md cursor-pointer">
+          <button className="btn-secondary px-4 py-2 rounded-md cursor-pointer">
             Contacto
           </button>
         </Link>

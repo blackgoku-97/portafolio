@@ -1,6 +1,6 @@
 "use client"
 
-import { ProjectCard } from "@/components"
+import { ProjectCard, PageTitle } from "@/components"
 import { motion } from "framer-motion"
 
 export const Projects = () => {
@@ -63,18 +63,9 @@ export const Projects = () => {
 
   return (
     <section className="pt-24 p-10 text-white max-w-6xl mx-auto">
-      <motion.h1
-        className="text-4xl font-extrabold text-cyan-400 mb-2 text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
+      <PageTitle subtitle="Proyectos destacados que reflejan mis habilidades en desarrollo frontend y backend, aplicando buenas prácticas, arquitecturas escalables y tecnologías modernas.">
         Portafolio Técnico
-      </motion.h1>
-      <div className="w-24 h-1 bg-cyan-400 mx-auto mb-8 rounded-full"></div>
-      <p className="mb-12 text-lg text-gray-300 text-center max-w-2xl mx-auto">
-        Proyectos destacados que reflejan mis habilidades en desarrollo frontend y backend, aplicando buenas prácticas, arquitecturas escalables y tecnologías modernas.
-      </p>
+      </PageTitle>
 
       {Object.entries(categories).map(([category, items]) => (
         <div key={category} className="mb-12">

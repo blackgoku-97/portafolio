@@ -28,7 +28,7 @@ export const SoftSkills = () => {
   ]
 
   return (
-    <section className="section-spacing max-w-5xl mx-auto px-4">
+    <section className="mb-10">
       <h2 className="text-3xl font-bold text-cyan-300 mb-8">Habilidades Blandas</h2>
       <SkillsSection title="Soft Skills" skills={softSkills} />
     </section>

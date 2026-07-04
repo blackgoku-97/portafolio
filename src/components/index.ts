@@ -25,3 +25,6 @@ export { SkillsCard } from './skills/SkillsCard';
 export { SkillsSection } from './skills/SkillsSection';
 export { TechnicalSkills } from './skills/TechnicalSkills';
 export { SoftSkills } from './skills/SoftSkills';
+
+// UI
+export { PageTitle } from './ui/PageTitle';
