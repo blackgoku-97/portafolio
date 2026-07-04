@@ -4,8 +4,9 @@ export { Resumen } from './curriculum/Resumen';
 export { Educacion } from './curriculum/Educacion';
 export { ExperienciaLaboral } from './curriculum/ExperienciaLaboral';
 export { Social } from './curriculum/Social';
-export { CurriculumPDF } from './curriculum/CurriculumPDF';
 export { CurriculumContent } from './curriculum/CurriculumContent';
+export { SectionHeader } from './curriculum/SectionHeader';
+export { InformacionAdicional } from './curriculum/InformacionAdicional';
 
 // Navegation
 export { Contact } from './navegation/Contact';
