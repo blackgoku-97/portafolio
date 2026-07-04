@@ -7,7 +7,7 @@ import { SectionHeader } from "./SectionHeader"
 
 export const Resumen = () => {
   return (
-    <section className="mb-12 border-b border-gray-700 pb-8">
+    <section>
       <SectionHeader icon={<FaUserTie />} title="Resumen" />
 
       <motion.div

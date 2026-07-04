@@ -6,7 +6,7 @@ export { ExperienciaLaboral } from './curriculum/ExperienciaLaboral';
 export { Social } from './curriculum/Social';
 export { CurriculumContent } from './curriculum/CurriculumContent';
 export { SectionHeader } from './curriculum/SectionHeader';
-export { InformacionAdicional } from './curriculum/InformacionAdicional';
+export { CurriculumPDF } from './curriculum/CurriculumPDF';
 
 // Navegation
 export { Contact } from './navegation/Contact';

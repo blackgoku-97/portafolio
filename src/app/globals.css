@@ -35,29 +35,3 @@ button {
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
-
-/* Impresión / exportación a PDF (react-to-print) del currículum */
-@media print {
-  @page {
-    margin: 12mm;
-  }
-
-  .curriculum-printable,
-  .curriculum-printable * {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
-  }
-
-  .curriculum-printable {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-  }
-
-  /* Salvaguarda: si el nodo referenciado por react-to-print alguna vez
-     incluyera el layout raíz, esto neutraliza el fondo animado global. */
-  .animate-gradient-x {
-    animation: none !important;
-    display: none !important;
-  }
-}

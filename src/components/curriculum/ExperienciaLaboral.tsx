@@ -7,11 +7,11 @@ import { SectionHeader } from "./SectionHeader";
 
 export const ExperienciaLaboral = () => {
   return (
-    <section className="mb-12 border-b border-gray-700 pb-8">
+    <section>
       <SectionHeader icon={<FaBriefcase />} title="Experiencia Laboral" />
 
       {experiencia.map((grupo) => (
-        <div key={grupo.id} className="mt-10 first:mt-0">
+        <div key={grupo.id} className="mt-8 first:mt-0">
           <SectionHeader icon={<FaLaptopCode />} title={grupo.titulo} level={3} />
           <div className="space-y-6">
             {grupo.entradas.map((exp, i) => (

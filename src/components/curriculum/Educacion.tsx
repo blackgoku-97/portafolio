@@ -17,7 +17,7 @@ export const Educacion = () => {
   return (
     <>
       {/* Educación */}
-      <section className="mb-10 border-b border-gray-700 pb-6">
+      <section className="mb-10">
         <SectionHeader icon={<FaGraduationCap />} title="Educación" />
         <div className="space-y-6">
           {educacion.map((edu, i) => (
@@ -40,7 +40,7 @@ export const Educacion = () => {
       </section>
 
       {/* Idiomas */}
-      <section className="mb-10 border-b border-gray-700 pb-6">
+      <section className="mb-10">
         <SectionHeader icon={<FaLanguage />} title="Idiomas" />
         <motion.ul
           initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export const Educacion = () => {
       </section>
 
       {/* Habilidades técnicas */}
-      <section className="mb-10 border-b border-gray-700 pb-6">
+      <section className="mb-10">
         <SectionHeader icon={<FaTools />} title="Habilidades Técnicas" />
         <div className="space-y-4">
           {habilidadesTecnicas.map((hab, i) => (
