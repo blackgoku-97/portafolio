@@ -1,11 +1,13 @@
 export interface PersonalInfo {
   nombre: string;
   rol: string;
+  web: string;
 }
 
 export const personalInfo: PersonalInfo = {
   nombre: "Ricardo Pérez",
   rol: "Ingeniero Informático",
+  web: "www.ricardoweb.cl",
 };
 
 export type SocialIcon = "email" | "github" | "linkedin";

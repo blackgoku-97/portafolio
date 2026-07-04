@@ -23,7 +23,7 @@ export const CurriculumPDF = (): JSX.Element => {
     <Document>
       <Page size="A4" style={styles.page}>
         <Text style={styles.header}>
-          {personalInfo.nombre} — {personalInfo.rol}
+          {personalInfo.nombre} — {personalInfo.rol} — {personalInfo.web}
         </Text>
 
         <View style={{ flexDirection: "row" }}>
