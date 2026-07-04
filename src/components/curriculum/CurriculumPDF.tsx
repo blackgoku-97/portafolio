@@ -9,6 +9,7 @@ import {
   resumen,
   experiencia,
   educacion,
+  certificaciones,
   idiomas,
   habilidadesTecnicas,
   habilidadesBlandas,
@@ -39,6 +40,15 @@ export const CurriculumPDF = (): JSX.Element => {
               {educacion.map((edu) => (
                 <Text key={edu.titulo} style={styles.text}>
                   {edu.titulo} ({edu.fecha})
+                </Text>
+              ))}
+            </View>
+
+            <View style={styles.section}>
+              <Text style={styles.subtitle}>Certificaciones</Text>
+              {certificaciones.map((cert) => (
+                <Text key={cert.titulo} style={styles.text}>
+                  {cert.titulo} — {cert.plataforma}, {cert.fecha}
                 </Text>
               ))}
             </View>

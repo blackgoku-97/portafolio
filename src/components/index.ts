@@ -2,6 +2,7 @@
 export { Curriculum } from './curriculum/Curriculum';
 export { Resumen } from './curriculum/Resumen';
 export { Educacion } from './curriculum/Educacion';
+export { Certificaciones } from './curriculum/Certificaciones';
 export { ExperienciaLaboral } from './curriculum/ExperienciaLaboral';
 export { Social } from './curriculum/Social';
 export { CurriculumContent } from './curriculum/CurriculumContent';

@@ -1,6 +1,6 @@
 "use client";
 
-import { ExperienciaLaboral, Educacion, Social, Resumen } from "@/components";
+import { ExperienciaLaboral, Educacion, Certificaciones, Social, Resumen } from "@/components";
 import { motion } from "framer-motion";
 
 export const CurriculumContent = () => {
@@ -18,6 +18,8 @@ export const CurriculumContent = () => {
         <ExperienciaLaboral />
         <div className="border-t border-gray-700 my-8"></div>
         <Educacion />
+        <div className="border-t border-gray-700 my-8"></div>
+        <Certificaciones />
 
         {/* Footer */}
         <footer className="mt-10 text-center text-gray-400 text-sm">

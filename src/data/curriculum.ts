@@ -137,6 +137,34 @@ export const educacion: EstudioEntry[] = [
   },
 ];
 
+export interface Certificacion {
+  titulo: string;
+  plataforma: string;
+  instructor: string;
+  fecha: string;
+  duracion: string;
+  url: string;
+}
+
+export const certificaciones: Certificacion[] = [
+  {
+    titulo: "Next.js: El framework de React para producción",
+    plataforma: "Udemy",
+    instructor: "Fernando Herrera · DevTalles",
+    fecha: "Junio 2026",
+    duracion: "39 horas",
+    url: "https://ude.my/UC-33b004f5-2539-46e3-bf86-8fef081de1a3",
+  },
+  {
+    titulo: "Curso Completo de Claude Code: Crea Aplicaciones con IA",
+    plataforma: "Udemy",
+    instructor: "Santiago Hernández",
+    fecha: "Julio 2026",
+    duracion: "15 horas",
+    url: "https://ude.my/UC-9496939e-6eb1-4985-9716-89d2074889ac",
+  },
+];
+
 export interface IdiomaEntry {
   idioma: string;
   nivel: string;
