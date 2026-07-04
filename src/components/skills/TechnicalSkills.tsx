@@ -5,7 +5,7 @@ import {
 } from "react-icons/fa"
 import {
   SiJavascript, SiTypescript, SiDart, SiMysql, SiPostgresql, SiPostman, SiFirebase, SiMongodb,
-  SiSpringboot, SiTailwindcss, SiFlutter, SiReact, SiNextdotjs, SiIntellijidea
+  SiSpringboot, SiTailwindcss, SiFlutter, SiReact, SiNextdotjs, SiIntellijidea, SiClaude
 } from "react-icons/si"
 import { FaNodeJs, FaGithub, FaDocker } from "react-icons/fa"
 
@@ -48,6 +48,7 @@ export const TechnicalSkills = () => {
 
   const ai = [
     { name: "Copilot", desc: "Asistente de IA para autocompletar y generar código.", icon: <FaBrain className="text-cyan-400" /> },
+    { name: "Claude", desc: "Asistente de IA para desarrollo, generación y automatización de código.", icon: <SiClaude className="text-orange-400" /> },
   ]
 
   return (

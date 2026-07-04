@@ -194,7 +194,7 @@ export const habilidadesTecnicas: HabilidadTecnicaGrupo[] = [
   { categoria: "Base de datos", items: ["MySQL", "PostgreSQL", "Firebase", "MongoDB"] },
   { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman"] },
   { categoria: "IDEs", items: ["Visual Studio Code", "IntelliJ IDEA"] },
-  { categoria: "IA", items: ["Copilot"] },
+  { categoria: "IA", items: ["Copilot", "Claude"] },
 ];
 
 export type SoftSkillIcon = "team" | "communication" | "problem-solving" | "self-learning";
