@@ -156,6 +156,14 @@ export const certificaciones: Certificacion[] = [
     url: "https://ude.my/UC-33b004f5-2539-46e3-bf86-8fef081de1a3",
   },
   {
+    titulo: "Dart: De cero hasta los detalles",
+    plataforma: "Udemy",
+    instructor: "Fernando Herrera · DevTalles",
+    fecha: "Junio 2026",
+    duracion: "10 horas",
+    url: "https://ude.my/UC-7cfb497a-f0fe-4f24-80c5-3522d692157d",
+  },
+  {
     titulo: "Curso Completo de Claude Code: Crea Aplicaciones con IA",
     plataforma: "Udemy",
     instructor: "Santiago Hernández",
