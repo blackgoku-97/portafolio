@@ -49,87 +49,63 @@ export interface ExperienciaItem {
   items: string[];
 }
 
-export interface ExperienciaGrupo {
-  id: string;
-  titulo: string;
-  entradas: ExperienciaItem[];
-}
-
-export const experiencia: ExperienciaGrupo[] = [
+export const experiencia: ExperienciaItem[] = [
   {
-    id: "practicas",
-    titulo: "Prácticas Profesionales",
-    entradas: [
-      {
-        titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
-        fecha: "03/2022 - 05/2022 · Concepción",
-        items: [
-          "Desarrollo backend y frontend con PHP, JavaScript, CSS y MySQL.",
-          "Optimización de interfaces responsivas con Bootstrap.",
-          "Diseño y maquetación de UI orientadas a la usabilidad.",
-        ],
-      },
-      {
-        titulo: "Práctica Profesional – Desarrollador Laravel en Himce",
-        fecha: "08/2019 - 10/2019 · San Pedro de la Paz",
-        items: [
-          "Desarrollo de aplicaciones web innovadoras.",
-          "Implementación de soluciones escalables con Laravel.",
-        ],
-      },
+    titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
+    fecha: "03/2022 - 05/2022 · Concepción",
+    items: [
+      "Desarrollo backend y frontend con PHP, JavaScript, CSS y MySQL.",
+      "Optimización de interfaces responsivas con Bootstrap.",
+      "Diseño y maquetación de UI orientadas a la usabilidad.",
     ],
   },
   {
-    id: "proyectos-academicos",
-    titulo: "Proyectos Académicos",
-    entradas: [
-      {
-        titulo: "Proyecto Académico – App de Conversión de Monedas",
-        fecha: "2024 - 2025 · Proyecto académico",
-        items: [
-          "Aplicación de escritorio en Java con integración de Exchange Rates API.",
-          "Uso de Gson para parseo de datos y arquitectura modular.",
-        ],
-      },
-      {
-        titulo: "Proyecto Académico – App de Librería",
-        fecha: "2024 - 2025 · Proyecto académico",
-        items: [
-          "Gestión de libros y autores con Java, Spring y PostgreSQL.",
-          "Implementación de API REST y persistencia con JPA.",
-        ],
-      },
-      {
-        titulo: "Proyecto Académico – App de Foro",
-        fecha: "2024 - 2025 · Proyecto académico",
-        items: [
-          "Aplicación web para gestión de tópicos y usuarios.",
-          "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",
-        ],
-      },
+    titulo: "Práctica Profesional – Desarrollador Laravel en Himce",
+    fecha: "08/2019 - 10/2019 · San Pedro de la Paz",
+    items: [
+      "Desarrollo de aplicaciones web innovadoras.",
+      "Implementación de soluciones escalables con Laravel.",
     ],
   },
   {
-    id: "proyectos-personales",
-    titulo: "Proyectos Personales",
-    entradas: [
-      {
-        titulo: "Gestor de Tareas – Frontend",
-        fecha: "01/2026 · Proyecto personal",
-        items: [
-          "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
-          "Uso de Tailwind CSS y IndexedDB para almacenamiento local.",
-        ],
-      },
-      {
-        titulo: "Gestor de Presupuestos – Frontend",
-        fecha: "01/2026 · Proyecto personal",
-        items: [
-          "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
-          "Persistencia local con IndexedDB y visualización de métricas con Nivo.",
-          "Modo oscuro total y formularios modernos con validaciones.",
-        ],
-      },
+    titulo: "Proyecto Académico – App de Conversión de Monedas",
+    fecha: "2024 - 2025 · Proyecto académico",
+    items: [
+      "Aplicación de escritorio en Java con integración de Exchange Rates API.",
+      "Uso de Gson para parseo de datos y arquitectura modular.",
+    ],
+  },
+  {
+    titulo: "Proyecto Académico – App de Librería",
+    fecha: "2024 - 2025 · Proyecto académico",
+    items: [
+      "Gestión de libros y autores con Java, Spring y PostgreSQL.",
+      "Implementación de API REST y persistencia con JPA.",
+    ],
+  },
+  {
+    titulo: "Proyecto Académico – App de Foro",
+    fecha: "2024 - 2025 · Proyecto académico",
+    items: [
+      "Aplicación web para gestión de tópicos y usuarios.",
+      "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",
+    ],
+  },
+  {
+    titulo: "Gestor de Tareas – Frontend",
+    fecha: "01/2026 · Proyecto personal",
+    items: [
+      "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
+      "Uso de Tailwind CSS y IndexedDB para almacenamiento local.",
+    ],
+  },
+  {
+    titulo: "Gestor de Presupuestos – Frontend",
+    fecha: "01/2026 · Proyecto personal",
+    items: [
+      "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
+      "Persistencia local con IndexedDB y visualización de métricas con Nivo.",
+      "Modo oscuro total y formularios modernos con validaciones.",
     ],
   },
 ];

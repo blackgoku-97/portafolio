@@ -83,19 +83,17 @@ export const CurriculumPDF = (): JSX.Element => {
               ))}
             </View>
 
-            {experiencia.map((grupo) => (
-              <View key={grupo.id} style={styles.section}>
-                <Text style={styles.subtitle}>{grupo.titulo}</Text>
-                {grupo.entradas.map((entrada) => (
-                  <View key={entrada.titulo} style={{ marginBottom: 4 }}>
-                    <Text style={styles.text}>{entrada.titulo} ({entrada.fecha})</Text>
-                    {entrada.items.map((item) => (
-                      <Text key={item} style={styles.listItem}>• {item}</Text>
-                    ))}
-                  </View>
-                ))}
-              </View>
-            ))}
+            <View style={styles.section}>
+              <Text style={styles.subtitle}>Experiencia Laboral</Text>
+              {experiencia.map((entrada) => (
+                <View key={entrada.titulo} style={{ marginBottom: 4 }}>
+                  <Text style={styles.text}>{entrada.titulo} ({entrada.fecha})</Text>
+                  {entrada.items.map((item) => (
+                    <Text key={item} style={styles.listItem}>• {item}</Text>
+                  ))}
+                </View>
+              ))}
+            </View>
           </View>
         </View>
 
