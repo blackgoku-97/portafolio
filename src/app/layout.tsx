@@ -3,8 +3,11 @@ import type { ReactNode } from "react"
 import { Navbar, Footer } from "@/components"
 
 export const metadata = {
-  title: "DevPerez",
-  description: "Portafolio de Ricardo Pérez",
+  title: {
+    default: "DevPerez",
+    template: "%s | DevPerez",
+  },
+  description: "Portafolio de Ricardo Pérez, Ingeniero Informático especializado en desarrollo web y móvil.",
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
