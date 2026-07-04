@@ -9,7 +9,7 @@ export const CurriculumContent = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="min-h-screen flex flex-col items-center justify-start p-10 bg-slate-900 text-white"
+      className="min-h-screen flex flex-col items-center justify-start p-10 text-white"
     >
       <div className="w-full max-w-4xl bg-slate-800/70 rounded-xl shadow-lg p-10">
         <Social />
