@@ -1,74 +1,102 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
+const ACCENT = "#0ea5e9";
+const HEADING = "#0f172a";
+const TEXT = "#334155";
+const MUTED = "#64748b";
+const BORDER = "#e2e8f0";
+
 export const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    paddingTop: 30,
-    paddingBottom: 25,
-    paddingHorizontal: 25,
+    paddingTop: 28,
+    paddingBottom: 28,
+    paddingHorizontal: 32,
     fontFamily: "Helvetica",
   },
-  header: {
-    position: "absolute",
-    top: 20,
-    left: 25,
-    right: 25,
-    fontSize: 11,
-    color: "#0f172a",
-    borderBottom: "1pt solid #0ea5e9",
-    paddingBottom: 6,
-    textAlign: "center",
-    fontWeight: "bold",
-    letterSpacing: 0.5,
+  headerBlock: {
+    marginBottom: 14,
+    paddingBottom: 10,
+    borderBottom: `1.5pt solid ${ACCENT}`,
   },
-  footer: {
-    position: "absolute",
-    bottom: 20,
-    left: 25,
-    right: 25,
-    textAlign: "center",
-    fontSize: 9,
-    color: "#64748b",
-    borderTop: "1pt solid #0ea5e9",
-    paddingTop: 6,
-    fontStyle: "italic",
+  name: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: HEADING,
+    letterSpacing: 0.3,
+  },
+  role: {
+    fontSize: 11,
+    color: ACCENT,
+    fontWeight: "bold",
+    marginTop: 2,
+    marginBottom: 6,
+  },
+  contactLine: {
+    fontSize: 8.5,
+    color: MUTED,
+  },
+  columns: {
+    flexDirection: "row",
+  },
+  sidebar: {
+    flex: 1,
+    paddingRight: 14,
+  },
+  main: {
+    flex: 1.7,
+    paddingLeft: 14,
+    borderLeft: `0.75pt solid ${BORDER}`,
   },
   section: {
-    marginBottom: 8,
-    padding: 8,
-    backgroundColor: "#f8fafc",
-    borderRadius: 6,
-    borderLeft: "2pt solid #0ea5e9",
+    marginBottom: 10,
   },
-  title: {
-    fontSize: 20,
-    color: "#0ea5e9",
-    marginBottom: 8,
+  sectionTitle: {
+    fontSize: 9.5,
     fontWeight: "bold",
-    textAlign: "center",
+    color: ACCENT,
     textTransform: "uppercase",
-    letterSpacing: 1,
-  },
-  subtitle: {
-    fontSize: 13,
-    marginBottom: 6,
-    fontWeight: "bold",
-    color: "#1e293b",
-    borderBottom: "0.5pt solid #e2e8f0",
+    letterSpacing: 0.8,
+    marginBottom: 5,
     paddingBottom: 3,
+    borderBottom: `0.75pt solid ${BORDER}`,
+  },
+  entryBlock: {
+    marginBottom: 7,
+  },
+  itemTitle: {
+    fontSize: 9.5,
+    fontWeight: "bold",
+    color: HEADING,
+  },
+  itemMeta: {
+    fontSize: 8,
+    color: MUTED,
+    marginBottom: 2,
   },
   text: {
-    fontSize: 10,
-    color: "#334155",
-    lineHeight: 1.3,
+    fontSize: 9,
+    color: TEXT,
+    lineHeight: 1.35,
     marginBottom: 2,
   },
   listItem: {
-    fontSize: 10,
-    marginLeft: 10,
-    marginBottom: 2,
-    color: "#475569",
+    fontSize: 8.5,
+    color: TEXT,
     lineHeight: 1.3,
+    marginLeft: 8,
+    marginBottom: 1,
+  },
+  footer: {
+    position: "absolute",
+    bottom: 14,
+    left: 32,
+    right: 32,
+    textAlign: "center",
+    fontSize: 7.5,
+    color: MUTED,
+    borderTop: `0.75pt solid ${BORDER}`,
+    paddingTop: 4,
   },
 });
