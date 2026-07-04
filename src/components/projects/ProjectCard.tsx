@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 interface Project {
@@ -16,11 +17,15 @@ export const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden flex flex-col hover:shadow-xl transition">
       {/* Imagen */}
-      <img
-        src={project.image}
-        alt={project.name}
-        className="w-full h-40 object-cover"
-      />
+      <div className="relative w-full h-40">
+        <Image
+          src={project.image}
+          alt={project.name}
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="object-cover"
+        />
+      </div>
 
       {/* Contenido */}
       <div className="p-4 flex flex-col flex-1">
