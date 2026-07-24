@@ -53,6 +53,15 @@ export interface ExperienciaItem {
 
 export const experiencia: ExperienciaItem[] = [
   {
+    titulo: "Cofundador y Desarrollador Full Stack – DevSecure Chile",
+    fecha: "02/2026 - Presente",
+    items: [
+      "Emprendimiento propio: desarrollo de sitios web seguros y modernos para emprendedores y pymes, con planes mensuales de acompañamiento continuo.",
+      "Implementación de buenas prácticas de seguridad desde el diseño (SSL, hosting seguro, monitoreo) y cumplimiento de la Ley 21.663 de Ciberseguridad y la Ley 21.719 de Protección de Datos.",
+      "Entregas en menos de 7 días, con optimización SEO y soporte técnico continuo.",
+    ],
+  },
+  {
     titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
     fecha: "03/2022 - 05/2022 · Concepción",
     items: [
