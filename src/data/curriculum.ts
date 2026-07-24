@@ -36,7 +36,7 @@ export const resumen: ResumenParrafo[] = [
     texto: "Ingeniero Informático en etapa inicial de mi carrera profesional (perfil junior), con una base sólida construida entre mi formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones y soluciones digitales reales.",
   },
   {
-    texto: "Como profesional junior, mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo mi propio emprendimiento en desarrollo web seguro.",
+    texto: "Como profesional junior, mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo el emprendimiento que cofundé junto a mi socio en desarrollo web seguro.",
     destacado: "velocidad de aprendizaje",
   },
   {
