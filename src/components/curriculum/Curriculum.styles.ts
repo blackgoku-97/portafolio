@@ -50,7 +50,7 @@ export const styles = StyleSheet.create({
     borderLeft: `0.75pt solid ${BORDER}`,
   },
   section: {
-    marginBottom: 10,
+    marginBottom: 12,
   },
   sectionTitle: {
     fontSize: 9.5,
@@ -63,7 +63,30 @@ export const styles = StyleSheet.create({
     borderBottom: `0.75pt solid ${BORDER}`,
   },
   entryBlock: {
+    marginBottom: 9,
+    paddingLeft: 8,
+    borderLeft: `2pt solid ${BORDER}`,
+  },
+  categoryLabel: {
+    fontSize: 9,
+    fontWeight: "bold",
+    color: HEADING,
+    marginBottom: 2,
+  },
+  badgeRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
     marginBottom: 7,
+  },
+  skillBadge: {
+    fontSize: 8,
+    color: ACCENT,
+    backgroundColor: "#e0f7fc",
+    paddingVertical: 2,
+    paddingHorizontal: 6,
+    borderRadius: 3,
+    marginRight: 4,
+    marginBottom: 4,
   },
   itemTitle: {
     fontSize: 9.5,

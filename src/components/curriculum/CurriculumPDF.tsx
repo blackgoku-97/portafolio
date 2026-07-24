@@ -73,18 +73,24 @@ export const CurriculumPDF = (): JSX.Element => {
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
               {habilidadesTecnicas.map((grupo) => (
-                <Text key={grupo.categoria} style={styles.text}>
-                  <Text style={{ fontWeight: "bold" }}>{grupo.categoria}: </Text>
-                  {grupo.items.join(", ")}
-                </Text>
+                <View key={grupo.categoria} wrap={false}>
+                  <Text style={styles.categoryLabel}>{grupo.categoria}</Text>
+                  <View style={styles.badgeRow}>
+                    {grupo.items.map((item) => (
+                      <Text key={item} style={styles.skillBadge}>{item}</Text>
+                    ))}
+                  </View>
+                </View>
               ))}
             </View>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Habilidades Blandas</Text>
-              <Text style={styles.text}>
-                {habilidadesBlandas.map((skill) => skill.nombre).join("  ·  ")}
-              </Text>
+              <View style={styles.badgeRow}>
+                {habilidadesBlandas.map((skill) => (
+                  <Text key={skill.nombre} style={styles.skillBadge}>{skill.nombre}</Text>
+                ))}
+              </View>
             </View>
 
             <View style={styles.section} wrap={false}>
