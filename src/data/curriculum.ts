@@ -33,15 +33,15 @@ export interface ResumenParrafo {
 
 export const resumen: ResumenParrafo[] = [
   {
-    texto: "Ingeniero Informático con experiencia en desarrollo de aplicaciones y soluciones digitales. Me interesa crear proyectos que sean rápidos, confiables y fáciles de usar.",
+    texto: "Ingeniero Informático en etapa inicial de mi carrera profesional (perfil junior), con una base sólida construida entre mi formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones y soluciones digitales reales.",
   },
   {
-    texto: "Mi diferencia está en la capacidad de resolver problemas de manera práctica y aportar ideas nuevas que mejoren los resultados de un equipo o empresa.",
-    destacado: "resolver problemas",
+    texto: "Como profesional junior, mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo mi propio emprendimiento en desarrollo web seguro.",
+    destacado: "velocidad de aprendizaje",
   },
   {
-    texto: "Puedo aportar organización, trabajo en equipo y aprendizaje constante, asegurando que cada proyecto avance con calidad y cumpla objetivos reales.",
-    destacado: "organización, trabajo en equipo y aprendizaje constante",
+    texto: "Busco un equipo donde seguir creciendo profesionalmente, aportando organización, trabajo en equipo y un compromiso genuino con la calidad de cada proyecto que desarrollo.",
+    destacado: "organización, trabajo en equipo y un compromiso genuino",
   },
 ];
 
