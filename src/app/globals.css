@@ -39,7 +39,9 @@ button {
 }
 
 @utility btn-primary {
-  @apply bg-cyan-500 hover:bg-cyan-600 text-white;
+  /* cyan-700/800 (no cyan-500/600): con texto blanco, cyan-500/600 no
+     llegan al contraste mínimo AA (4.5:1) exigido por WCAG. */
+  @apply bg-cyan-700 hover:bg-cyan-800 text-white;
 }
 
 @utility btn-secondary {

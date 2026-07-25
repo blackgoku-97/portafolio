@@ -46,7 +46,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="text-xs bg-cyan-600 text-white px-2 py-1 rounded-md"
+              className="text-xs bg-cyan-700 text-white px-2 py-1 rounded-md"
             >
               {tech}
             </span>
@@ -79,7 +79,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md transition"
+              className="flex items-center gap-2 text-sm bg-green-700 hover:bg-green-800 text-white px-3 py-1 rounded-md transition"
             >
               <FaExternalLinkAlt /> Demo
             </a>
