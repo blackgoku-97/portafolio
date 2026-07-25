@@ -1,6 +1,7 @@
 import "./globals.css"
 import type { ReactNode } from "react"
 import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { Navbar, Footer } from "@/components"
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="grow">{children}</main>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   )
