@@ -10,6 +10,7 @@ const inter = Inter({
 })
 
 export const metadata = {
+  metadataBase: new URL("https://www.ricardoweb.cl"),
   title: {
     default: "DevPerez",
     template: "%s | DevPerez",
