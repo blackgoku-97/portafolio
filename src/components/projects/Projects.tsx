@@ -6,6 +6,15 @@ import { motion } from "framer-motion"
 export const Projects = () => {
   const projects = [
     {
+      name: "DevSecure Chile",
+      desc: "Desarrollo de sitios web seguros y modernos para emprendedores y pymes, con planes mensuales de acompañamiento continuo.",
+      stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      impact: "Emprendimiento propio cofundado junto a mi socio, con foco en buenas prácticas de seguridad desde el diseño y cumplimiento de la normativa chilena de ciberseguridad (Ley 21.663 y Ley 21.719).",
+      image: "/devsecure.jpg",
+      link: "https://www.devsecure.cl",
+      linkType: "web" as const,
+    },
+    {
       name: "App de Conversión de Monedas",
       desc: "Aplicación de escritorio en Java que permite transformar monedas en tiempo real usando Exchange Rates API.",
       stack: ["Java", "Exchange Rates API", "Gson"],
@@ -51,6 +60,7 @@ export const Projects = () => {
 
   // Categorías más descriptivas
   const categories = {
+    "Emprendimiento": projects.filter(p => p.name === "DevSecure Chile"),
     "Frontend Web": projects.filter(p =>
       p.name.includes("Frontend") || p.name.includes("Presupuestos")
     ),

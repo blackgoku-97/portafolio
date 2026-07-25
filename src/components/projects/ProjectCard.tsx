@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaGithub, FaGlobe, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 interface Project {
   name: string;
@@ -10,6 +10,7 @@ interface Project {
   impact: string;
   image: string;
   link: string;
+  linkType?: "github" | "web";
   demo?: string;
 }
 
@@ -63,7 +64,15 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm btn-primary px-3 py-1 rounded-md transition"
           >
-            <FaGithub /> GitHub
+            {project.linkType === "web" ? (
+              <>
+                <FaGlobe /> Sitio web
+              </>
+            ) : (
+              <>
+                <FaGithub /> GitHub
+              </>
+            )}
           </a>
           {project.demo && (
             <a
