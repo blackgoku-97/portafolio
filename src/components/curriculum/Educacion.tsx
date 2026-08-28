@@ -39,21 +39,6 @@ export const Educacion = () => {
         </div>
       </section>
 
-      {/* Idiomas */}
-      <section className="mb-10">
-        <SectionHeader icon={<FaLanguage />} title="Idiomas" />
-        <motion.ul
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="list-disc list-inside text-gray-200 leading-relaxed space-y-1"
-        >
-          {idiomas.map((idioma) => (
-            <li key={idioma.idioma}>{idioma.idioma} – {idioma.nivel}</li>
-          ))}
-        </motion.ul>
-      </section>
-
       {/* Habilidades técnicas */}
       <section className="mb-10">
         <SectionHeader icon={<FaTools />} title="Habilidades Técnicas" />
@@ -82,7 +67,7 @@ export const Educacion = () => {
       </section>
 
       {/* Habilidades blandas */}
-      <section>
+      <section className="mb-10">
         <SectionHeader icon={<FaTools />} title="Habilidades Blandas" />
         <motion.div
           initial={{ opacity: 0 }}
@@ -106,6 +91,21 @@ export const Educacion = () => {
             );
           })}
         </motion.div>
+      </section>
+
+      {/* Idiomas */}
+      <section>
+        <SectionHeader icon={<FaLanguage />} title="Idiomas" />
+        <motion.ul
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="list-disc list-inside text-gray-200 leading-relaxed space-y-1"
+        >
+          {idiomas.map((idioma) => (
+            <li key={idioma.idioma}>{idioma.idioma} – {idioma.nivel}</li>
+          ))}
+        </motion.ul>
       </section>
     </>
   );

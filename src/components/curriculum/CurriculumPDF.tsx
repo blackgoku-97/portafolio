@@ -7,16 +7,28 @@ import {
   personalInfo,
   contacto,
   resumen,
-  experiencia,
+  experienciaLaboral,
+  proyectos,
   educacion,
   certificaciones,
   idiomas,
   habilidadesTecnicas,
   habilidadesBlandas,
   informacionAdicional,
+  type ProyectoTipo,
 } from "@/data/curriculum";
 
 const displayHref = (href: string) => href.replace(/^mailto:/, "").replace(/^https?:\/\//, "");
+
+const tipoLabel: Record<ProyectoTipo, string> = {
+  academico: "Académico",
+  personal: "Personal",
+};
+
+const tipoStyle: Record<ProyectoTipo, typeof styles.tagPersonal> = {
+  academico: styles.tagAcademic,
+  personal: styles.tagPersonal,
+};
 
 export const CurriculumPDF = (): JSX.Element => {
   return (
@@ -53,24 +65,6 @@ export const CurriculumPDF = (): JSX.Element => {
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Certificaciones</Text>
-              {certificaciones.map((cert) => (
-                <Text key={cert.titulo} style={styles.text}>
-                  {cert.titulo} — {cert.plataforma}, {cert.fecha}
-                </Text>
-              ))}
-            </View>
-
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Idiomas</Text>
-              {idiomas.map((idioma) => (
-                <Text key={idioma.idioma} style={styles.text}>
-                  {idioma.idioma} – {idioma.nivel}
-                </Text>
-              ))}
-            </View>
-
-            <View style={styles.section}>
               <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
               {habilidadesTecnicas.map((grupo) => (
                 <View key={grupo.categoria} wrap={false}>
@@ -93,6 +87,24 @@ export const CurriculumPDF = (): JSX.Element => {
               </View>
             </View>
 
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Idiomas</Text>
+              {idiomas.map((idioma) => (
+                <Text key={idioma.idioma} style={styles.text}>
+                  {idioma.idioma} – {idioma.nivel}
+                </Text>
+              ))}
+            </View>
+
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Certificaciones</Text>
+              {certificaciones.map((cert) => (
+                <Text key={cert.titulo} style={styles.text}>
+                  {cert.titulo} — {cert.plataforma}, {cert.fecha}
+                </Text>
+              ))}
+            </View>
+
             <View style={styles.section} wrap={false}>
               <Text style={styles.sectionTitle}>{informacionAdicional.titulo}</Text>
               <Text style={styles.text}>{informacionAdicional.texto}</Text>
@@ -109,11 +121,27 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Experiencia Laboral</Text>
-              {experiencia.map((entrada) => (
+              {experienciaLaboral.map((entrada) => (
                 <View key={entrada.titulo} style={styles.entryBlock} wrap={false}>
                   <Text style={styles.itemTitle}>{entrada.titulo}</Text>
                   <Text style={styles.itemMeta}>{entrada.fecha}</Text>
                   {entrada.items.map((item) => (
+                    <Text key={item} style={styles.listItem}>• {item}</Text>
+                  ))}
+                </View>
+              ))}
+            </View>
+
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Proyectos</Text>
+              {proyectos.map((proyecto) => (
+                <View key={proyecto.titulo} style={styles.entryBlock} wrap={false}>
+                  <View style={styles.itemHeaderRow}>
+                    <Text style={styles.itemTitle}>{proyecto.titulo}</Text>
+                    <Text style={tipoStyle[proyecto.tipo]}>{tipoLabel[proyecto.tipo]}</Text>
+                  </View>
+                  <Text style={styles.itemMeta}>{proyecto.fecha}</Text>
+                  {proyecto.items.map((item) => (
                     <Text key={item} style={styles.listItem}>• {item}</Text>
                   ))}
                 </View>

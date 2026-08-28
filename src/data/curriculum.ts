@@ -36,7 +36,7 @@ export const resumen: ResumenParrafo[] = [
     texto: "Ingeniero Informático en etapa inicial de mi carrera profesional (perfil junior), con una base sólida construida entre mi formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones y soluciones digitales reales.",
   },
   {
-    texto: "Como profesional junior, mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo el emprendimiento que cofundé junto a mi socio en desarrollo web seguro.",
+    texto: "Mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo el emprendimiento que cofundé junto a mi socio en desarrollo web seguro.",
     destacado: "velocidad de aprendizaje",
   },
   {
@@ -51,7 +51,7 @@ export interface ExperienciaItem {
   items: string[];
 }
 
-export const experiencia: ExperienciaItem[] = [
+export const experienciaLaboral: ExperienciaItem[] = [
   {
     titulo: "Cofundador y Desarrollador Full Stack – DevSecure Chile",
     fecha: "02/2026 - Presente",
@@ -78,33 +78,19 @@ export const experiencia: ExperienciaItem[] = [
       "Implementación de soluciones escalables con Laravel.",
     ],
   },
-  {
-    titulo: "Proyecto Académico – App de Conversión de Monedas",
-    fecha: "2024 - 2025 · Proyecto académico",
-    items: [
-      "Aplicación de escritorio en Java con integración de Exchange Rates API.",
-      "Uso de Gson para parseo de datos y arquitectura modular.",
-    ],
-  },
-  {
-    titulo: "Proyecto Académico – App de Librería",
-    fecha: "2024 - 2025 · Proyecto académico",
-    items: [
-      "Gestión de libros y autores con Java, Spring y PostgreSQL.",
-      "Implementación de API REST y persistencia con JPA.",
-    ],
-  },
-  {
-    titulo: "Proyecto Académico – App de Foro",
-    fecha: "2024 - 2025 · Proyecto académico",
-    items: [
-      "Aplicación web para gestión de tópicos y usuarios.",
-      "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",
-    ],
-  },
+];
+
+export type ProyectoTipo = "academico" | "personal";
+
+export interface ProyectoItem extends ExperienciaItem {
+  tipo: ProyectoTipo;
+}
+
+export const proyectos: ProyectoItem[] = [
   {
     titulo: "Gestor de Tareas – Frontend",
-    fecha: "01/2026 · Proyecto personal",
+    fecha: "01/2026",
+    tipo: "personal",
     items: [
       "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
       "Uso de Tailwind CSS y IndexedDB para almacenamiento local.",
@@ -112,11 +98,39 @@ export const experiencia: ExperienciaItem[] = [
   },
   {
     titulo: "Gestor de Presupuestos – Frontend",
-    fecha: "01/2026 · Proyecto personal",
+    fecha: "01/2026",
+    tipo: "personal",
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
       "Persistencia local con IndexedDB y visualización de métricas con Nivo.",
       "Modo oscuro total y formularios modernos con validaciones.",
+    ],
+  },
+  {
+    titulo: "App de Conversión de Monedas",
+    fecha: "2024 - 2025",
+    tipo: "academico",
+    items: [
+      "Aplicación de escritorio en Java con integración de Exchange Rates API.",
+      "Uso de Gson para parseo de datos y arquitectura modular.",
+    ],
+  },
+  {
+    titulo: "App de Librería",
+    fecha: "2024 - 2025",
+    tipo: "academico",
+    items: [
+      "Gestión de libros y autores con Java, Spring y PostgreSQL.",
+      "Implementación de API REST y persistencia con JPA.",
+    ],
+  },
+  {
+    titulo: "App de Foro",
+    fecha: "2024 - 2025",
+    tipo: "academico",
+    items: [
+      "Aplicación web para gestión de tópicos y usuarios.",
+      "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",
     ],
   },
 ];
@@ -159,6 +173,14 @@ export interface Certificacion {
 
 export const certificaciones: Certificacion[] = [
   {
+    titulo: "Curso Completo de Claude Code: Crea Aplicaciones con IA",
+    plataforma: "Udemy",
+    instructor: "Santiago Hernández",
+    fecha: "Julio 2026",
+    duracion: "15 horas",
+    url: "https://ude.my/UC-9496939e-6eb1-4985-9716-89d2074889ac",
+  },
+  {
     titulo: "Next.js: El framework de React para producción",
     plataforma: "Udemy",
     instructor: "Fernando Herrera · DevTalles",
@@ -173,14 +195,6 @@ export const certificaciones: Certificacion[] = [
     fecha: "Junio 2026",
     duracion: "10 horas",
     url: "https://ude.my/UC-7cfb497a-f0fe-4f24-80c5-3522d692157d",
-  },
-  {
-    titulo: "Curso Completo de Claude Code: Crea Aplicaciones con IA",
-    plataforma: "Udemy",
-    instructor: "Santiago Hernández",
-    fecha: "Julio 2026",
-    duracion: "15 horas",
-    url: "https://ude.my/UC-9496939e-6eb1-4985-9716-89d2074889ac",
   },
 ];
 

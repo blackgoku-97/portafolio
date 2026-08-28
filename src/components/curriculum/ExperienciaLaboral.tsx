@@ -2,7 +2,7 @@
 
 import { FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { experiencia } from "@/data/curriculum";
+import { experienciaLaboral } from "@/data/curriculum";
 import { SectionHeader } from "./SectionHeader";
 
 export const ExperienciaLaboral = () => {
@@ -11,7 +11,7 @@ export const ExperienciaLaboral = () => {
       <SectionHeader icon={<FaBriefcase />} title="Experiencia Laboral" />
 
       <div className="space-y-6">
-        {experiencia.map((exp, i) => (
+        {experienciaLaboral.map((exp, i) => (
           <motion.div
             key={exp.titulo}
             initial={{ opacity: 0, y: 30 }}

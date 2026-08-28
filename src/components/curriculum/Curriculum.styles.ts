@@ -1,6 +1,7 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
 const ACCENT = "#0ea5e9";
+const ACCENT_SECONDARY = "#a855f7";
 const HEADING = "#0f172a";
 const TEXT = "#334155";
 const MUTED = "#64748b";
@@ -88,6 +89,10 @@ export const styles = StyleSheet.create({
     marginRight: 4,
     marginBottom: 4,
   },
+  itemHeaderRow: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
   itemTitle: {
     fontSize: 9.5,
     fontWeight: "bold",
@@ -97,6 +102,26 @@ export const styles = StyleSheet.create({
     fontSize: 8,
     color: MUTED,
     marginBottom: 2,
+  },
+  tagPersonal: {
+    fontSize: 7,
+    fontWeight: "bold",
+    color: ACCENT,
+    backgroundColor: "#e0f7fc",
+    paddingVertical: 1.5,
+    paddingHorizontal: 5,
+    borderRadius: 3,
+    marginLeft: 6,
+  },
+  tagAcademic: {
+    fontSize: 7,
+    fontWeight: "bold",
+    color: ACCENT_SECONDARY,
+    backgroundColor: "#f3e8ff",
+    paddingVertical: 1.5,
+    paddingHorizontal: 5,
+    borderRadius: 3,
+    marginLeft: 6,
   },
   text: {
     fontSize: 9,
