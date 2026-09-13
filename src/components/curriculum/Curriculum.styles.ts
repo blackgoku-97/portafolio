@@ -1,4 +1,16 @@
-import { StyleSheet } from "@react-pdf/renderer";
+import path from "path";
+import { StyleSheet, Font } from "@react-pdf/renderer";
+
+const FONTS_DIR = path.join(process.cwd(), "src/assets/fonts/Inter");
+
+Font.register({
+  family: "Inter",
+  fonts: [
+    { src: path.join(FONTS_DIR, "Inter-Regular.ttf"), fontWeight: 400 },
+    { src: path.join(FONTS_DIR, "Inter-SemiBold.ttf"), fontWeight: 600 },
+    { src: path.join(FONTS_DIR, "Inter-Bold.ttf"), fontWeight: 700 },
+  ],
+});
 
 const ACCENT = "#0ea5e9";
 const ACCENT_SECONDARY = "#a855f7";
@@ -6,6 +18,7 @@ const HEADING = "#0f172a";
 const TEXT = "#334155";
 const MUTED = "#64748b";
 const BORDER = "#e2e8f0";
+const SIDEBAR_BG = "#f8fafc";
 
 export const styles = StyleSheet.create({
   page: {
@@ -14,7 +27,7 @@ export const styles = StyleSheet.create({
     paddingTop: 28,
     paddingBottom: 28,
     paddingHorizontal: 32,
-    fontFamily: "Helvetica",
+    fontFamily: "Inter",
   },
   headerBlock: {
     marginBottom: 14,
@@ -23,14 +36,14 @@ export const styles = StyleSheet.create({
   },
   name: {
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: 700,
     color: HEADING,
     letterSpacing: 0.3,
   },
   role: {
     fontSize: 11,
     color: ACCENT,
-    fontWeight: "bold",
+    fontWeight: 600,
     marginTop: 2,
     marginBottom: 6,
   },
@@ -43,19 +56,20 @@ export const styles = StyleSheet.create({
   },
   sidebar: {
     flex: 1,
-    paddingRight: 14,
+    backgroundColor: SIDEBAR_BG,
+    borderRadius: 6,
+    padding: 12,
+    marginRight: 14,
   },
   main: {
     flex: 1.7,
-    paddingLeft: 14,
-    borderLeft: `0.75pt solid ${BORDER}`,
   },
   section: {
     marginBottom: 12,
   },
   sectionTitle: {
     fontSize: 9.5,
-    fontWeight: "bold",
+    fontWeight: 600,
     color: ACCENT,
     textTransform: "uppercase",
     letterSpacing: 0.8,
@@ -70,7 +84,7 @@ export const styles = StyleSheet.create({
   },
   categoryLabel: {
     fontSize: 9,
-    fontWeight: "bold",
+    fontWeight: 600,
     color: HEADING,
     marginBottom: 2,
   },
@@ -95,7 +109,7 @@ export const styles = StyleSheet.create({
   },
   itemTitle: {
     fontSize: 9.5,
-    fontWeight: "bold",
+    fontWeight: 600,
     color: HEADING,
   },
   itemMeta: {
@@ -105,7 +119,7 @@ export const styles = StyleSheet.create({
   },
   tagPersonal: {
     fontSize: 7,
-    fontWeight: "bold",
+    fontWeight: 600,
     color: ACCENT,
     backgroundColor: "#e0f7fc",
     paddingVertical: 1.5,
@@ -115,7 +129,7 @@ export const styles = StyleSheet.create({
   },
   tagAcademic: {
     fontSize: 7,
-    fontWeight: "bold",
+    fontWeight: 600,
     color: ACCENT_SECONDARY,
     backgroundColor: "#f3e8ff",
     paddingVertical: 1.5,

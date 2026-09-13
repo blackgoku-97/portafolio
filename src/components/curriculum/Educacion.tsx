@@ -28,8 +28,8 @@ export const Educacion = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="p-4 border border-gray-700 rounded-lg hover:border-cyan-400 transition-colors break-inside-avoid"
             >
-              <h3 className="text-xl font-semibold text-sky-400 flex items-center gap-2">
-                <FaUniversity className="text-blue-400" /> {edu.titulo}
+              <h3 className="text-xl font-semibold text-cyan-400 flex items-center gap-2">
+                <FaUniversity className="text-cyan-400" /> {edu.titulo}
               </h3>
               <p className="italic text-gray-400">{edu.fecha}</p>
               <p className="text-gray-200">{edu.modalidad}</p>
