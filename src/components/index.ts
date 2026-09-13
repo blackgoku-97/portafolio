@@ -1,13 +1,5 @@
 // Curriculum
 export { Curriculum } from './curriculum/Curriculum';
-export { Resumen } from './curriculum/Resumen';
-export { Educacion } from './curriculum/Educacion';
-export { Certificaciones } from './curriculum/Certificaciones';
-export { ExperienciaLaboral } from './curriculum/ExperienciaLaboral';
-export { Proyectos } from './curriculum/Proyectos';
-export { Social } from './curriculum/Social';
-export { CurriculumContent } from './curriculum/CurriculumContent';
-export { SectionHeader } from './curriculum/SectionHeader';
 
 // Navegation
 export { Contact } from './navegation/Contact';

@@ -26,26 +26,7 @@ export const contacto: SocialLink[] = [
   { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ricardo-perez-a31474229/", icono: "linkedin", external: true },
 ];
 
-export interface ResumenParrafo {
-  texto: string;
-  destacado?: string;
-}
-
-export const resumen: ResumenParrafo[] = [
-  {
-    texto: "Ingeniero Informático en etapa inicial de mi carrera profesional (perfil junior), con una base sólida construida entre mi formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones y soluciones digitales reales.",
-  },
-  {
-    texto: "Mi mayor fortaleza es la velocidad de aprendizaje: certifico activamente nuevas tecnologías y las aplico de inmediato en proyectos reales, incluyendo el emprendimiento que cofundé junto a mi socio en desarrollo web seguro.",
-    destacado: "velocidad de aprendizaje",
-  },
-  {
-    texto: "Busco un equipo donde seguir creciendo profesionalmente, aportando organización, trabajo en equipo y un compromiso genuino con la calidad de cada proyecto que desarrollo.",
-    destacado: "organización, trabajo en equipo y un compromiso genuino",
-  },
-];
-
-// Versión condensada de 1 párrafo, solo para el PDF descargable (la web usa `resumen` completo).
+// Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
 export const resumenPdf: string =
   "Ingeniero Informático junior, con formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones reales — incluyendo el emprendimiento que cofundé en desarrollo web seguro. Mi mayor fortaleza es la velocidad de aprendizaje: certifico nuevas tecnologías y las aplico de inmediato. Busco un equipo donde seguir creciendo, aportando organización y un compromiso genuino con la calidad.";
 
@@ -232,21 +213,6 @@ export const habilidadesTecnicas: HabilidadTecnicaGrupo[] = [
   { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman"] },
   { categoria: "IDEs", items: ["Visual Studio Code", "IntelliJ IDEA"] },
   { categoria: "IA", items: ["Copilot", "Claude"] },
-];
-
-export type SoftSkillIcon = "team" | "communication" | "problem-solving" | "self-learning";
-
-export interface SoftSkill {
-  nombre: string;
-  icono: SoftSkillIcon;
-  colorClass: string;
-}
-
-export const habilidadesBlandas: SoftSkill[] = [
-  { nombre: "Trabajo en equipo", icono: "team", colorClass: "text-cyan-400" },
-  { nombre: "Comunicación", icono: "communication", colorClass: "text-green-400" },
-  { nombre: "Resolución de problemas", icono: "problem-solving", colorClass: "text-yellow-400" },
-  { nombre: "Autodidacta", icono: "self-learning", colorClass: "text-purple-400" },
 ];
 
 export interface InformacionAdicionalData {
