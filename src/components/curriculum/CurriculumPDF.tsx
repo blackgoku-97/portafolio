@@ -1,5 +1,3 @@
-"use client";
-
 import { Page, Text, View, Document, Link } from "@react-pdf/renderer";
 import { JSX } from "react";
 import { styles } from "./Curriculum.styles";

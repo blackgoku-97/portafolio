@@ -8,7 +8,6 @@ export { Proyectos } from './curriculum/Proyectos';
 export { Social } from './curriculum/Social';
 export { CurriculumContent } from './curriculum/CurriculumContent';
 export { SectionHeader } from './curriculum/SectionHeader';
-export { CurriculumPDF } from './curriculum/CurriculumPDF';
 
 // Navegation
 export { Contact } from './navegation/Contact';
