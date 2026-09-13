@@ -12,13 +12,12 @@ Font.register({
   ],
 });
 
-const ACCENT = "#0ea5e9";
-const ACCENT_SECONDARY = "#a855f7";
 const HEADING = "#0f172a";
 const TEXT = "#334155";
 const MUTED = "#64748b";
 const BORDER = "#e2e8f0";
 const SIDEBAR_BG = "#f8fafc";
+const BADGE_BG = "#eef2f6";
 
 export const styles = StyleSheet.create({
   page: {
@@ -32,7 +31,7 @@ export const styles = StyleSheet.create({
   headerBlock: {
     marginBottom: 14,
     paddingBottom: 10,
-    borderBottom: `1.5pt solid ${ACCENT}`,
+    borderBottom: `1.5pt solid ${HEADING}`,
   },
   name: {
     fontSize: 20,
@@ -42,7 +41,7 @@ export const styles = StyleSheet.create({
   },
   role: {
     fontSize: 11,
-    color: ACCENT,
+    color: HEADING,
     fontWeight: 600,
     marginTop: 2,
     marginBottom: 6,
@@ -70,7 +69,7 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 9.5,
     fontWeight: 600,
-    color: ACCENT,
+    color: HEADING,
     textTransform: "uppercase",
     letterSpacing: 0.8,
     marginBottom: 5,
@@ -95,8 +94,8 @@ export const styles = StyleSheet.create({
   },
   skillBadge: {
     fontSize: 8,
-    color: ACCENT,
-    backgroundColor: "#e0f7fc",
+    color: HEADING,
+    backgroundColor: BADGE_BG,
     paddingVertical: 2,
     paddingHorizontal: 6,
     borderRadius: 3,
@@ -120,8 +119,8 @@ export const styles = StyleSheet.create({
   tagPersonal: {
     fontSize: 7,
     fontWeight: 600,
-    color: ACCENT,
-    backgroundColor: "#e0f7fc",
+    color: HEADING,
+    backgroundColor: BADGE_BG,
     paddingVertical: 1.5,
     paddingHorizontal: 5,
     borderRadius: 3,
@@ -130,8 +129,9 @@ export const styles = StyleSheet.create({
   tagAcademic: {
     fontSize: 7,
     fontWeight: 600,
-    color: ACCENT_SECONDARY,
-    backgroundColor: "#f3e8ff",
+    color: HEADING,
+    backgroundColor: "transparent",
+    border: `0.75pt solid ${MUTED}`,
     paddingVertical: 1.5,
     paddingHorizontal: 5,
     borderRadius: 3,
