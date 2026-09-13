@@ -45,6 +45,10 @@ export const resumen: ResumenParrafo[] = [
   },
 ];
 
+// Versión condensada de 1 párrafo, solo para el PDF descargable (la web usa `resumen` completo).
+export const resumenPdf: string =
+  "Ingeniero Informático junior, con formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones reales — incluyendo el emprendimiento que cofundé en desarrollo web seguro. Mi mayor fortaleza es la velocidad de aprendizaje: certifico nuevas tecnologías y las aplico de inmediato. Busco un equipo donde seguir creciendo, aportando organización y un compromiso genuino con la calidad.";
+
 export interface ExperienciaItem {
   titulo: string;
   fecha: string;
@@ -84,6 +88,8 @@ export type ProyectoTipo = "academico" | "personal";
 
 export interface ProyectoItem extends ExperienciaItem {
   tipo: ProyectoTipo;
+  // Marca los proyectos más representativos para el PDF de 1 página (la web sigue mostrando todos).
+  destacado?: boolean;
 }
 
 export const proyectos: ProyectoItem[] = [
@@ -100,6 +106,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Presupuestos – Frontend",
     fecha: "01/2026",
     tipo: "personal",
+    destacado: true,
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
       "Persistencia local con IndexedDB y visualización de métricas con Nivo.",
@@ -119,6 +126,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Librería",
     fecha: "2024 - 2025",
     tipo: "academico",
+    destacado: true,
     items: [
       "Gestión de libros y autores con Java, Spring y PostgreSQL.",
       "Implementación de API REST y persistencia con JPA.",
@@ -169,6 +177,8 @@ export interface Certificacion {
   fecha: string;
   duracion: string;
   url: string;
+  // Marca las certificaciones más relevantes para el PDF de 1 página (la web sigue mostrando todas).
+  destacado?: boolean;
 }
 
 export const certificaciones: Certificacion[] = [
@@ -179,6 +189,7 @@ export const certificaciones: Certificacion[] = [
     fecha: "Julio 2026",
     duracion: "15 horas",
     url: "https://ude.my/UC-9496939e-6eb1-4985-9716-89d2074889ac",
+    destacado: true,
   },
   {
     titulo: "Next.js: El framework de React para producción",
@@ -187,6 +198,7 @@ export const certificaciones: Certificacion[] = [
     fecha: "Junio 2026",
     duracion: "39 horas",
     url: "https://ude.my/UC-33b004f5-2539-46e3-bf86-8fef081de1a3",
+    destacado: true,
   },
   {
     titulo: "Dart: De cero hasta los detalles",

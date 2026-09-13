@@ -4,17 +4,29 @@ import { styles } from "./Curriculum.styles";
 import {
   personalInfo,
   contacto,
-  resumen,
+  resumenPdf,
   experienciaLaboral,
   proyectos,
   educacion,
   certificaciones,
   idiomas,
   habilidadesTecnicas,
-  habilidadesBlandas,
   informacionAdicional,
   type ProyectoTipo,
 } from "@/data/curriculum";
+
+const proyectosDestacados = proyectos.filter((p) => p.destacado);
+const certificacionesDestacadas = certificaciones.filter((c) => c.destacado);
+// Para el PDF de 1 página: "IDEs" se omite (bajo valor para reclutadores) e "IA" se
+// fusiona dentro de "Herramientas" para ahorrar una fila del sidebar sin perder ítems.
+const grupoIA = habilidadesTecnicas.find((g) => g.categoria === "IA");
+const habilidadesTecnicasPdf = habilidadesTecnicas
+  .filter((g) => g.categoria !== "IDEs" && g.categoria !== "IA")
+  .map((g) =>
+    g.categoria === "Herramientas" && grupoIA
+      ? { ...g, items: [...g.items, ...grupoIA.items] }
+      : g
+  );
 
 const displayHref = (href: string) => href.replace(/^mailto:/, "").replace(/^https?:\/\//, "");
 
@@ -64,7 +76,7 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
-              {habilidadesTecnicas.map((grupo) => (
+              {habilidadesTecnicasPdf.map((grupo) => (
                 <View key={grupo.categoria} wrap={false}>
                   <Text style={styles.categoryLabel}>{grupo.categoria}</Text>
                   <View style={styles.badgeRow}>
@@ -74,15 +86,6 @@ export const CurriculumPDF = (): JSX.Element => {
                   </View>
                 </View>
               ))}
-            </View>
-
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Habilidades Blandas</Text>
-              <View style={styles.badgeRow}>
-                {habilidadesBlandas.map((skill) => (
-                  <Text key={skill.nombre} style={styles.skillBadge}>{skill.nombre}</Text>
-                ))}
-              </View>
             </View>
 
             <View style={styles.section}>
@@ -96,25 +99,23 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Certificaciones</Text>
-              {certificaciones.map((cert) => (
+              {certificacionesDestacadas.map((cert) => (
                 <Text key={cert.titulo} style={styles.text}>
                   {cert.titulo} — {cert.plataforma}, {cert.fecha}
                 </Text>
               ))}
             </View>
 
-            <View style={styles.section} wrap={false}>
+            <View style={[styles.section, { marginBottom: 0 }]} wrap={false}>
               <Text style={styles.sectionTitle}>{informacionAdicional.titulo}</Text>
-              <Text style={styles.text}>{informacionAdicional.texto}</Text>
+              <Text style={[styles.text, { marginBottom: 0 }]}>{informacionAdicional.texto}</Text>
             </View>
           </View>
 
           <View style={styles.main}>
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Resumen</Text>
-              {resumen.map((parrafo) => (
-                <Text key={parrafo.texto} style={styles.text}>{parrafo.texto}</Text>
-              ))}
+              <Text style={styles.text}>{resumenPdf}</Text>
             </View>
 
             <View style={styles.section}>
@@ -132,7 +133,7 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Proyectos</Text>
-              {proyectos.map((proyecto) => (
+              {proyectosDestacados.map((proyecto) => (
                 <View key={proyecto.titulo} style={styles.entryBlock} wrap={false}>
                   <View style={styles.itemHeaderRow}>
                     <Text style={styles.itemTitle}>{proyecto.titulo}</Text>
@@ -147,14 +148,6 @@ export const CurriculumPDF = (): JSX.Element => {
             </View>
           </View>
         </View>
-
-        <Text
-          style={styles.footer}
-          fixed
-          render={({ pageNumber, totalPages }) =>
-            `Página ${pageNumber} de ${totalPages}`
-          }
-        />
       </Page>
     </Document>
   );
