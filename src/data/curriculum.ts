@@ -88,6 +88,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Conversión de Monedas",
     fecha: "2024 - 2025",
     tipo: "academico",
+    destacado: true,
     items: [
       "Aplicación de escritorio en Java con integración de Exchange Rates API.",
       "Uso de Gson para parseo de datos y arquitectura modular.",
