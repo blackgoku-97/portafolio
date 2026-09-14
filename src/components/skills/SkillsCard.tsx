@@ -1,5 +1,4 @@
 import { ReactNode } from "react"
-import { motion } from "framer-motion"
 
 interface SkillsCardProps {
   name: string
@@ -9,14 +8,7 @@ interface SkillsCardProps {
 
 export const SkillsCard: React.FC<SkillsCardProps> = ({ name, desc, icon }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      whileHover={{ scale: 1.08 }}
-      transition={{ duration: 0.4 }}
-      viewport={{ once: true }}
-      className="card-surface p-6"
-    >
+    <div className="card-surface p-6 hover:scale-105 transition-transform duration-300">
       {/* Ícono con acento circular */}
       <div className="mb-4 flex justify-center">
         <span className="text-6xl inline-flex items-center justify-center rounded-full bg-cyan-500/10 p-4">
@@ -39,6 +31,6 @@ export const SkillsCard: React.FC<SkillsCardProps> = ({ name, desc, icon }) => {
       >
         {desc}
       </p>
-    </motion.div>
+    </div>
   )
 }

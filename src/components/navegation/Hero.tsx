@@ -1,8 +1,5 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { FaCheckCircle, FaShieldAlt, FaCode, FaGlobe } from "react-icons/fa"
 
 export const Hero = () => {
@@ -21,14 +18,9 @@ export const Hero = () => {
         className="rounded-full border-4 border-indigo-500 shadow-lg w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
       />
 
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 tracking-wide font-sans"
-      >
+      <h1 className="animate-fade-down mt-6 text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 tracking-wide font-sans">
         Ingeniero Informático · Desarrollo Web y Móvil
-      </motion.h1>
+      </h1>
 
       <p className="mt-4 text-lg max-w-md">
         Creo aplicaciones rápidas, confiables y fáciles de usar, 
@@ -50,11 +42,9 @@ export const Hero = () => {
       </div>
 
       {/* Bloque de valor agregado */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.5 }}
-        className="mt-10 max-w-2xl bg-black/30 backdrop-blur-md border border-white/10 
+      <div
+        style={{ animationDelay: "0.5s" }}
+        className="animate-fade-up mt-10 max-w-2xl bg-black/30 backdrop-blur-md border border-white/10
                    rounded-lg p-6 text-left"
       >
         <h2 className="text-xl font-semibold mb-4 text-pink-300">¿Por qué contratarme?</h2>
@@ -76,7 +66,7 @@ export const Hero = () => {
             Diseño adaptable para cualquier dispositivo y usuario.
           </li>
         </ul>
-      </motion.div>
+      </div>
     </section>
   )
 }

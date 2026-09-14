@@ -1,7 +1,5 @@
-"use client"
-
 import { ProjectCard, PageTitle } from "@/components"
-import { motion } from "framer-motion"
+import type { CSSProperties } from "react"
 
 export const Projects = () => {
   const projects = [
@@ -80,32 +78,17 @@ export const Projects = () => {
       {Object.entries(categories).map(([category, items]) => (
         <div key={category} className="mb-12">
           <h2 className="text-2xl font-bold text-cyan-300 mb-6">{category}</h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={{
-              hidden: {},
-              visible: {
-                transition: { staggerChildren: 0.2 },
-              },
-            }}
-          >
-            {items.map((project) => (
-              <motion.div
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {items.map((project, i) => (
+              <div
                 key={project.name}
-                variants={{
-                  hidden: { opacity: 0, y: 30, scale: 0.95 },
-                  visible: { opacity: 1, y: 0, scale: 1 },
-                }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                whileHover={{ scale: 1.05, boxShadow: "0px 8px 20px rgba(0,0,0,0.3)" }}
+                style={{ "--stagger": i } as CSSProperties}
+                className="animate-fade-up hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition-transform duration-300"
               >
                 <ProjectCard project={project} />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       ))}
     </section>

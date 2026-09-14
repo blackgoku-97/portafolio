@@ -35,8 +35,10 @@ export const Skills: React.FC = () => {
         </button>
       </div>
 
-      {/* Render condicional con animación */}
-      <AnimatePresence mode="wait">
+      {/* Render condicional con animación. initial={false}: la pestaña que
+          se muestra al cargar la página no depende del JS para ser visible
+          (aparece de inmediato); solo se anima al cambiar de pestaña. */}
+      <AnimatePresence mode="wait" initial={false}>
         {activeTab === "tecnicas" && (
           <motion.div
             key="tecnicas"
