@@ -68,6 +68,17 @@ export interface ProyectoItem extends ExperienciaItem {
 
 export const proyectos: ProyectoItem[] = [
   {
+    titulo: "DevSecure Chile",
+    fecha: "02/2026 - Presente",
+    tipo: "personal",
+    destacado: true,
+    url: "https://www.devsecure.cl",
+    items: [
+      "Emprendimiento propio: desarrollo de sitios web seguros y modernos con Next.js, React y TypeScript para emprendedores y pymes.",
+      "Buenas prácticas de seguridad desde el diseño y cumplimiento de la Ley 21.663 de Ciberseguridad y la Ley 21.719 de Protección de Datos.",
+    ],
+  },
+  {
     titulo: "Gestor de Tareas – Frontend",
     fecha: "01/2026",
     tipo: "personal",
