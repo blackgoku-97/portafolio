@@ -55,7 +55,7 @@ export const CurriculumPDF = (): JSX.Element => {
               <Text key={link.id}>
                 {"   ·   "}
                 <Link src={link.href} style={styles.contactLine}>
-                  {displayHref(link.href)}
+                  {link.label}
                 </Link>
               </Text>
             ))}

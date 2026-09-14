@@ -21,7 +21,7 @@ export interface SocialLink {
 }
 
 export const contacto: SocialLink[] = [
-  { id: "email", label: "Correo Profesional", href: "mailto:rpe19971210@gmail.com", icono: "email" },
+  { id: "email", label: "Correo Electrónico", href: "mailto:rpe19971210@gmail.com", icono: "email" },
   { id: "github", label: "GitHub", href: "https://github.com/blackgoku-97", icono: "github", external: true },
   { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ricardo-perez-a31474229/", icono: "linkedin", external: true },
 ];
