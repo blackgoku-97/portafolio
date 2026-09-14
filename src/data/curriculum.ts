@@ -10,7 +10,7 @@ export const personalInfo: PersonalInfo = {
   web: "www.ricardoweb.cl",
 };
 
-export type SocialIcon = "email" | "github" | "linkedin";
+export type SocialIcon = "email" | "github" | "linkedin" | "whatsapp";
 
 export interface SocialLink {
   id: string;
@@ -24,6 +24,7 @@ export const contacto: SocialLink[] = [
   { id: "email", label: "Correo Electrónico", href: "mailto:rpe19971210@gmail.com", icono: "email" },
   { id: "github", label: "GitHub", href: "https://github.com/blackgoku-97", icono: "github", external: true },
   { id: "linkedin", label: "LinkedIn", href: "https://www.linkedin.com/in/ricardo-perez-a31474229/", icono: "linkedin", external: true },
+  { id: "whatsapp", label: "WhatsApp +56 9 3103 1944", href: "https://wa.me/56931031944", icono: "whatsapp", external: true },
 ];
 
 // Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
