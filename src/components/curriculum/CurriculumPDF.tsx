@@ -101,7 +101,7 @@ export const CurriculumPDF = (): JSX.Element => {
               <Text style={styles.sectionTitle}>Certificaciones</Text>
               {certificacionesDestacadas.map((cert) => (
                 <Text key={cert.titulo} style={styles.text}>
-                  {cert.titulo} — {cert.plataforma}, {cert.fecha}
+                  <Link src={cert.url} style={styles.text}>{cert.titulo}</Link> — {cert.plataforma}, {cert.fecha}
                 </Text>
               ))}
             </View>
@@ -139,7 +139,15 @@ export const CurriculumPDF = (): JSX.Element => {
                     <Text style={styles.itemTitle}>{proyecto.titulo}</Text>
                     <Text style={tipoStyle[proyecto.tipo]}>{tipoLabel[proyecto.tipo]}</Text>
                   </View>
-                  <Text style={styles.itemMeta}>{proyecto.fecha}</Text>
+                  <Text style={styles.itemMeta}>
+                    {proyecto.fecha}
+                    {proyecto.url && (
+                      <>
+                        {"  ·  "}
+                        <Link src={proyecto.url} style={styles.itemLink}>{displayHref(proyecto.url)}</Link>
+                      </>
+                    )}
+                  </Text>
                   {proyecto.items.map((item) => (
                     <Text key={item} style={styles.listItem}>• {item}</Text>
                   ))}

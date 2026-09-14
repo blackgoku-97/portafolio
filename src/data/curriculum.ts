@@ -62,6 +62,7 @@ export interface ProyectoItem extends ExperienciaItem {
   tipo: ProyectoTipo;
   // Marca los proyectos más representativos para el PDF de 1 página (la web sigue mostrando todos).
   destacado?: boolean;
+  url?: string;
 }
 
 export const proyectos: ProyectoItem[] = [
@@ -69,6 +70,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Tareas – Frontend",
     fecha: "01/2026",
     tipo: "personal",
+    url: "https://github.com/blackgoku-97/gestor-tareas-frontend",
     items: [
       "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
       "Uso de Tailwind CSS y IndexedDB para almacenamiento local.",
@@ -78,6 +80,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Presupuestos – Frontend",
     fecha: "01/2026",
     tipo: "personal",
+    url: "https://github.com/blackgoku-97/frontend-presupuestos",
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
       "Persistencia local con IndexedDB y visualización de métricas con Nivo.",
@@ -89,6 +92,7 @@ export const proyectos: ProyectoItem[] = [
     fecha: "2024 - 2025",
     tipo: "academico",
     destacado: true,
+    url: "https://github.com/blackgoku-97/transformador_monedas",
     items: [
       "Aplicación de escritorio en Java con integración de Exchange Rates API.",
       "Uso de Gson para parseo de datos y arquitectura modular.",
@@ -99,6 +103,7 @@ export const proyectos: ProyectoItem[] = [
     fecha: "2024 - 2025",
     tipo: "academico",
     destacado: true,
+    url: "https://github.com/blackgoku-97/java-spring-libreria",
     items: [
       "Gestión de libros y autores con Java, Spring y PostgreSQL.",
       "Implementación de API REST y persistencia con JPA.",
@@ -109,6 +114,7 @@ export const proyectos: ProyectoItem[] = [
     fecha: "2024 - 2025",
     tipo: "academico",
     destacado: true,
+    url: "https://github.com/blackgoku-97/foroapi",
     items: [
       "Aplicación web para gestión de tópicos y usuarios.",
       "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",

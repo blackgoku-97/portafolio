@@ -118,6 +118,11 @@ export const styles = StyleSheet.create({
     color: MUTED,
     marginBottom: 3,
   },
+  itemLink: {
+    fontSize: 9,
+    color: MUTED,
+    textDecoration: "underline",
+  },
   tagPersonal: {
     fontSize: 8,
     fontWeight: 600,
