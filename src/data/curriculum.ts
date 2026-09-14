@@ -28,7 +28,7 @@ export const contacto: SocialLink[] = [
 
 // Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
 export const resumenPdf: string =
-  "Ingeniero Informático junior, con formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones reales — incluyendo el emprendimiento que cofundé en desarrollo web seguro. Mi mayor fortaleza es la velocidad de aprendizaje: certifico nuevas tecnologías y las aplico de inmediato. Busco un equipo donde seguir creciendo, aportando organización y un compromiso genuino con la calidad.";
+  "Ingeniero Informático junior, con formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones reales. Mi mayor fortaleza es la velocidad de aprendizaje: certifico nuevas tecnologías y las aplico de inmediato. Busco un equipo donde seguir creciendo, aportando organización y un compromiso genuino con la calidad.";
 
 export interface ExperienciaItem {
   titulo: string;
@@ -37,15 +37,6 @@ export interface ExperienciaItem {
 }
 
 export const experienciaLaboral: ExperienciaItem[] = [
-  {
-    titulo: "Cofundador y Desarrollador Full Stack – DevSecure Chile",
-    fecha: "02/2026 - Presente",
-    items: [
-      "Emprendimiento propio: desarrollo de sitios web seguros y modernos para emprendedores y pymes, con planes mensuales de acompañamiento continuo.",
-      "Implementación de buenas prácticas de seguridad desde el diseño (SSL, hosting seguro, monitoreo) y cumplimiento de la Ley 21.663 de Ciberseguridad y la Ley 21.719 de Protección de Datos.",
-      "Entregas en menos de 7 días, con optimización SEO y soporte técnico continuo.",
-    ],
-  },
   {
     titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
     fecha: "03/2022 - 05/2022 · Concepción",
@@ -87,7 +78,6 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Presupuestos – Frontend",
     fecha: "01/2026",
     tipo: "personal",
-    destacado: true,
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
       "Persistencia local con IndexedDB y visualización de métricas con Nivo.",

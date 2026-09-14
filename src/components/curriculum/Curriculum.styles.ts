@@ -23,9 +23,9 @@ export const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     backgroundColor: "#ffffff",
-    paddingTop: 22,
-    paddingBottom: 8,
-    paddingHorizontal: 32,
+    paddingTop: 20,
+    paddingBottom: 6,
+    paddingHorizontal: 34,
     fontFamily: "Inter",
   },
   headerBlock: {
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     borderBottom: `1.5pt solid ${HEADING}`,
   },
   name: {
-    fontSize: 25,
+    fontSize: 26,
     fontWeight: 700,
     color: HEADING,
     letterSpacing: 0.3,
@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     color: HEADING,
     fontWeight: 600,
     marginTop: 3,
-    marginBottom: 5,
+    marginBottom: 6,
   },
   contactLine: {
     fontSize: 9.5,
@@ -57,30 +57,30 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: SIDEBAR_BG,
     borderRadius: 6,
-    paddingTop: 9,
+    paddingTop: 7,
     paddingHorizontal: 9,
-    paddingBottom: 4,
-    marginRight: 14,
+    paddingBottom: 2,
+    marginRight: 16,
   },
   main: {
     flex: 1.7,
   },
   section: {
-    marginBottom: 8,
+    marginBottom: 6,
   },
   sectionTitle: {
-    fontSize: 11,
+    fontSize: 11.5,
     fontWeight: 600,
     color: HEADING,
     textTransform: "uppercase",
     letterSpacing: 0.8,
-    marginBottom: 4,
+    marginBottom: 3,
     paddingBottom: 3,
     borderBottom: `0.75pt solid ${BORDER}`,
   },
   entryBlock: {
-    marginBottom: 7,
-    paddingLeft: 9,
+    marginBottom: 5,
+    paddingLeft: 10,
     borderLeft: `2pt solid ${BORDER}`,
   },
   categoryLabel: {
@@ -92,7 +92,7 @@ export const styles = StyleSheet.create({
   badgeRow: {
     flexDirection: "row",
     flexWrap: "wrap",
-    marginBottom: 5,
+    marginBottom: 4,
   },
   skillBadge: {
     fontSize: 9,
@@ -109,14 +109,14 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   itemTitle: {
-    fontSize: 11,
+    fontSize: 11.5,
     fontWeight: 600,
     color: HEADING,
   },
   itemMeta: {
     fontSize: 9,
     color: MUTED,
-    marginBottom: 2,
+    marginBottom: 3,
   },
   tagPersonal: {
     fontSize: 8,
@@ -140,16 +140,16 @@ export const styles = StyleSheet.create({
     marginLeft: 7,
   },
   text: {
+    fontSize: 11,
+    color: TEXT,
+    lineHeight: 1.35,
+    marginBottom: 3,
+  },
+  listItem: {
     fontSize: 10.5,
     color: TEXT,
     lineHeight: 1.3,
+    marginLeft: 10,
     marginBottom: 2,
-  },
-  listItem: {
-    fontSize: 10,
-    color: TEXT,
-    lineHeight: 1.3,
-    marginLeft: 9,
-    marginBottom: 1,
   },
 });
