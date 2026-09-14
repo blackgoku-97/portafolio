@@ -94,7 +94,6 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Conversión de Monedas",
     fecha: "2024 - 2025",
     tipo: "academico",
-    destacado: true,
     url: "https://github.com/blackgoku-97/transformador_monedas",
     items: [
       "Aplicación de escritorio en Java con integración de Exchange Rates API.",
@@ -116,7 +115,6 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Foro",
     fecha: "2024 - 2025",
     tipo: "academico",
-    destacado: true,
     url: "https://github.com/blackgoku-97/foroapi",
     items: [
       "Aplicación web para gestión de tópicos y usuarios.",
