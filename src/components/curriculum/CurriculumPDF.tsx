@@ -49,7 +49,7 @@ export const CurriculumPDF = (): JSX.Element => {
           <Text style={styles.role}>{personalInfo.rol}</Text>
           <Text style={styles.contactLine}>
             <Link src={`https://${personalInfo.web}`} style={styles.contactLine}>
-              Página profesional
+              Página Profesional
             </Link>
             {contacto.map((link) => (
               <Text key={link.id}>
