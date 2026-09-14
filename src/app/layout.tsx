@@ -39,6 +39,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
 
+        {/*
+          Los componentes con Framer Motion arrancan con opacity:0 (vía estilo
+          inline, para animar la entrada). Si el JS no llega a ejecutarse
+          (deshabilitado, bloqueado, error de hidratación), ese contenido
+          queda invisible para siempre. Con JS desactivado esta hoja SÍ se
+          aplica y fuerza la visibilidad; con JS activo, <noscript> nunca se
+          procesa, así que no afecta las animaciones normales.
+        */}
+        <noscript>
+          <style>{`[style*="opacity:0;"] { opacity: 1 !important; transform: none !important; }`}</style>
+        </noscript>
+
         {/* Fondo global moderno */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-linear-to-br from-indigo-700 via-purple-700 to-pink-600 animate-gradient-x"></div>
