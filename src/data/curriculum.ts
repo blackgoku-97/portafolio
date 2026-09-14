@@ -108,6 +108,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Foro",
     fecha: "2024 - 2025",
     tipo: "academico",
+    destacado: true,
     items: [
       "Aplicación web para gestión de tópicos y usuarios.",
       "Desarrollada con Java, Spring y MySQL, probada con Insomnia.",
