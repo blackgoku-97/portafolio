@@ -71,6 +71,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Tareas – Frontend",
     fecha: "01/2026",
     tipo: "personal",
+    destacado: true,
     url: "https://github.com/blackgoku-97/gestor-tareas-frontend",
     items: [
       "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
@@ -81,6 +82,7 @@ export const proyectos: ProyectoItem[] = [
     titulo: "Gestor de Presupuestos – Frontend",
     fecha: "01/2026",
     tipo: "personal",
+    destacado: true,
     url: "https://github.com/blackgoku-97/frontend-presupuestos",
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
