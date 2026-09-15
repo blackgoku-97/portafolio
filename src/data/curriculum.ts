@@ -64,6 +64,7 @@ export interface ProyectoItem extends ExperienciaItem {
   // Marca los proyectos más representativos para el PDF de 1 página (la web sigue mostrando todos).
   destacado?: boolean;
   url?: string;
+  demoUrl?: string;
 }
 
 export const proyectos: ProyectoItem[] = [
@@ -84,6 +85,7 @@ export const proyectos: ProyectoItem[] = [
     tipo: "personal",
     destacado: true,
     url: "https://github.com/blackgoku-97/gestor-tareas-frontend",
+    demoUrl: "https://gestor-tareas-frontend-olive.vercel.app/",
     items: [
       "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
       "Uso de Tailwind CSS y IndexedDB para almacenamiento local.",
@@ -95,6 +97,7 @@ export const proyectos: ProyectoItem[] = [
     tipo: "personal",
     destacado: true,
     url: "https://github.com/blackgoku-97/frontend-presupuestos",
+    demoUrl: "https://frontend-presupuestos-delta.vercel.app/",
     items: [
       "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos.",
       "Persistencia local con IndexedDB y visualización de métricas con Nivo.",

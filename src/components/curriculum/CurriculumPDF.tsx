@@ -141,11 +141,24 @@ export const CurriculumPDF = (): JSX.Element => {
                   </View>
                   <Text style={styles.itemMeta}>
                     {proyecto.fecha}
-                    {proyecto.url && (
+                    {proyecto.demoUrl ? (
                       <>
                         {"  ·  "}
-                        <Link src={proyecto.url} style={styles.itemLink}>{displayHref(proyecto.url)}</Link>
+                        <Link src={proyecto.demoUrl} style={styles.itemLink}>Demo</Link>
+                        {proyecto.url && (
+                          <>
+                            {"  ·  "}
+                            <Link src={proyecto.url} style={styles.itemLink}>Código</Link>
+                          </>
+                        )}
                       </>
+                    ) : (
+                      proyecto.url && (
+                        <>
+                          {"  ·  "}
+                          <Link src={proyecto.url} style={styles.itemLink}>{displayHref(proyecto.url)}</Link>
+                        </>
+                      )
                     )}
                   </Text>
                   {proyecto.items.map((item) => (

@@ -37,7 +37,7 @@ export const Projects = () => {
       link: "https://github.com/blackgoku-97/foroapi",
     },
     {
-      name: "Gestor de Tareas - Frontend",
+      name: "Gestor de Tareas – Frontend",
       desc: "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
       stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB"],
       impact: "Proyecto personal que refleja habilidades en UI moderna y persistencia de datos.",
@@ -46,7 +46,7 @@ export const Projects = () => {
       demo: "https://gestor-tareas-frontend-olive.vercel.app/"
     },
     {
-      name: "Gestor de Presupuestos - Frontend",
+      name: "Gestor de Presupuestos – Frontend",
       desc: "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos con IndexedDB.",
       stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB", "Nivo"],
       impact: "Proyecto personal que demuestra dominio en dashboards, formularios oscuros y persistencia local.",
