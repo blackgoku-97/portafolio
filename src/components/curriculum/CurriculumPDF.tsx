@@ -119,19 +119,6 @@ export const CurriculumPDF = (): JSX.Element => {
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Experiencia Laboral</Text>
-              {experienciaLaboral.map((entrada) => (
-                <View key={entrada.titulo} style={styles.entryBlock} wrap={false}>
-                  <Text style={styles.itemTitle}>{entrada.titulo}</Text>
-                  <Text style={styles.itemMeta}>{entrada.fecha}</Text>
-                  {entrada.items.map((item) => (
-                    <Text key={item} style={styles.listItem}>• {item}</Text>
-                  ))}
-                </View>
-              ))}
-            </View>
-
-            <View style={styles.section}>
               <Text style={styles.sectionTitle}>Proyectos</Text>
               {proyectosDestacados.map((proyecto) => (
                 <View key={proyecto.titulo} style={styles.entryBlock} wrap={false}>
@@ -162,6 +149,19 @@ export const CurriculumPDF = (): JSX.Element => {
                     )}
                   </Text>
                   {proyecto.items.map((item) => (
+                    <Text key={item} style={styles.listItem}>• {item}</Text>
+                  ))}
+                </View>
+              ))}
+            </View>
+
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Experiencia Laboral</Text>
+              {experienciaLaboral.map((entrada) => (
+                <View key={entrada.titulo} style={styles.entryBlock} wrap={false}>
+                  <Text style={styles.itemTitle}>{entrada.titulo}</Text>
+                  <Text style={styles.itemMeta}>{entrada.fecha}</Text>
+                  {entrada.items.map((item) => (
                     <Text key={item} style={styles.listItem}>• {item}</Text>
                   ))}
                 </View>
