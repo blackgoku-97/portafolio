@@ -1,0 +1,86 @@
+import { ProjectCard, PageTitle } from "@/components"
+import type { CSSProperties } from "react"
+
+export const Projects = () => {
+  const projects = [
+    {
+      name: "App de Conversión de Monedas",
+      desc: "Aplicación de escritorio en Java que permite transformar monedas en tiempo real usando Exchange Rates API.",
+      stack: ["Java", "Exchange Rates API", "Gson"],
+      impact: "Proyecto académico que demuestra integración de APIs externas y arquitectura modular.",
+      image: "/monedas.jpg",
+      link: "https://github.com/blackgoku-97/transformador_monedas",
+    },
+    {
+      name: "App de Librería",
+      desc: "Sistema de gestión de libros y autores con API REST y persistencia en PostgreSQL.",
+      stack: ["Java", "Spring", "PostgreSQL", "Jackson"],
+      impact: "Proyecto académico que evidencia dominio de Spring Boot y bases de datos relacionales.",
+      image: "/libros.jpg",
+      link: "https://github.com/blackgoku-97/java-spring-libreria",
+    },
+    {
+      name: "App de Foro",
+      desc: "Aplicación web para la gestión de tópicos y usuarios, probada con Insomnia.",
+      stack: ["Java", "Spring", "MySQL", "Insomnia"],
+      impact: "Proyecto académico que muestra experiencia en desarrollo de APIs y pruebas de endpoints.",
+      image: "/topicos.jpg",
+      link: "https://github.com/blackgoku-97/foroapi",
+    },
+    {
+      name: "Gestor de Tareas – Frontend",
+      desc: "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
+      stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB"],
+      impact: "Proyecto personal que refleja habilidades en UI moderna y persistencia de datos.",
+      image: "/frontend.jpg",
+      link: "https://github.com/blackgoku-97/gestor-tareas-frontend",
+      demo: "https://gestor-tareas-frontend-olive.vercel.app/"
+    },
+    {
+      name: "Gestor de Presupuestos – Frontend",
+      desc: "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos con IndexedDB.",
+      stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB", "Nivo"],
+      impact: "Proyecto personal que demuestra dominio en dashboards, formularios oscuros y persistencia local.",
+      image: "/frontend-2.jpg",
+      link: "https://github.com/blackgoku-97/frontend-presupuestos",
+      demo: "https://frontend-presupuestos-delta.vercel.app/"
+    },
+  ]
+
+  // Categorías más descriptivas
+  const categories = {
+    "Frontend Web": projects.filter(p =>
+      p.name.includes("Frontend") || p.name.includes("Presupuestos")
+    ),
+    "Backend APIs y Sistemas": projects.filter(
+      p =>
+        p.name.includes("Backend") ||
+        ["App de Conversión de Monedas", "App de Librería", "App de Foro"].includes(p.name)
+    ),
+  }
+
+  return (
+    <section className="pt-24 p-10 text-white max-w-6xl mx-auto">
+      <PageTitle subtitle="Proyectos destacados que reflejan mis habilidades en desarrollo frontend y backend, aplicando buenas prácticas, arquitecturas escalables y tecnologías modernas.">
+        Portafolio Técnico
+      </PageTitle>
+
+      {Object.entries(categories).map(([category, items]) => (
+        <div key={category} className="mb-12">
+          <h2 className="text-2xl font-bold text-cyan-300 mb-6">{category}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {items.map((project, i) => (
+              <div
+                key={project.name}
+                style={{ "--stagger": i } as CSSProperties}
+                className="animate-fade-up hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition-transform duration-300"
+              >
+                <ProjectCard project={project} />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+  )
+}
