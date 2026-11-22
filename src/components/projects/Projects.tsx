@@ -2,8 +2,7 @@ import { ProjectCard, PageTitle } from "@/components"
 import type { CSSProperties } from "react"
 
 export const Projects = () => {
-  const projects = [
-    {
+  const projects = [   {
       name: "App de Conversión de Monedas",
       desc: "Aplicación de escritorio en Java que permite transformar monedas en tiempo real usando Exchange Rates API.",
       stack: ["Java", "Exchange Rates API", "Gson"],
