@@ -3,7 +3,7 @@ import { Curriculum } from "@/components"
 
 export const metadata: Metadata = {
   title: "Currículum",
-  description: "Experiencia profesional, formación y habilidades de Ricardo Pérez. Consulta o descarga su currículum.",
+  description: "Proyectos personales, prácticas profesionales, formación y habilidades de Ricardo Pérez, Desarrollador Web Junior.",
 }
 
 export default function CurriculumPage() {

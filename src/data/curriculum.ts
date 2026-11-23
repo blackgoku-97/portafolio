@@ -27,9 +27,9 @@ export const contacto: SocialLink[] = [
   { id: "whatsapp", label: "WhatsApp", href: "https://wa.me/56931031944", icono: "whatsapp", external: true },
 ];
 
-// Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
+// Resumen compartido entre el currículum web y el PDF descargable.
 export const resumenPdf: string =
-  "Ingeniero Informático y Desarrollador Web Junior con experiencia práctica en desarrollo web mediante prácticas profesionales y proyectos personales y académicos. He desarrollado aplicaciones e interfaces con Java, Spring Boot, React, TypeScript, Laravel, PHP y MySQL. Busco una oportunidad junior en desarrollo web para aportar al equipo y seguir creciendo.";
+  "Ingeniero Informático y Desarrollador Web Junior en búsqueda de mi primera oportunidad laboral formal. He desarrollado proyectos personales con React, TypeScript, Java y Spring, y realicé prácticas profesionales de desarrollo web en Betech y Himce. Estoy disponible para incorporarme de inmediato y seguir creciendo junto a un equipo.";
 
 export interface ExperienciaItem {
   titulo: string;
@@ -37,7 +37,7 @@ export interface ExperienciaItem {
   items: string[];
 }
 
-export const experienciaLaboral: ExperienciaItem[] = [
+export const practicasProfesionales: ExperienciaItem[] = [
   {
     titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
     fecha: "03/2022 - 05/2022 · Concepción",
@@ -208,12 +208,39 @@ export interface HabilidadTecnicaGrupo {
 
 export const habilidadesTecnicas: HabilidadTecnicaGrupo[] = [
   { categoria: "Lenguajes", items: ["Java", "JavaScript", "TypeScript", "Dart", "PHP", "SQL"] },
-  { categoria: "Frameworks", items: ["React", "Next.js", "Tailwind CSS", "Node.js", "Spring Boot", "Flutter", "Laravel", "Bootstrap"] },
+  { categoria: "Frameworks", items: ["React", "Vite", "Next.js", "Tailwind CSS", "Node.js", "Spring Boot", "Flutter", "Laravel", "Bootstrap"] },
   { categoria: "Base de datos", items: ["MySQL", "PostgreSQL", "Firebase", "MongoDB"] },
   { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman", "Insomnia"] },
   { categoria: "IDEs", items: ["Visual Studio Code", "IntelliJ IDEA"] },
   { categoria: "IA", items: ["Copilot", "Claude"] },
 ];
+
+const habilidadesDemostradas = new Set([
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "PHP",
+  "SQL",
+  "React",
+  "Vite",
+  "Next.js",
+  "Tailwind CSS",
+  "Spring Boot",
+  "Laravel",
+  "Bootstrap",
+  "MySQL",
+  "PostgreSQL",
+  "Git",
+  "GitHub",
+  "Insomnia",
+]);
+
+export const habilidadesParaCurriculum = habilidadesTecnicas
+  .map((grupo) => ({
+    ...grupo,
+    items: grupo.items.filter((item) => habilidadesDemostradas.has(item)),
+  }))
+  .filter((grupo) => grupo.items.length > 0);
 
 export interface InformacionAdicionalData {
   titulo: string;

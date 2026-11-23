@@ -5,42 +5,18 @@ import {
   personalInfo,
   contacto,
   resumenPdf,
-  experienciaLaboral,
+  habilidadesParaCurriculum,
+  practicasProfesionales,
   proyectos,
   educacion,
   certificaciones,
   idiomas,
-  habilidadesTecnicas,
   informacionAdicional,
   type ProyectoTipo,
 } from "@/data/curriculum";
 
 const proyectosDestacados = proyectos.filter((p) => p.destacado);
 const certificacionesDestacadas = certificaciones.filter((c) => c.destacado);
-const habilidadesRelevantesPdf = new Set([
-  "Java",
-  "JavaScript",
-  "TypeScript",
-  "PHP",
-  "SQL",
-  "React",
-  "Next.js",
-  "Tailwind CSS",
-  "Spring Boot",
-  "Laravel",
-  "Bootstrap",
-  "MySQL",
-  "PostgreSQL",
-  "Git",
-  "GitHub",
-  "Insomnia",
-]);
-const habilidadesTecnicasPdf = habilidadesTecnicas
-  .map((grupo) => ({
-    ...grupo,
-    items: grupo.items.filter((item) => habilidadesRelevantesPdf.has(item)),
-  }))
-  .filter((grupo) => grupo.items.length > 0);
 
 const displayHref = (href: string) => href.replace(/^mailto:/, "").replace(/^https?:\/\//, "");
 
@@ -90,7 +66,7 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
-              {habilidadesTecnicasPdf.map((grupo) => (
+              {habilidadesParaCurriculum.map((grupo) => (
                 <View key={grupo.categoria} wrap={false}>
                   <Text style={styles.categoryLabel}>{grupo.categoria}</Text>
                   <View style={styles.badgeRow}>
@@ -171,7 +147,7 @@ export const CurriculumPDF = (): JSX.Element => {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Prácticas Profesionales</Text>
-              {experienciaLaboral.map((entrada) => (
+              {practicasProfesionales.map((entrada) => (
                 <View key={entrada.titulo} style={styles.entryBlock} wrap={false}>
                   <Text style={styles.itemTitle}>{entrada.titulo}</Text>
                   <Text style={styles.itemMeta}>{entrada.fecha}</Text>

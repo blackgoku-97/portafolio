@@ -1,15 +1,18 @@
 import Link from "next/link";
 import {
   educacion,
-  experienciaLaboral,
-  habilidadesTecnicas,
+  habilidadesParaCurriculum,
   personalInfo,
+  practicasProfesionales,
+  proyectos,
   resumenPdf,
 } from "@/data/curriculum";
 import {
   FaDownload,
   FaEnvelope,
 } from "react-icons/fa";
+
+const proyectosDestacados = proyectos.filter((proyecto) => proyecto.destacado);
 
 export const Curriculum = () => {
   return (
@@ -42,11 +45,50 @@ export const Curriculum = () => {
         </div>
       </header>
 
+      <section className="card-surface mt-8 p-6">
+        <h2 className="mb-5 text-2xl font-bold text-cyan-300">Proyectos personales y académicos</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {proyectosDestacados.map((proyecto) => (
+            <article key={proyecto.titulo} className="rounded-lg border border-white/10 bg-black/20 p-5">
+              <h3 className="font-semibold text-white">{proyecto.titulo}</h3>
+              <p className="mt-1 text-sm text-cyan-100">
+                Proyecto {proyecto.tipo} · {proyecto.fecha}
+              </p>
+              <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-gray-300">
+                {proyecto.items.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <div className="mt-4 flex flex-wrap gap-4 text-sm font-semibold">
+                {proyecto.demoUrl && (
+                  <a
+                    href={proyecto.demoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-cyan-200 underline underline-offset-4 hover:text-white"
+                  >
+                    Ver demo
+                  </a>
+                )}
+                {proyecto.url && (
+                  <a
+                    href={proyecto.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-cyan-200 underline underline-offset-4 hover:text-white"
+                  >
+                    Ver código
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <div className="mt-8 grid gap-8 md:grid-cols-2">
         <section className="card-surface p-6">
-          <h2 className="mb-5 text-2xl font-bold text-cyan-300">Experiencia profesional</h2>
+          <h2 className="mb-5 text-2xl font-bold text-cyan-300">Prácticas profesionales</h2>
           <div className="space-y-6">
-            {experienciaLaboral.map((experiencia) => (
+            {practicasProfesionales.map((experiencia) => (
               <article key={experiencia.titulo}>
                 <h3 className="font-semibold text-white">{experiencia.titulo}</h3>
                 <p className="mt-1 text-sm text-cyan-100">{experiencia.fecha}</p>
@@ -75,7 +117,7 @@ export const Curriculum = () => {
       <section className="card-surface mt-8 p-6">
         <h2 className="mb-5 text-2xl font-bold text-cyan-300">Habilidades técnicas</h2>
         <div className="grid gap-5 sm:grid-cols-2">
-          {habilidadesTecnicas.map((grupo) => (
+          {habilidadesParaCurriculum.map((grupo) => (
             <div key={grupo.categoria}>
               <h3 className="font-semibold text-white">{grupo.categoria}</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-300">

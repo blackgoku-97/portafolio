@@ -3,6 +3,7 @@ import type { CSSProperties } from "react"
 
 type Project = {
   name: string
+  date: string
   desc: string
   stack: string[]
   focus: string
@@ -16,6 +17,7 @@ type Project = {
 const projects: Project[] = [
   {
     name: "Gestor de Tareas – Frontend",
+    date: "01/2026",
     desc: "Interfaz web para organizar tareas, con persistencia de datos local.",
     stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB"],
     focus: "Desarrollé la interfaz y el almacenamiento local para mantener las tareas en el navegador.",
@@ -27,6 +29,7 @@ const projects: Project[] = [
   },
   {
     name: "Gestor de Presupuestos – Frontend",
+    date: "01/2026",
     desc: "Aplicación web para administrar clientes y presupuestos, con panel de métricas.",
     stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB", "Nivo"],
     focus: "Implementé formularios con validaciones, modo oscuro, persistencia local y visualización de métricas.",
@@ -38,6 +41,7 @@ const projects: Project[] = [
   },
   {
     name: "App de Conversión de Monedas",
+    date: "2024–2025",
     desc: "Aplicación de escritorio en Java para convertir monedas con tasas obtenidas de una API externa.",
     stack: ["Java", "Exchange Rates API", "Gson"],
     focus: "Integré Exchange Rates API y Gson para procesar las tasas de cambio.",
@@ -48,6 +52,7 @@ const projects: Project[] = [
   },
   {
     name: "App de Librería",
+    date: "2024–2025",
     desc: "API REST para gestionar libros y autores, con persistencia en PostgreSQL.",
     stack: ["Java", "Spring", "PostgreSQL", "Jackson"],
     focus: "Implementé endpoints y persistencia relacional para la gestión de libros y autores.",
@@ -58,6 +63,7 @@ const projects: Project[] = [
   },
   {
     name: "App de Foro",
+    date: "2024–2025",
     desc: "Aplicación web para crear y administrar tópicos y usuarios.",
     stack: ["Java", "Spring", "MySQL", "Insomnia"],
     focus: "Desarrollé una API con Spring y MySQL, y probé sus endpoints con Insomnia.",

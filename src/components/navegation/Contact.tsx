@@ -52,8 +52,8 @@ export const Contact = () => {
       <PageTitle
         subtitle={
           <>
-            Busco una oportunidad laboral junior y también converso sobre proyectos web
-            pequeños y bien definidos.<br />
+            Estoy disponible para incorporarme de inmediato a un puesto junior y también
+            converso sobre proyectos web pequeños y bien definidos.<br />
             <span className="text-cyan-400 font-semibold">
               Escríbeme por correo o LinkedIn para conversar.
             </span>

@@ -5,6 +5,7 @@ import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 interface ProjectCardData {
   name: string;
+  date: string;
   desc: string;
   stack: string[];
   focus: string;
@@ -53,7 +54,7 @@ export const ProjectCard = ({ project }: { project: ProjectCardData }) => {
         </div>
 
         <p className="text-xs font-medium text-cyan-200 mb-2">
-          Proyecto {project.origin.toLowerCase()}
+          Proyecto {project.origin.toLowerCase()} · {project.date}
         </p>
         <p className="text-xs text-gray-400 mb-4">
           <span className="font-semibold text-gray-300">Enfoque:</span> {project.focus}
