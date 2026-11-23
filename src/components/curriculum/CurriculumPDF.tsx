@@ -17,16 +17,30 @@ import {
 
 const proyectosDestacados = proyectos.filter((p) => p.destacado);
 const certificacionesDestacadas = certificaciones.filter((c) => c.destacado);
-// Para el PDF de 1 página: "IDEs" se omite (bajo valor para reclutadores) e "IA" se
-// fusiona dentro de "Herramientas" para ahorrar una fila del sidebar sin perder ítems.
-const grupoIA = habilidadesTecnicas.find((g) => g.categoria === "IA");
+const habilidadesRelevantesPdf = new Set([
+  "Java",
+  "JavaScript",
+  "TypeScript",
+  "PHP",
+  "SQL",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Spring Boot",
+  "Laravel",
+  "Bootstrap",
+  "MySQL",
+  "PostgreSQL",
+  "Git",
+  "GitHub",
+  "Insomnia",
+]);
 const habilidadesTecnicasPdf = habilidadesTecnicas
-  .filter((g) => g.categoria !== "IDEs" && g.categoria !== "IA")
-  .map((g) =>
-    g.categoria === "Herramientas" && grupoIA
-      ? { ...g, items: [...g.items, ...grupoIA.items] }
-      : g
-  );
+  .map((grupo) => ({
+    ...grupo,
+    items: grupo.items.filter((item) => habilidadesRelevantesPdf.has(item)),
+  }))
+  .filter((grupo) => grupo.items.length > 0);
 
 const displayHref = (href: string) => href.replace(/^mailto:/, "").replace(/^https?:\/\//, "");
 
@@ -156,7 +170,7 @@ export const CurriculumPDF = (): JSX.Element => {
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Experiencia Laboral</Text>
+              <Text style={styles.sectionTitle}>Prácticas Profesionales</Text>
               {experienciaLaboral.map((entrada) => (
                 <View key={entrada.titulo} style={styles.entryBlock} wrap={false}>
                   <Text style={styles.itemTitle}>{entrada.titulo}</Text>

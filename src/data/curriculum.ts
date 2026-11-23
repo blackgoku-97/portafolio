@@ -29,7 +29,7 @@ export const contacto: SocialLink[] = [
 
 // Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
 export const resumenPdf: string =
-  "Ingeniero Informático con experiencia práctica en desarrollo web mediante prácticas profesionales y proyectos personales y académicos. He trabajado con Java y Spring Boot, React, TypeScript, Laravel, PHP y MySQL. Busco una oportunidad junior para contribuir al desarrollo de software y seguir creciendo junto a un equipo.";
+  "Ingeniero Informático y Desarrollador Web Junior con experiencia práctica en desarrollo web mediante prácticas profesionales y proyectos personales y académicos. He desarrollado aplicaciones e interfaces con Java, Spring Boot, React, TypeScript, Laravel, PHP y MySQL. Busco una oportunidad junior en desarrollo web para aportar al equipo y seguir creciendo.";
 
 export interface ExperienciaItem {
   titulo: string;
@@ -42,17 +42,15 @@ export const experienciaLaboral: ExperienciaItem[] = [
     titulo: "Práctica Profesional – Desarrollador Laravel en Betech",
     fecha: "03/2022 - 05/2022 · Concepción",
     items: [
-      "Desarrollo backend y frontend con PHP, JavaScript, CSS y MySQL.",
-      "Optimización de interfaces responsivas con Bootstrap.",
-      "Diseño y maquetación de UI orientadas a la usabilidad.",
+      "Desarrollé funcionalidades backend y frontend con PHP, JavaScript, CSS y MySQL.",
+      "Diseñé y optimicé interfaces responsivas con Bootstrap, enfocadas en la usabilidad.",
     ],
   },
   {
     titulo: "Práctica Profesional – Desarrollador Laravel en Himce",
     fecha: "08/2019 - 10/2019 · San Pedro de la Paz",
     items: [
-      "Desarrollo de aplicaciones web innovadoras.",
-      "Implementación de soluciones escalables con Laravel.",
+      "Desarrollé aplicaciones web utilizando Laravel.",
     ],
   },
 ];
@@ -209,10 +207,10 @@ export interface HabilidadTecnicaGrupo {
 }
 
 export const habilidadesTecnicas: HabilidadTecnicaGrupo[] = [
-  { categoria: "Lenguajes", items: ["Java", "JavaScript", "TypeScript", "Dart", "SQL"] },
-  { categoria: "Frameworks", items: ["React", "Next.js", "Tailwind CSS", "Node.js", "Spring Boot", "Flutter"] },
+  { categoria: "Lenguajes", items: ["Java", "JavaScript", "TypeScript", "Dart", "PHP", "SQL"] },
+  { categoria: "Frameworks", items: ["React", "Next.js", "Tailwind CSS", "Node.js", "Spring Boot", "Flutter", "Laravel", "Bootstrap"] },
   { categoria: "Base de datos", items: ["MySQL", "PostgreSQL", "Firebase", "MongoDB"] },
-  { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman"] },
+  { categoria: "Herramientas", items: ["Git", "GitHub", "Docker", "Postman", "Insomnia"] },
   { categoria: "IDEs", items: ["Visual Studio Code", "IntelliJ IDEA"] },
   { categoria: "IA", items: ["Copilot", "Claude"] },
 ];
@@ -225,5 +223,5 @@ export interface InformacionAdicionalData {
 export const informacionAdicional: InformacionAdicionalData = {
   titulo: "Información adicional",
   texto:
-    "Discapacidad reconocida por SENADIS: usuario de silla de ruedas, gestionada con autonomía y sin impacto en desempeño profesional.",
+    "Persona con discapacidad reconocida por SENADIS y usuario de silla de ruedas. Me desenvuelvo con autonomía.",
 };
