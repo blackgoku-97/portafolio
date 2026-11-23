@@ -3,7 +3,7 @@ import { Projects } from "@/components"
 
 export const metadata: Metadata = {
   title: "Proyectos",
-  description: "Proyectos destacados de Ricardo Pérez: desarrollo frontend y backend con React, Java y Spring.",
+  description: "Proyectos personales y académicos de Ricardo Pérez con React, TypeScript, Java y Spring.",
 }
 
 export default function ProjectPage() {

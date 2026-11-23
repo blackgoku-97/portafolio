@@ -11,6 +11,7 @@ export const Contact = () => {
       icon: <MdEmail />,
       desc: "Correo electrónico",
       color: "from-cyan-400 to-blue-500",
+      external: false,
     },
     {
       name: "GitHub",
@@ -18,13 +19,15 @@ export const Contact = () => {
       icon: <FaGithub />,
       desc: "Repositorio de proyectos",
       color: "from-gray-400 to-gray-600",
+      external: true,
     },
     {
-      name: "EmpleaONE",
+      name: "Perfil Alura",
       href: "https://app.aluracursos.com/emprega-one/profile/rpe19971210",
       icon: <FaGlobe />,
-      desc: "Perfil de Alura",
+      desc: "Perfil de formación y empleo",
       color: "from-green-400 to-green-600",
+      external: true,
     },
     {
       name: "LinkedIn",
@@ -32,6 +35,7 @@ export const Contact = () => {
       icon: <FaLinkedin />,
       desc: "LinkedIn",
       color: "from-blue-400 to-blue-600",
+      external: true,
     },
     {
       name: "WhatsApp",
@@ -39,6 +43,7 @@ export const Contact = () => {
       icon: <FaWhatsapp />,
       desc: "WhatsApp",
       color: "from-green-400 to-green-600",
+      external: true,
     },
   ]
 
@@ -47,9 +52,9 @@ export const Contact = () => {
       <PageTitle
         subtitle={
           <>
-            Puedes escribirme para proyectos, colaboraciones o nuevas oportunidades.<br />
+            Estoy buscando una oportunidad laboral junior en desarrollo de software.<br />
             <span className="text-cyan-400 font-semibold">
-              ¡Hablemos y creemos algo increíble juntos!
+              Puedes contactarme por correo o LinkedIn.
             </span>
           </>
         }
@@ -62,8 +67,8 @@ export const Contact = () => {
           <a
             key={c.name}
             href={c.href}
-            target="_blank"
-            rel="noreferrer"
+            target={c.external ? "_blank" : undefined}
+            rel={c.external ? "noreferrer" : undefined}
             aria-label={`Abrir ${c.name} - ${c.desc}`}
             style={{ "--stagger": i } as CSSProperties}
             className="animate-fade-up card-surface p-6 text-center hover:scale-105 hover:-rotate-1 active:scale-95 transition-transform duration-200"

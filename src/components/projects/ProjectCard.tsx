@@ -1,20 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaGlobe, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
-interface Project {
+interface ProjectCardData {
   name: string;
   desc: string;
   stack: string[];
-  impact: string;
+  focus: string;
   image: string;
   link: string;
-  linkType?: "github" | "web";
   demo?: string;
+  origin: "Personal" | "Académico";
 }
 
-export const ProjectCard = ({ project }: { project: Project }) => {
+export const ProjectCard = ({ project }: { project: ProjectCardData }) => {
   return (
     <div className="card-surface overflow-hidden flex flex-col">
       {/* Imagen */}
@@ -34,7 +34,6 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           <FaCode className="text-cyan-500" /> {project.name}
         </h3>
 
-        {/* Descripción con border-radius sobrio */}
         <div className="bg-slate-800/60 p-3 rounded-md mb-3">
           <p className="text-sm text-gray-200 leading-relaxed">
             {project.desc}
@@ -53,8 +52,12 @@ export const ProjectCard = ({ project }: { project: Project }) => {
           ))}
         </div>
 
-        {/* Impacto */}
-        <p className="text-xs text-gray-400 mb-4">{project.impact}</p>
+        <p className="text-xs font-medium text-cyan-200 mb-2">
+          Proyecto {project.origin.toLowerCase()}
+        </p>
+        <p className="text-xs text-gray-400 mb-4">
+          <span className="font-semibold text-gray-300">Enfoque:</span> {project.focus}
+        </p>
 
         {/* Links */}
         <div className="mt-auto flex gap-3">
@@ -64,15 +67,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm btn-primary px-3 py-1 rounded-md transition"
           >
-            {project.linkType === "web" ? (
-              <>
-                <FaGlobe /> Sitio web
-              </>
-            ) : (
-              <>
-                <FaGithub /> GitHub
-              </>
-            )}
+            <FaGithub aria-hidden="true" /> Código
           </a>
           {project.demo && (
             <a
@@ -81,7 +76,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm bg-green-700 hover:bg-green-800 text-white px-3 py-1 rounded-md transition"
             >
-              <FaExternalLinkAlt /> Demo
+              <FaExternalLinkAlt aria-hidden="true" /> Demo en vivo
             </a>
           )}
         </div>

@@ -6,7 +6,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   nombre: "Ricardo Pérez",
-  rol: "Ingeniero Informático",
+  rol: "Ingeniero Informático · Desarrollador de Software Junior",
   web: "www.ricardoweb.cl",
 };
 
@@ -29,7 +29,7 @@ export const contacto: SocialLink[] = [
 
 // Resumen del CV, usado solo por el PDF descargable (la vista web ya no muestra el CV completo).
 export const resumenPdf: string =
-  "Ingeniero Informático junior, con formación universitaria y el programa intensivo Oracle Next Education (Alura & Oracle), además de experiencia práctica desarrollando aplicaciones reales. Mi mayor fortaleza es la velocidad de aprendizaje: certifico nuevas tecnologías y las aplico de inmediato. Busco un equipo donde seguir creciendo, aportando organización y un compromiso genuino con la calidad.";
+  "Ingeniero Informático con experiencia práctica en desarrollo web mediante prácticas profesionales y proyectos personales y académicos. He trabajado con Java y Spring Boot, React, TypeScript, Laravel, PHP y MySQL. Busco una oportunidad junior para contribuir al desarrollo de software y seguir creciendo junto a un equipo.";
 
 export interface ExperienciaItem {
   titulo: string;

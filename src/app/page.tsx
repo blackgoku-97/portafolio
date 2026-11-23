@@ -2,8 +2,8 @@ import type { Metadata } from "next"
 import { Hero } from "@/components";
 
 export const metadata: Metadata = {
-  title: "Ricardo Pérez — Ingeniero Informático",
-  description: "Portafolio de Ricardo Pérez, Ingeniero Informático especializado en desarrollo web y móvil: proyectos, habilidades y currículum.",
+  title: "Ricardo Pérez — Desarrollador de Software Junior",
+  description: "Portafolio profesional de Ricardo Pérez, Ingeniero Informático abierto a oportunidades junior en desarrollo de software. Revisa sus proyectos, habilidades y currículum.",
 }
 
 export default function Home() {

@@ -17,9 +17,12 @@ export const Navbar = () => {
   return (
     <nav className="flex justify-between items-center px-8 py-4 fixed w-full top-0 z-50
                     backdrop-blur-md border-b border-white/10">
-      {/* Título como enlace al Home */}
-      <Link href="/" className="text-xl font-bold tracking-wide hover:text-pink-300 transition">
-        DevPerez
+      <Link
+        href="/"
+        aria-label="Ir al inicio"
+        className="text-xl font-bold tracking-wide hover:text-pink-300 transition"
+      >
+        Ricardo Pérez
       </Link>
 
       {/* Botón hamburguesa en móvil */}
@@ -27,6 +30,8 @@ export const Navbar = () => {
         className="md:hidden text-pink-300 text-2xl"
         onClick={() => setOpen(!open)}
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
+        aria-expanded={open}
+        aria-controls="mobile-navigation"
       >
         {open ? <FaTimes /> : <FaBars />}
       </button>
@@ -44,7 +49,10 @@ export const Navbar = () => {
 
       {/* Menú desplegable en móvil */}
       {open && (
-        <ul className="absolute top-16 left-0 w-full bg-black/90 flex flex-col items-center gap-6 py-6 text-sm font-medium md:hidden">
+        <ul
+          id="mobile-navigation"
+          className="absolute top-16 left-0 w-full bg-black/90 flex flex-col items-center gap-6 py-6 text-sm font-medium md:hidden"
+        >
           {NAV_LINKS.map(({ href, label, icon: Icon }) => (
             <li key={href}>
               <Link

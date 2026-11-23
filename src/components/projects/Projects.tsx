@@ -1,74 +1,91 @@
 import { ProjectCard, PageTitle } from "@/components"
 import type { CSSProperties } from "react"
 
-export const Projects = () => {
-  const projects = [   {
-      name: "App de Conversión de Monedas",
-      desc: "Aplicación de escritorio en Java que permite transformar monedas en tiempo real usando Exchange Rates API.",
-      stack: ["Java", "Exchange Rates API", "Gson"],
-      impact: "Proyecto académico que demuestra integración de APIs externas y arquitectura modular.",
-      image: "/monedas.jpg",
-      link: "https://github.com/blackgoku-97/transformador_monedas",
-    },
-    {
-      name: "App de Librería",
-      desc: "Sistema de gestión de libros y autores con API REST y persistencia en PostgreSQL.",
-      stack: ["Java", "Spring", "PostgreSQL", "Jackson"],
-      impact: "Proyecto académico que evidencia dominio de Spring Boot y bases de datos relacionales.",
-      image: "/libros.jpg",
-      link: "https://github.com/blackgoku-97/java-spring-libreria",
-    },
-    {
-      name: "App de Foro",
-      desc: "Aplicación web para la gestión de tópicos y usuarios, probada con Insomnia.",
-      stack: ["Java", "Spring", "MySQL", "Insomnia"],
-      impact: "Proyecto académico que muestra experiencia en desarrollo de APIs y pruebas de endpoints.",
-      image: "/topicos.jpg",
-      link: "https://github.com/blackgoku-97/foroapi",
-    },
-    {
-      name: "Gestor de Tareas – Frontend",
-      desc: "Interfaz web en React + Vite + Tailwind CSS para gestionar tareas.",
-      stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB"],
-      impact: "Proyecto personal que refleja habilidades en UI moderna y persistencia de datos.",
-      image: "/frontend.jpg",
-      link: "https://github.com/blackgoku-97/gestor-tareas-frontend",
-      demo: "https://gestor-tareas-frontend-olive.vercel.app/"
-    },
-    {
-      name: "Gestor de Presupuestos – Frontend",
-      desc: "Aplicación web en React + Vite + Tailwind CSS para gestionar clientes y presupuestos con IndexedDB.",
-      stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB", "Nivo"],
-      impact: "Proyecto personal que demuestra dominio en dashboards, formularios oscuros y persistencia local.",
-      image: "/frontend-2.jpg",
-      link: "https://github.com/blackgoku-97/frontend-presupuestos",
-      demo: "https://frontend-presupuestos-delta.vercel.app/"
-    },
-  ]
+type Project = {
+  name: string
+  desc: string
+  stack: string[]
+  focus: string
+  image: string
+  link: string
+  demo?: string
+  origin: "Personal" | "Académico"
+  area: "Frontend web" | "Java y aplicaciones"
+}
 
-  // Categorías más descriptivas
-  const categories = {
-    "Frontend Web": projects.filter(p =>
-      p.name.includes("Frontend") || p.name.includes("Presupuestos")
-    ),
-    "Backend APIs y Sistemas": projects.filter(
-      p =>
-        p.name.includes("Backend") ||
-        ["App de Conversión de Monedas", "App de Librería", "App de Foro"].includes(p.name)
-    ),
-  }
+const projects: Project[] = [
+  {
+    name: "Gestor de Tareas – Frontend",
+    desc: "Interfaz web para organizar tareas, con persistencia de datos local.",
+    stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB"],
+    focus: "Desarrollé la interfaz y el almacenamiento local para mantener las tareas en el navegador.",
+    image: "/frontend.jpg",
+    link: "https://github.com/blackgoku-97/gestor-tareas-frontend",
+    demo: "https://gestor-tareas-frontend-olive.vercel.app/",
+    origin: "Personal",
+    area: "Frontend web",
+  },
+  {
+    name: "Gestor de Presupuestos – Frontend",
+    desc: "Aplicación web para administrar clientes y presupuestos, con panel de métricas.",
+    stack: ["React", "Vite", "TypeScript", "Tailwind CSS", "IndexedDB", "Nivo"],
+    focus: "Implementé formularios con validaciones, modo oscuro, persistencia local y visualización de métricas.",
+    image: "/frontend-2.jpg",
+    link: "https://github.com/blackgoku-97/frontend-presupuestos",
+    demo: "https://frontend-presupuestos-delta.vercel.app/",
+    origin: "Personal",
+    area: "Frontend web",
+  },
+  {
+    name: "App de Conversión de Monedas",
+    desc: "Aplicación de escritorio en Java para convertir monedas con tasas obtenidas de una API externa.",
+    stack: ["Java", "Exchange Rates API", "Gson"],
+    focus: "Integré Exchange Rates API y Gson para procesar las tasas de cambio.",
+    image: "/monedas.jpg",
+    link: "https://github.com/blackgoku-97/transformador_monedas",
+    origin: "Académico",
+    area: "Java y aplicaciones",
+  },
+  {
+    name: "App de Librería",
+    desc: "API REST para gestionar libros y autores, con persistencia en PostgreSQL.",
+    stack: ["Java", "Spring", "PostgreSQL", "Jackson"],
+    focus: "Implementé endpoints y persistencia relacional para la gestión de libros y autores.",
+    image: "/libros.jpg",
+    link: "https://github.com/blackgoku-97/java-spring-libreria",
+    origin: "Académico",
+    area: "Java y aplicaciones",
+  },
+  {
+    name: "App de Foro",
+    desc: "Aplicación web para crear y administrar tópicos y usuarios.",
+    stack: ["Java", "Spring", "MySQL", "Insomnia"],
+    focus: "Desarrollé una API con Spring y MySQL, y probé sus endpoints con Insomnia.",
+    image: "/topicos.jpg",
+    link: "https://github.com/blackgoku-97/foroapi",
+    origin: "Académico",
+    area: "Java y aplicaciones",
+  },
+]
+
+const categories = [
+  { name: "Desarrollo frontend", area: "Frontend web" },
+  { name: "Java y aplicaciones", area: "Java y aplicaciones" },
+] as const
+
+export const Projects = () => {
 
   return (
     <section className="pt-24 p-10 text-white max-w-6xl mx-auto">
-      <PageTitle subtitle="Proyectos destacados que reflejan mis habilidades en desarrollo frontend y backend, aplicando buenas prácticas, arquitecturas escalables y tecnologías modernas.">
-        Portafolio Técnico
+      <PageTitle subtitle="Proyectos personales y académicos para revisar código, tecnologías utilizadas y demos disponibles.">
+        Proyectos
       </PageTitle>
 
-      {Object.entries(categories).map(([category, items]) => (
-        <div key={category} className="mb-12">
-          <h2 className="text-2xl font-bold text-cyan-300 mb-6">{category}</h2>
+      {categories.map(({ name, area }) => (
+        <div key={name} className="mb-12">
+          <h2 className="text-2xl font-bold text-cyan-300 mb-6">{name}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {items.map((project, i) => (
+            {projects.filter((project) => project.area === area).map((project, i) => (
               <div
                 key={project.name}
                 style={{ "--stagger": i } as CSSProperties}
