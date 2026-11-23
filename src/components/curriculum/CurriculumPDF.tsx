@@ -3,7 +3,6 @@ import { JSX } from "react";
 import { styles } from "./Curriculum.styles";
 import {
   personalInfo,
-  contacto,
   resumenPdf,
   habilidadesParaCurriculum,
   practicasProfesionales,
@@ -37,19 +36,6 @@ export const CurriculumPDF = (): JSX.Element => {
         <View style={styles.headerBlock}>
           <Text style={styles.name}>{personalInfo.nombre}</Text>
           <Text style={styles.role}>{personalInfo.rol}</Text>
-          <Text style={styles.contactLine}>
-            <Link src={`https://${personalInfo.web}`} style={styles.contactLine}>
-              Página Profesional
-            </Link>
-            {contacto.map((link) => (
-              <Text key={link.id}>
-                {"   ·   "}
-                <Link src={link.href} style={styles.contactLine}>
-                  {link.label}
-                </Link>
-              </Text>
-            ))}
-          </Text>
         </View>
 
         <View style={styles.columns}>
