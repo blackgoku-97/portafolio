@@ -14,10 +14,10 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://www.ricardoweb.cl"),
   title: {
-    default: "Ricardo Pérez — Desarrollador de Software Junior",
+    default: "Ricardo Pérez — Desarrollador Web Junior",
     template: "%s | Ricardo Pérez",
   },
-  description: "Portafolio profesional de Ricardo Pérez, Ingeniero Informático abierto a oportunidades junior en desarrollo de software.",
+  description: "Portafolio profesional de Ricardo Pérez, Ingeniero Informático abierto a oportunidades junior y proyectos web pequeños.",
 }
 
 const personJsonLd = {

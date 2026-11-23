@@ -3,7 +3,7 @@ import { Contact } from "@/components"
 
 export const metadata: Metadata = {
   title: "Contacto",
-  description: "Contacta a Ricardo Pérez por oportunidades laborales junior en desarrollo de software.",
+  description: "Contacta a Ricardo Pérez por oportunidades laborales junior o proyectos web pequeños.",
 }
 
 export default function ContactPage() {

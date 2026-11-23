@@ -6,7 +6,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   nombre: "Ricardo Pérez",
-  rol: "Ingeniero Informático · Desarrollador de Software Junior",
+  rol: "Ingeniero Informático · Desarrollador Web Junior",
   web: "www.ricardoweb.cl",
 };
 

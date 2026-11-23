@@ -52,9 +52,10 @@ export const Contact = () => {
       <PageTitle
         subtitle={
           <>
-            Estoy buscando una oportunidad laboral junior en desarrollo de software.<br />
+            Busco una oportunidad laboral junior y también converso sobre proyectos web
+            pequeños y bien definidos.<br />
             <span className="text-cyan-400 font-semibold">
-              Puedes contactarme por correo o LinkedIn.
+              Escríbeme por correo o LinkedIn para conversar.
             </span>
           </>
         }

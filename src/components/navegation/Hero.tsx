@@ -18,20 +18,23 @@ export const Hero = () => {
       />
 
       <p className="mt-6 rounded-full border border-cyan-400/40 bg-cyan-950/40 px-4 py-2 text-sm font-medium text-cyan-200">
-        Abierto a oportunidades laborales junior
+        Oportunidades laborales junior · proyectos web pequeños
       </p>
 
       <h1 className="animate-fade-down mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold text-cyan-400 tracking-wide font-sans">
         Ingeniero Informático
         <span className="block mt-2 text-2xl sm:text-3xl md:text-4xl text-white">
-          Desarrollador de Software Junior
+          Desarrollador Web Junior
         </span>
       </h1>
 
       <p className="mt-5 text-lg max-w-2xl text-gray-200">
+        Busco integrarme a un equipo como desarrollador web junior. También puedo conversar
+        sobre proyectos web pequeños y bien definidos.
+      </p>
+      <p className="mt-3 max-w-2xl text-gray-300">
         He trabajado en aplicaciones web y APIs con Java, Spring Boot, React y TypeScript,
-        además de realizar prácticas profesionales con Laravel, PHP y MySQL. Busco
-        integrarme a un equipo donde aportar y seguir creciendo.
+        además de realizar prácticas profesionales con Laravel, PHP y MySQL.
       </p>
 
       <div className="mt-7 flex flex-wrap justify-center gap-4">
