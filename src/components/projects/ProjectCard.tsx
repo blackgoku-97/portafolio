@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaCode, FaCoffee } from "react-icons/fa";
 
 interface ProjectCardData {
   name: string;
@@ -9,7 +9,7 @@ interface ProjectCardData {
   desc: string;
   stack: string[];
   focus: string;
-  image: string;
+  image?: string;
   link: string;
   demo?: string;
   origin: "Personal" | "Académico";
@@ -20,13 +20,20 @@ export const ProjectCard = ({ project }: { project: ProjectCardData }) => {
     <div className="card-surface overflow-hidden flex flex-col">
       {/* Imagen */}
       <div className="relative w-full h-40">
-        <Image
-          src={project.image}
-          alt={project.name}
-          fill
-          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-          className="object-cover"
-        />
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={project.name}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
+        ) : (
+          <div className="flex h-full flex-col items-center justify-center gap-2 bg-linear-to-br from-amber-950 to-orange-900 text-amber-100">
+            <FaCoffee className="text-4xl" aria-hidden="true" />
+            <span className="text-sm font-semibold tracking-widest">CAFÉ BRUMA</span>
+          </div>
+        )}
       </div>
 
       {/* Contenido */}

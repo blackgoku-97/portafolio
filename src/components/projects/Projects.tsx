@@ -7,7 +7,7 @@ type Project = {
   desc: string
   stack: string[]
   focus: string
-  image: string
+  image?: string
   link: string
   demo?: string
   origin: "Personal" | "Académico"
@@ -15,6 +15,17 @@ type Project = {
 }
 
 const projects: Project[] = [
+  {
+    name: "Café Bruma",
+    date: "11/2026",
+    desc: "Sitio responsive para una cafetería ficticia, con menú filtrable, historia y sección de ubicación de muestra.",
+    stack: ["Next.js", "React", "Tailwind CSS", "Lucide React"],
+    focus: "Desarrollé una experiencia web responsive para presentar el concepto y explorar productos por categoría.",
+    link: "https://github.com/blackgoku-97/cafe",
+    demo: "https://cafe-sigma-blush.vercel.app/",
+    origin: "Personal",
+    area: "Frontend web",
+  },
   {
     name: "Gestor de Tareas – Frontend",
     date: "01/2026",

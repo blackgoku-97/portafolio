@@ -67,6 +67,18 @@ export interface ProyectoItem extends ExperienciaItem {
 
 export const proyectos: ProyectoItem[] = [
   {
+    titulo: "Café Bruma",
+    fecha: "11/2026",
+    tipo: "personal",
+    destacado: true,
+    url: "https://github.com/blackgoku-97/cafe",
+    demoUrl: "https://cafe-sigma-blush.vercel.app/",
+    items: [
+      "Sitio responsive para una cafetería ficticia, con catálogo de productos filtrable, historia y sección de ubicación de muestra.",
+      "Desarrollado con Next.js, React, Tailwind CSS y Lucide React.",
+    ],
+  },
+  {
     titulo: "Gestor de Tareas – Frontend",
     fecha: "01/2026",
     tipo: "personal",
@@ -105,7 +117,6 @@ export const proyectos: ProyectoItem[] = [
     titulo: "App de Librería",
     fecha: "2024 - 2025",
     tipo: "academico",
-    destacado: true,
     url: "https://github.com/blackgoku-97/java-spring-libreria",
     items: [
       "Gestión de libros y autores con Java, Spring y PostgreSQL.",

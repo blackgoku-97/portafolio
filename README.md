@@ -1,74 +1,76 @@
-# Portafolio
+# Portafolio de Ricardo Pérez
 
-Portafolio personal de Ricardo Pérez, Ingeniero Informático — desarrollado con
-Next.js. Incluye presentación (Hero), proyectos, habilidades, contacto y un
-currículum descargable en PDF, generado a partir de una única fuente de datos
-compartida entre la vista web y el PDF.
+Portafolio profesional de Ricardo Pérez, Ingeniero Informático y Desarrollador
+Web Junior. Estoy buscando mi primera oportunidad laboral formal y también
+converso sobre proyectos web pequeños y bien definidos.
 
-Sitio en vivo: [www.ricardoweb.cl](https://www.ricardoweb.cl)
+Sitio publicado: [www.ricardoweb.cl](https://www.ricardoweb.cl)
 
-## Tecnologías usadas
+## Proyectos destacados
 
-- **[Next.js 16](https://nextjs.org)** (App Router, Turbopack)
-- **[React 19](https://react.dev)**
-- **[TypeScript](https://www.typescriptlang.org)**
-- **[Tailwind CSS 4](https://tailwindcss.com)** (CSS-first, `@theme`/`@utility`)
-- **[Framer Motion](https://motion.dev)** — animaciones
-- **[react-icons](https://react-icons.github.io/react-icons)** — íconos
-- **[@react-pdf/renderer](https://react-pdf.org)** — generación del CV en PDF
-- **[sharp](https://sharp.pixelplumbing.com)** — optimización de imágenes
-- **[ESLint](https://eslint.org)** — linting
-- **pnpm** — gestor de paquetes
+- **Café Bruma:** sitio responsive para una cafetería ficticia. Incluye catálogo
+  con filtros por categoría, historia y una sección de ubicación de muestra.
+  - [Demo](https://cafe-sigma-blush.vercel.app/)
+  - [Código fuente](https://github.com/blackgoku-97/cafe)
+  - Los productos, precios, horarios y datos de ubicación son ficticios.
+- **Gestor de Tareas:** aplicación frontend con React, TypeScript y almacenamiento
+  local mediante IndexedDB.
+- **Gestor de Presupuestos:** aplicación frontend con formularios, métricas y
+  persistencia local.
+- **Proyectos académicos:** aplicaciones Java, APIs REST y ejercicios de
+  integración con servicios externos.
 
-## Estructura del proyecto
+## Tecnologías
 
-```
+- **Next.js**, **React** y **TypeScript**
+- **Tailwind CSS**
+- **Java** y **Spring Boot**
+- **Laravel**, **PHP** y **MySQL**
+- **PostgreSQL**, **Git** y **GitHub**
+- **@react-pdf/renderer** para generar el currículum PDF
+- **pnpm** como gestor de paquetes
+
+## Estructura
+
+```text
 src/
-├── app/                      # Rutas (App Router)
-│   ├── page.tsx              # Home (Hero)
-│   ├── proyectos/page.tsx
-│   ├── habilidades/page.tsx
-│   ├── contacto/page.tsx
-│   ├── curriculum/page.tsx
-│   ├── layout.tsx            # Layout raíz (Navbar, Footer, fondo animado)
-│   └── globals.css           # Tailwind + utilidades compartidas
-│
+├── app/                 # Rutas del App Router
+│   ├── contacto/
+│   ├── curriculum/
+│   │   └── pdf/         # Endpoint que genera el CV descargable
+│   ├── habilidades/
+│   ├── proyectos/
+│   └── page.tsx         # Portada
 ├── components/
-│   ├── navegation/            # Navbar, Footer, Hero, Contact
-│   ├── projects/              # Projects, ProjectCard
-│   ├── skills/                # Skills, SkillsSection, SkillsCard, Technical/SoftSkills
-│   ├── curriculum/             # Vista del currículum + generador de PDF
-│   │   ├── Curriculum.tsx           # Orquestador (botón descargar CV)
-│   │   ├── CurriculumContent.tsx    # Vista web
-│   │   ├── CurriculumPDF.tsx        # Documento PDF (@react-pdf/renderer)
-│   │   ├── Curriculum.styles.ts     # Estilos del PDF
-│   │   ├── SectionHeader.tsx        # Encabezado de sección reutilizable
-│   │   └── Resumen.tsx, ExperienciaLaboral.tsx, Educacion.tsx,
-│   │       Certificaciones.tsx, Social.tsx
-│   ├── ui/                    # Componentes de UI genéricos (PageTitle)
-│   └── index.ts               # Barrel de exports
-│
-└── data/
-    └── curriculum.ts          # Única fuente de datos del CV (web + PDF)
+│   ├── curriculum/      # Vista web, plantilla PDF y estilos del PDF
+│   ├── navegation/      # Portada, navegación, contacto y pie de página
+│   ├── projects/        # Listado y tarjetas de proyectos
+│   ├── skills/          # Secciones de habilidades
+│   └── ui/              # Componentes de interfaz compartidos
+├── data/
+│   └── curriculum.ts    # Datos compartidos entre el CV web y el PDF
+└── assets/fonts/        # Fuentes locales usadas por el PDF
 ```
 
-## Getting Started
+## Desarrollo local
+
+Requisitos: Node.js y pnpm.
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-Abrí [http://localhost:3000](http://localhost:3000) para ver el resultado.
+Abre [http://localhost:3000](http://localhost:3000).
 
-Otros comandos:
+Comandos disponibles:
 
 ```bash
-pnpm build   # build de producción
-pnpm start   # servir el build de producción
-pnpm lint    # linting
+pnpm lint   # Ejecuta ESLint
+pnpm build  # Genera la compilación de producción
+pnpm start  # Sirve la compilación de producción
 ```
 
-## Deploy
+## Despliegue
 
-Desplegado en [Vercel](https://vercel.com).
+El sitio está desplegado en [Vercel](https://vercel.com).
